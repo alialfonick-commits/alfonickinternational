@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
 const cards = [
@@ -61,7 +61,7 @@ export function AgencyIntroSection() {
       <div className="mx-auto max-w-420">
         <div className="grid items-start gap-12 lg:grid-cols-[1fr_0.92fr] xl:gap-16">
           {/* Left content */}
-          <div className="max-w-190">
+          <div className="max-w-190 relative">
             <div className="mb-6 flex items-center gap-4">
               <span className="relative h-0.5 w-16 bg-[#B81C15]">
                 <span className="absolute -left-1.5 top-1/2 size-3 -translate-y-1/2 rounded-full bg-[#B81C15]" />
@@ -80,6 +80,26 @@ export function AgencyIntroSection() {
               Agency from Pakistan
             </h2>
 
+            <div className="absolute top-12 right-10">
+              <Image
+                src="/images/star-img.png"
+                alt="red star"
+                width={70}
+                height={70}
+                className="animate-spin-slow"
+              />
+            </div>
+
+            <div className="absolute top-26 right-6">
+              <Image
+                src="/images/grey-star-img.png"
+                alt="gray star"
+                width={35}
+                height={35}
+                className="animate-spin-slow"
+              />
+            </div>
+
             <p className="mt-6 max-w-185 font-[Arial] text-base leading-[1.65] text-[#777777] sm:text-lg">
               Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
               Industry. Lorem Ipsum Has Been The Industry&apos;s Standard Dummy
@@ -87,29 +107,25 @@ export function AgencyIntroSection() {
             </p>
 
             <Link
-              href="#about"
-              className="font-archivo group mt-7 inline-flex items-center gap-4 rounded-full border border-[#C1C1C2] bg-white py-2.5 pl-2.5 pr-7 text-lg font-medium text-[#222222] transition-all duration-300 hover:border-[#B81C15] hover:bg-[#F5D5D2]"
+              href="#"
+              className="headerBtn group relative inline-block border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pr-15 active:pl-5 text-black hover:text-white hover:border-[#b81c15] transition-all duration-300 mt-5 hover:bg-[#b81c15]"
             >
-              <span className="grid size-10 place-items-center rounded-full bg-[#B81C15] text-white transition-all duration-300 group-hover:scale-105 group-hover:bg-[#D93433]">
-                <ArrowRight
-                  size={21}
-                  strokeWidth={2.2}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
+              <span className="inline-block transition-all duration-300 lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px]">
+                Read more
               </span>
-              Read More
             </Link>
+            
           </div>
 
           {/* Right expanding cards */}
           <div className="relative">
             {/* Stars */}
-            <div className="pointer-events-none absolute -left-20 top-8 hidden lg:block">
+            {/* <div className="pointer-events-none absolute -left-20 top-8 hidden lg:block">
               <div className="relative size-28">
                 <span className="absolute left-0 top-0 h-20 w-20 bg-[#B81C15] [clip-path:polygon(50%_0%,62%_38%,100%_50%,62%_62%,50%_100%,38%_62%,0%_50%,38%_38%)]" />
                 <span className="absolute bottom-0 right-0 h-14 w-14 bg-[#C1C1C2] [clip-path:polygon(50%_0%,62%_38%,100%_50%,62%_62%,50%_100%,38%_62%,0%_50%,38%_38%)]" />
               </div>
-            </div>
+            </div> */}
 
             <div className="flex h-90 gap-3 sm:h-107.5 md:h-125 lg:h-110 xl:h-125">
               {cards.map((card, index) => {
@@ -134,7 +150,9 @@ export function AgencyIntroSection() {
                       fill
                       sizes="(max-width: 768px) 80vw, 40vw"
                       className={`object-cover transition-all duration-700 ease-out ${
-                        isActive ? "scale-100 grayscale-0" : "scale-110 grayscale"
+                        isActive
+                          ? "scale-100 grayscale-0"
+                          : "scale-110 grayscale"
                       }`}
                     />
 

@@ -1,31 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  Briefcase,
+  Camera,
   Clock,
+  Globe,
   Mail,
   MapPin,
   Phone,
-
+  X,
 } from "lucide-react";
 import { ContactForm } from "@/components/forms/contact-form";
 
-const companyLinks = ["About", "Service", "portfolio", "contact", "Career", "Blog"];
 
-const serviceLinks = [
-  "Web Development",
-  "UI/UX DESIGN",
-  "Digital Marketing Services",
-  "Branding & Communication",
-  "Ecommerce Web Development",
-  "Mobile App Development",
+const companyLinks = [
+  { name: "About", href: "/about" },
+  { name: "Service", href: "#" },
+  { name: "Portfolio", href: "#" },
+  { name: "Contact", href: "#" },
+  { name: "Career", href: "/careers" },
+  { name: "Blog", href: "/blogs" },
 ];
 
-// const socialLinks = [
-//   { icon: Facebook, href: "#", label: "Facebook" },
-//   { icon: Twitter, href: "#", label: "Twitter" },
-//   { icon: Linkedin, href: "#", label: "LinkedIn" },
-//   { icon: Instagram, href: "#", label: "Instagram" },
-// ];
+
+const serviceLinks = [
+  { name: "Web Development", href: "#" },
+  { name: "UI/UX DESIGN", href: "#" },
+  { name: "Branding & Communication", href: "#" },
+  { name: "Ecommerce Web Development", href: "#" },
+  { name: "Mobile App Development", href: "#" },
+];
 
 const contactInfo = [
   {
@@ -35,10 +39,12 @@ const contactInfo = [
   {
     icon: Phone,
     text: "021-34800227",
+    href: "tel:02134800227",
   },
   {
     icon: Mail,
     text: "info@alfonickinternational.com",
+    href: "mailto:info@alfonickinternational.com",
   },
   {
     icon: Clock,
@@ -106,22 +112,22 @@ export function Footer() {
                 Social Media
               </p>
 
-              {/* <div className="mt-4 flex items-center gap-3">
-                {socialLinks.map((item) => {
-                  const Icon = item.icon;
+               <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
+              <Link href="#">
+                <Globe size={20} />
+              </Link>
+              <Link href="#">
+                <X size={20} />
+              </Link>
+              <Link href="#">
+                <Briefcase size={20} />
+              </Link>
+              <Link href="#">
+                <Camera size={20} />
+              </Link>
+            </div>
+       
 
-                  return (
-                    <Link
-                      key={item.label}
-                      href={item.href}
-                      aria-label={item.label}
-                      className="grid size-9 place-items-center rounded-full bg-white text-[#B81C15] transition-all duration-300 hover:-translate-y-1 hover:bg-[#D93433] hover:text-white"
-                    >
-                      <Icon size={16} />
-                    </Link>
-                  );
-                })}
-              </div> */}
             </div>
 
             {/* Company */}
@@ -132,12 +138,12 @@ export function Footer() {
 
               <ul className="mt-7 space-y-4">
                 {companyLinks.map((link) => (
-                  <li key={link}>
+                  <li key={link.name}>
                     <Link
-                      href="#"
+                      href={link.href}
                       className="font-[Arial] text-[16px] text-white transition-colors duration-300 hover:text-[#D93433]"
                     >
-                      {link}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
@@ -152,12 +158,12 @@ export function Footer() {
 
               <ul className="mt-7 space-y-4">
                 {serviceLinks.map((link) => (
-                  <li key={link}>
+                  <li key={link.name}>
                     <Link
-                      href="#"
+                      href={link.href}
                       className="font-[Arial] text-[16px] text-white transition-colors duration-300 hover:text-[#D93433]"
                     >
-                      {link}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
@@ -175,16 +181,26 @@ export function Footer() {
                   const Icon = item.icon;
 
                   return (
-                    <li key={item.text} className="flex gap-4">
+                    <li key={item.text} className="flex gap-4 items-start">
                       <Icon
                         size={18}
                         className="mt-1 shrink-0 text-[#D93433]"
-                        fill="currentColor"
+                        // fill="currentColor" // Note: can be removed if icons look solid/blocked
                         strokeWidth={1.5}
                       />
-                      <span className="font-[Arial] text-[16px] leading-[1.45] text-white">
-                        {item.text}
-                      </span>
+
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          className="font-[Arial] text-[16px] leading-[1.45] text-white hover:text-[#D93433] transition-colors duration-200"
+                        >
+                          {item.text}
+                        </a>
+                      ) : (
+                        <span className="font-[Arial] text-[16px] leading-[1.45] text-white">
+                          {item.text}
+                        </span>
+                      )}
                     </li>
                   );
                 })}
@@ -196,7 +212,7 @@ export function Footer() {
 
           {/* Copyright */}
           <div className="mt-8 flex flex-col gap-4 text-center font-[Arial] text-[14px] text-white sm:flex-row sm:items-center sm:justify-between sm:text-left">
-            <p>©2024 Transparent. All rights reserved</p>
+            <p>©2026 Transparent. All rights reserved</p>
 
             <div className="flex flex-wrap justify-center gap-x-2 gap-y-1 sm:justify-end">
               <Link href="#" className="hover:text-[#D93433]">

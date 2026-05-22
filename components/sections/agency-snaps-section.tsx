@@ -105,7 +105,7 @@ export function AgencySnapsSection() {
       {/* Button */}
       <div className="mt-10 flex justify-center sm:mt-12">
         <Link
-          href="#gallery"
+          href="/gallery"
           className="font-archivo group inline-flex items-center gap-4 rounded-full border border-[#C1C1C2] bg-white py-2.5 pl-2.5 pr-8 text-lg font-medium text-[#222222] transition-all duration-300 hover:border-[#B81C15] hover:bg-[#F5D5D2]"
         >
           <span className="grid size-10 place-items-center rounded-full bg-[#B81C15] text-white transition-all duration-300 group-hover:scale-105 group-hover:bg-[#D93433]">

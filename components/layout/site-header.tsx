@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 function clamp(value: number, min: number, max: number) {
@@ -37,9 +36,6 @@ export function SiteHeader() {
 
   const headerY = scrollProgress * -10;
   const logoScale = 1 - scrollProgress * 0.035;
-  const buttonScale = 1 - scrollProgress * 0.025;
-  const buttonBgOpacity = 0.08 + scrollProgress * 0.16;
-  const buttonBorderOpacity = 0.28 + scrollProgress * 0.12;
 
   return (
     <header
@@ -59,7 +55,7 @@ export function SiteHeader() {
           }}
         >
           <Image
-            src="/images/alfonick-logo.png"
+            src="/images/alfonick.webp"
             alt="Alfonick International"
             width={160}
             height={48}
@@ -69,26 +65,33 @@ export function SiteHeader() {
         </Link>
 
         {/* Book Button */}
-        <Link
-          href="#contact"
-          className="group font-archivo inline-flex origin-right items-center gap-2 rounded-full border py-1.5 pl-1.5 pr-3 text-[12px] font-medium text-white shadow-[0_0_30px_rgba(0,0,0,0.18)] backdrop-blur-md transition-all duration-300 ease-out hover:border-[#D93433]/80 hover:bg-white/8 sm:gap-3 sm:pr-5 sm:text-[15px]"
-          style={{
-            transform: `scale(${buttonScale})`,
-            backgroundColor: `rgba(0, 0, 0, ${buttonBgOpacity})`,
-            borderColor: `rgba(255, 255, 255, ${buttonBorderOpacity})`,
-          }}
-        >
-          <span className="grid size-8 place-items-center rounded-full bg-[#D93433] text-white transition-all duration-300 ease-out group-hover:scale-110 group-hover:bg-[#B81C15] sm:size-10">
-            <ArrowUpRight
-              size={17}
-              strokeWidth={2.2}
-              className="transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </span>
+        {/* <Link
+  href="#contact"
+  className="group font-archivo inline-flex items-center gap-3 rounded-full border py-1.5 pl-1.5 pr-3 text-[12px] font-medium text-white transition-all duration-300 sm:pr-5 sm:text-[15px]"
+>
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    <span className="grid size-8 place-items-center rounded-full bg-[#D93433] text-white sm:size-10">
+      <ArrowUpRight size={17} strokeWidth={2.2} />
+    </span>
+  </span>
 
-          <span className="hidden whitespace-nowrap sm:inline">Book a Demo</span>
-          <span className="whitespace-nowrap sm:hidden">Book</span>
+  <span className="hidden whitespace-nowrap transition-transform duration-300 group-hover:-translate-x-1 sm:inline">
+    Book a Demo
+  </span>
+
+  <span className="whitespace-nowrap transition-transform duration-300 group-hover:-translate-x-1 sm:hidden">
+    Book
+  </span>
+</Link> */}
+
+
+        <Link
+          href="#" className="headerBtn group relative inline-block border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 text-white transition-all duration-300">
+          <span className="inline-block transition-all duration-300 lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px]">
+            Book A Demo
+          </span>
         </Link>
+
       </div>
     </header>
   );

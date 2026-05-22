@@ -63,9 +63,9 @@ export function HeroSection() {
       <div className="sticky top-0 h-svh overflow-hidden bg-black">
         <div
           className="relative h-full will-change-transform"
-          // style={{
-          //   transform: `translateY(${heroTranslateY}vh)`,
-          // }}
+        // style={{
+        //   transform: `translateY(${heroTranslateY}vh)`,
+        // }}
         >
           {/* Background image */}
           <Image
@@ -127,21 +127,56 @@ export function HeroSection() {
               </p>
 
               <div className="mt-8 flex flex-col items-center gap-3 sm:mt-9 sm:flex-row sm:gap-4">
-                <Link
+                {/* <Link
                   href="#contact"
-                  className="font-archivo group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#D93433] px-6 text-[12px] font-semibold uppercase tracking-[-0.01em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#B81C15] hover:shadow-[0_12px_30px_rgba(217,52,51,0.35)] sm:min-h-12.5 sm:px-7"
+                  className="font-archivo group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#D93433] px-6 text-[12px] font-semibold uppercase tracking-[-0.01em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#B81C15] sm:min-h-12.5 sm:px-7"
                 >
                   Discuss the Project
                   <span className="size-2 rounded-full bg-white transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
+                </Link> */}
 
                 <Link
                   href="#contact"
-                  className="font-archivo group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-white px-6 text-[12px] font-semibold uppercase tracking-[-0.01em] text-[#B81C15] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#F5D5D2] hover:shadow-[0_12px_30px_rgba(255,255,255,0.14)] sm:min-h-12.5 sm:px-7"
+                  className="font-archivo group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#D93433] px-6 text-[12px] font-semibold uppercase tracking-[-0.01em] text-white transition-all duration-300 sm:min-h-12.5 sm:px-7"
+                >
+                  Discuss the Project
+
+                  <div className="relative flex size-2 items-center justify-center">
+
+                    <span className="absolute size-2 rounded-full bg-white transition-all duration-300 group-hover:scale-0 group-hover:opacity-0" />
+
+                    <img
+                      src="images/arrow.webp"
+                      alt="Arrow Icon"
+                      width={16} height={16}
+                      className="absolute max-w-none size-4 opacity-0 scale-50 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-100 group-hover:opacity-100"
+                    />
+
+                  </div>
+                </Link>
+
+                <Link href="#" className="font-archivo group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-white px-6 text-[12px] font-semibold uppercase tracking-[-0.01em] text-[#B81C15] transition-all duration-300 sm:min-h-12.5 sm:px-7"
                 >
                   Get Free Quote
-                  <span className="size-2 rounded-full bg-[#B81C15] transition-transform duration-300 group-hover:translate-x-1" />
+
+                 
+                  <div className="relative flex size-2 items-center justify-center">
+
+                   
+                    <span className="absolute size-2 rounded-full bg-[#B81C15] transition-all duration-300 group-hover:scale-0 group-hover:opacity-0" />                    
+
+
+                    <img
+                      src="images/red-arrow.webp"
+                      alt="Arrow Icon"
+                      width={16} height={16}
+                      className="absolute max-w-none size-4 opacity-0 scale-50 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-100 group-hover:opacity-100"
+                    />
+
+                  </div>
                 </Link>
+
+
               </div>
             </div>
           </div>
