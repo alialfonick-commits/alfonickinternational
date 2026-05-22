@@ -11,6 +11,7 @@ import PlatformSlider from '@/components/sections/PlatformSlider'
 import AgencySnap from '@/components/sections/AgencySnap'
 import FAQ from '@/components/sections/FAQ'
 import { Footer } from '@/components/sections/footer'
+import { CoreValuesSection } from '@/components/sections/core-values-section'
 
 
 // import { Footer } from '@/components/sections/footer'
@@ -27,6 +28,7 @@ const page = () => {
         <AboutCompany />
         <BrandMarquee />
         <Process />
+        <CoreValuesSection />
         <AboutWhyChoose />
         <PlatformSlider />
         <AgencySnap />
