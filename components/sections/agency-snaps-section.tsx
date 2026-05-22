@@ -68,7 +68,7 @@ export function AgencySnapsSection() {
               </p>
             </div>
 
-            <p className="mt-10 max-w-[330px] font-[Arial] text-base leading-[1.65] text-[#777777] sm:text-lg">
+            <p className="mt-10 max-w-[330px] font-[Arial] text-base leading-[1.65] text-[#22222299] sm:text-lg">
               Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
               Industry. Lorem Ipsum Has Been The Industry&apos;s Standard Dummy
               Text Ever Since The 1500s,

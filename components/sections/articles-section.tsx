@@ -43,12 +43,12 @@ export function ArticlesSection() {
       id="blogs"
       className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-10 xl:px-12 xl:py-24"
     >
-      <div className="mx-auto max-w-[1280px]">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="grid gap-8 lg:grid-cols-[300px_1fr] lg:items-start xl:grid-cols-[340px_1fr]">
+        <div className="grid gap-8 lg:grid-cols-[410px_1fr] lg:items-start xl:grid-cols-[340px_1fr]">
           <SectionEyebrow />
 
-          <h2 className="font-archivo max-w-[780px] text-[42px] font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] sm:text-[58px] lg:text-[72px] xl:text-[82px]">
+          <h2 className="font-archivo max-w-195 text-[42px] font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] sm:text-[58px] lg:text-[72px] xl:text-[82px]">
             Explore{" "}
             <span className="font-medium italic text-[#B81C15]">
               Articles And
@@ -66,7 +66,7 @@ export function ArticlesSection() {
           {articles.map((article) => (
             <article key={article.title} className="group">
               <Link href="#blogs" className="block">
-                <div className="relative aspect-[1.08/1] overflow-hidden rounded-[12px] bg-[#EFF0F0]">
+                <div className="relative aspect-[1.08/1] overflow-hidden rounded-xl bg-[#EFF0F0]">
                   <Image
                     src={article.image}
                     alt={article.title}
@@ -76,13 +76,9 @@ export function ArticlesSection() {
                   />
 
                   <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
-
-                  <span className="absolute right-4 top-4 grid size-11 translate-y-2 place-items-center rounded-full bg-white text-[#B81C15] opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <ArrowUpRight size={21} strokeWidth={2.2} />
-                  </span>
                 </div>
 
-                <h3 className="font-archivo mt-6 max-w-[360px] text-[20px] font-medium leading-[1.25] tracking-[-0.03em] text-[#222222] transition-colors duration-300 group-hover:text-[#B81C15] sm:text-[22px]">
+                <h3 className="font-archivo mt-6 max-w-[92%] text-[20px] font-medium leading-[1.25] tracking-[-0.03em] text-[#222222] transition-colors duration-300 group-hover:text-[#B81C15] sm:text-[22px]">
                   {article.title}
                 </h3>
 
@@ -94,7 +90,7 @@ export function ArticlesSection() {
                   {article.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="font-archivo rounded-full border border-[#C1C1C2] bg-[#EFF0F0] px-4 py-2 text-[12px] font-medium uppercase text-[#777777] transition-all duration-300 group-hover:border-[#B81C15]/40 group-hover:bg-[#F5D5D2] group-hover:text-[#B81C15]"
+                      className="font-archivo rounded-full border border-[#C1C1C2] bg-[#EFF0F0] px-4 py-2 text-[12px] font-medium uppercase text-[#777777] transition-all duration-300 hover:border-[#B81C15]/40 hover:bg-[#F5D5D2] hover:text-[#B81C15]"
                     >
                       {tag}
                     </span>

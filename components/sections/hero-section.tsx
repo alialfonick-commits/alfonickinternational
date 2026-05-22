@@ -111,16 +111,26 @@ export function HeroSection() {
             }}
           >
             <div className="mx-auto flex max-w-295 flex-col items-center">
-              <p className="font-archivo mb-6 text-[11px] font-medium tracking-[0.34em] text-white/78 sm:mb-7">
-                Intelligence, unleashed.
-              </p>
+              <div className="relative inline-block mb-5 [&_span]:absolute [&_span]:h-3 [&_span]:w-3 [&_span]:border-[#FFFFFF80] [&_span]:rounded-[1px]">
+                <p className="font-archivo mb-0! text-[42px] font-normal tracking-[-0.94px] text-[#EFF0F0] sm:mb-7">
+                  Intelligence, unleashed.
+                </p>
 
-              <h1 className="font-archivo max-w-280 text-balance text-[38px] font-semibold leading-[0.96] tracking-tighter text-white sm:text-[56px] md:text-[74px] lg:text-[92px] 2xl:text-[106px] xl:text-[90px]">
+                <span className="-left-1 top-0 border-l border-t" />
+
+                <span className="-right-1 top-0 border-r border-t" />
+
+                <span className="bottom-0 -left-1 border-l border-b" />
+
+                <span className="bottom-0 -right-1 border-r border-b" />
+              </div>
+
+              <h1 className="font-archivo max-w-280 text-[38px] font-medium leading-[0.96] tracking-tighter text-white sm:text-[56px] md:text-[74px] lg:text-[92px] 2xl:text-[102px] xl:text-[90px]">
                 Marketing agency for
                 <br className="hidden sm:block" /> creative business solutions
               </h1>
 
-              <p className="mt-6 max-w-230 font-[Arial] text-[14px] leading-[1.45] text-white/88 sm:mt-7 sm:text-[15px] md:text-[17px]">
+              <p className="mt-6 max-w-230 font-[Arial] text-[14px] leading-[1.45] text-white sm:mt-7 sm:text-[15px] md:text-[18px] font-normal">
                 We specialize in website development, branding, and promotion
                 for developers, large manufacturing companies, transportation
                 companies, and FMCG companies.
@@ -137,21 +147,28 @@ export function HeroSection() {
 
                 <Link
                   href="#contact"
-                  className="font-archivo group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#D93433] px-6 text-[12px] font-semibold uppercase tracking-[-0.01em] text-white transition-all duration-300 sm:min-h-12.5 sm:px-7"
+                  className="font-archivo group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-full bg-[#B81C15] px-6 text-[12px] font-semibold uppercase tracking-[-0.01em] text-white transition-all duration-300 sm:min-h-12.5 sm:px-7 pr-11.25! hover:text-[#B81C15]"
                 >
-                  Discuss the Project
+                  {/* expanding white bg */}
+                  <span className="absolute right-6 size-2 rounded-full bg-white transition-all duration-500 ease-out group-hover:right-0 group-hover:h-full group-hover:w-full" />
 
-                  <div className="relative flex size-2 items-center justify-center">
+                  {/* text */}
+                  <span className="relative z-10">
+                    Discuss the Project
+                  </span>
 
-                    <span className="absolute size-2 rounded-full bg-white transition-all duration-300 group-hover:scale-0 group-hover:opacity-0" />
+                  {/* icon area */}
+                  <div className="absolute z-10 left-0 -right-25 group-hover:-right-38.5 transition-all duration-300 top-0 bottom-0 m-auto w-fit h-fit">
 
+
+                    {/* arrow after hover */}
                     <img
-                      src="images/arrow.webp"
+                      src="images/red-arrow.webp"
                       alt="Arrow Icon"
-                      width={16} height={16}
-                      className="absolute max-w-none size-4 opacity-0 scale-50 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-100 group-hover:opacity-100"
+                      width={16}
+                      height={16}
+                      className="size-4 scale-50 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
                     />
-
                   </div>
                 </Link>
 
@@ -159,11 +176,11 @@ export function HeroSection() {
                 >
                   Get Free Quote
 
-                 
+
                   <div className="relative flex size-2 items-center justify-center">
 
-                   
-                    <span className="absolute size-2 rounded-full bg-[#B81C15] transition-all duration-300 group-hover:scale-0 group-hover:opacity-0" />                    
+
+                    <span className="absolute size-2 rounded-full bg-[#B81C15] transition-all duration-300 group-hover:scale-0 group-hover:opacity-0" />
 
 
                     <img

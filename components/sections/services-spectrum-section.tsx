@@ -76,7 +76,7 @@ export function ServicesSpectrumSection() {
             <div key={`${item}-${index}`} className="flex items-center gap-10">
               <h3
                 className={`font-archivo text-[34px] font-bold uppercase leading-none tracking-[-0.04em] sm:text-[48px] lg:text-[58px] ${
-                  index % 3 === 1 ? "text-[#B81C15]" : "text-black"
+                  index % 2 === 1 ? "text-[#B81C15]" : "text-[#000000]"
                 }`}
               >
                 {item}
