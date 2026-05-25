@@ -1,5 +1,8 @@
 "use client"
 
+
+// 02
+
 import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
@@ -182,24 +185,44 @@ function CarouselPrevious({
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
   return (
+    // <Button
+    //   data-slot="carousel-previous"
+    //   variant={variant}
+    //   size={size}
+    //   className={cn(
+    //     "absolute touch-manipulation rounded-full",
+    //     orientation === "horizontal"
+    //       ? "top-1/2 -left-12 -translate-y-1/2"
+    //       : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+    //     className
+    //   )}
+    //   disabled={!canScrollPrev}
+    //   onClick={scrollPrev}
+    //   {...props}
+    // >
+    //   {/* <ChevronLeftIcon /> */}
+    //   <props.children />
+    //   <span className="sr-only">Previous slide</span>
+    // </Button>
+
     <Button
-      data-slot="carousel-previous"
-      variant={variant}
-      size={size}
-      className={cn(
-        "absolute touch-manipulation rounded-full",
-        orientation === "horizontal"
-          ? "top-1/2 -left-12 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
-        className
-      )}
-      disabled={!canScrollPrev}
-      onClick={scrollPrev}
-      {...props}
-    >
-      <ChevronLeftIcon />
-      <span className="sr-only">Previous slide</span>
-    </Button>
+  data-slot="carousel-previous"
+  variant={variant}
+  size={size}
+  className={cn(
+    "absolute touch-manipulation rounded-full",
+    orientation === "horizontal"
+      ? "top-1/2 -left-12 -translate-y-1/2"
+      : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+    className
+  )}
+  disabled={!canScrollPrev}
+  onClick={scrollPrev}
+  {...props}
+>
+  {props.children}
+  <span className="sr-only">Previous slide</span>
+</Button>
   )
 }
 
@@ -227,7 +250,8 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRightIcon />
+      {/* <ChevronRightIcon /> */}
+      {props.children}
       <span className="sr-only">Next slide</span>
     </Button>
   )

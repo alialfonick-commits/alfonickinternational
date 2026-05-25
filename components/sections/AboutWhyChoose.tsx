@@ -38,7 +38,7 @@ export default function AboutWhyChoose() {
           </p>
 
           <ul className="space-y-4 mb-4 lg:[&_li]:text-[20px] [&_li]:text-[16px] [&_li]:text-[#222]">
-            <li className="flex items-start mb-2 gap-3">
+            <li className="flex mb-2 gap-3 items-center">
               <Image
                 src="/images/About Why Icon.webp"
                 alt="icon"
@@ -49,7 +49,7 @@ export default function AboutWhyChoose() {
               Struggling to communicate your brand message
             </li>
 
-            <li className="flex items-start mb-2 gap-3">
+            <li className="flex items-center mb-2 gap-3">
               <Image
                 src="/images/About Why Icon.webp"
                 alt="icon"
@@ -60,7 +60,7 @@ export default function AboutWhyChoose() {
               Need better digital marketing strategies
             </li>
 
-            <li className="flex items-start mb-2 gap-3">
+            <li className="flex items-center mb-2 gap-3">
               <Image
                 src="/images/About Why Icon.webp"
                 alt="icon"
@@ -71,7 +71,7 @@ export default function AboutWhyChoose() {
               Looking to grow your online presence
             </li>
 
-            <li className="flex items-start mb-2 gap-3">
+            <li className="flex items-center mb-2 gap-3">
               <Image
                 src="/images/About Why Icon.webp"
                 alt="icon"

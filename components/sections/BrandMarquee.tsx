@@ -15,8 +15,8 @@ const logos = [
 
 export default function BrandMarquee() {
   return (
-    <section className="w-full py-20 overflow-hidden">
-      <div className="pb-5 xl:[&>h2]:text-[50px] lg:[&>h2]:text-[46px] sm:[&>h2]:text-[36px] [&>h2]:mt-4 [&>h2]:text-[30px] sm:[&>h2]:pt-0 [&>h2]:pt-5 [&>h2]:leading-[1.1] [&>h2_span]:text-[#B81C15] [&>h2_span]:italic text-center [&>span]:px-6 [&>span]:py-3 [&>span]:italic [&>span]:rounded-4xl [&>span]:bg-[#B81C15]/5 [&>span]:text-[#B81C15]">
+    <section className="w-full sm:pt-22 pt-16 sm:pb-25 pb-15 overflow-hidden">
+      <div className="pb-5 xl:[&>h2]:text-[56px] lg:[&>h2]:text-[46px] sm:[&>h2]:text-[36px] [&>h2]:mt-4 [&>h2]:text-[30px] sm:[&>h2]:pt-0 [&>h2]:pt-5 [&>h2]:leading-[1.1] [&>h2_span]:text-[#B81C15] [&>h2_span]:italic text-center [&>span]:px-6 [&>span]:py-3 [&>span]:italic [&>span]:rounded-4xl [&>span]:bg-[#B81C15]/5 [&>span]:text-[#B81C15]">
         <span className=""> Core Values </span>
         <h2>
           Brand We Have{" "}
@@ -27,7 +27,7 @@ export default function BrandMarquee() {
         </h2>
       </div>
 
-      <div className="max-w-397.5 mx-auto px-5 space-y-6">
+      <div className="max-w-397.5 mx-auto px-5 space-y-6 pt-[20px]">
         <div className="overflow-hidden">
           <div className="flex gap-3 animate-marquee whitespace-nowrap">
             {[...logos, ...logos].map((item, i) => (

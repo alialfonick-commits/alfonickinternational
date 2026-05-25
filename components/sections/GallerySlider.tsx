@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import type { CarouselApi } from "@/components/ui/carousel";
+import type { CarouselApi } from "@/components/ui/carouselSlider";
+import { ArrowLeft } from "lucide-react";
 
 import {
   Carousel,
@@ -10,7 +11,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "@/components/ui/carouselSlider";
 
 const GallerySlider = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -18,24 +19,24 @@ const GallerySlider = () => {
 
   const images = [
     {
-      image: "/images/snap-gallery1.png",
-      title: "Modern Interior Design",
+      image: "/images/Gallery img_1.webp",
+      // title: "Modern Interior Design",
     },
     {
-      image: "/images/snap-gallery2.png",
-      title: "Creative Workspace",
+      image: "/images/Gallery img_1.webp",
+      // title: "Creative Workspace",
     },
     {
-      image: "/images/snap-gallery3.png",
-      title: "Luxury Living Room",
+      image: "/images/Gallery img_1.webp",
+      // title: "Luxury Living Room",
     },
     {
-      image: "/images/snap-gallery4.png",
-      title: "Minimal Architecture",
+      image: "/images/Gallery img_1.webp",
+      // title: "Minimal Architecture",
     },
     {
-      image: "/images/snap-gallery5.png",
-      title: "Elegant Home Style",
+      image: "/images/Gallery img_1.webp",
+      // title: "Elegant Home Style",
     },
   ];
 
@@ -57,15 +58,13 @@ const GallerySlider = () => {
 
   return (
     <section className="sm:py-20 pt-10  pb-15 overflow-hidden bg-white">
-      
       <div className="text-[#B81C15] text-center px-6 py-3 rounded-4xl w-fit m-auto bg-[#B81C15]/5">
         <span> IMAGE GALLERY </span>
       </div>
 
       <div className="text-center sm:mb-12 mb-6">
         <h2 className="text-[36px] md:text-[44px] lg:text-[56px] font-bold text-[#222] leading-[1.1] tracking-[-1px] mt-3.5">
-          Our Story in{" "}
-          <span className="text-[#B81C15] italic"> Motion </span>
+          Our Story in <span className="text-[#B81C15] italic"> Motion </span>
         </h2>
       </div>
 
@@ -77,7 +76,6 @@ const GallerySlider = () => {
         }}
         className="w-full relative"
       >
-        
         <div className="absolute left-0 top-0 z-20 h-full w-20 md:w-32 pointer-events-none bg-linear-to-r from-white/80 to-transparent" />
 
         {/* Right Fade */}
@@ -88,8 +86,6 @@ const GallerySlider = () => {
             const isActive = index === activeIndex;
 
             return (
-
-
               <CarouselItem
                 key={index}
                 className="pl-2 md:pl-3 md:pr-4 basis-[88%] sm:basis-[72%] md:basis-[58%] lg:basis-[50%]"
@@ -101,9 +97,7 @@ const GallerySlider = () => {
                       : "scale-[0.92] opacity-100"
                   }`}
                 >
-                  
-                  <div className="w-full
-                   h-65 sm:h-82.5 md:h-95">
+                  <div className="w-full h-65 sm:h-82.5 md:h-95">
                     <Image
                       src={item.image}
                       alt="gallery"
@@ -114,40 +108,25 @@ const GallerySlider = () => {
                   </div>
 
                   {/* Text */}
-                  <div className="absolute bottom-6 left-6 z-10">
+                  {/* <div className="absolute bottom-6 left-6 z-10">
                     <h3 className="text-white text-xl md:text-2xl font-semibold">
                       {item.title}
                     </h3>
-                  </div>
-
+                  </div> */}
                 </div>
               </CarouselItem>
             );
           })}
         </CarouselContent>
 
-        <div className="sm:mt-8 mt-0 flex items-center justify-center gap-6">
-          
-          <CarouselPrevious className="static translate-y-0 bg-transparent border-none shadow-none hover:bg-transparent">
-            <Image
-              src="/images/arrow.webp"
-              alt="prev"
-              width={40}
-              height={40}
-              className="w-10 h-10 rotate-180"
-            />
+        <div className="sm:mt-8 mt-0 flex items-center justify-center gap-4">
+          <CarouselPrevious className="w-10 h-10 static translate-y-0 shadow-none border border-black group hover:bg-[#B81C15] hover:border-[#B81C15] transition-colors">
+            <ArrowLeft className="w-13 h-13 text-black group-hover:text-white transition-colors" />
           </CarouselPrevious>
 
-          <CarouselNext className="static translate-y-0 bg-transparent border-none shadow-none hover:bg-transparent">
-            <Image
-              src="/images/arrow.webp"
-              alt="next"
-              width={40}
-              height={40}
-              className="w-10 h-10"
-            />
-          </CarouselNext>
-
+          <CarouselPrevious className="w-10 h-10 static translate-y-0 shadow-none border border-black group hover:bg-[#B81C15] hover:border-[#B81C15] transition-colors">
+            <ArrowLeft className="w-13 h-13 text-black group-hover:text-white transition-colors rotate-180" />
+          </CarouselPrevious>
         </div>
       </Carousel>
     </section>

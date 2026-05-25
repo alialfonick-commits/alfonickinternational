@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AgencyCulture() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white pt-16 sm:pb-16 pb-12">
       <div className="max-w-430 mx-auto px-5">
         <div className="span:text-[#B81C15] text-center px-6 py-3 rounded-4xl w-fit m-auto bg-[#B81C15]/5 text-[#B81C15]">
           <span className="font-[inter]!"> OUR CULTURE </span>

@@ -66,9 +66,8 @@ export default function PlatformSlider() {
   }, [api]);
 
   return (
-    <section className="py-20 overflow-hidden">
-      <div className="max-w-380 mx-auto px-4 overflow-hidden">
-
+    <section className="sm:py-20 py-5 overflow-hidden">
+      <div className="max-w-380 mx-auto px-4 ">
         <div className="pb-5 xl:[&>h2]:text-[50px] lg:[&>h2]:text-[46px] sm:[&>h2]:text-[36px] [&>h2]:mt-4 [&>h2]:text-[30px] sm:[&>h2]:pt-0 [&>h2]:pt-5 [&>h2]:leading-[1.1] [&>h2>span]:text-[#B81C15] [&>h2>span]:italic text-center [&>span]:px-6 [&>span]:py-3 [&>span]:italic [&>span]:rounded-4xl [&>span]:bg-[#B81C15]/5 [&>span]:text-[#B81C15]">
           <span>Core Values</span>
 
@@ -78,7 +77,7 @@ export default function PlatformSlider() {
           </h2>
         </div>
 
-        <div className="overflow-hidden pl-4">
+        <div className="overflow-hidden md:px-5 px-0">
           <Carousel
             setApi={setApi}
             opts={{
@@ -97,11 +96,9 @@ export default function PlatformSlider() {
             basis-1/2
             sm:basis-1/3
             md:basis-1/4
-            lg:basis-1/5
-          "
-                >
-                  <Card className="xl:h-60 lg:h-50 md:h-35 h-30 rounded-[12px] border border-[#22222280] shadow-none bg-white">
-                    <CardContent className="flex items-center justify-center h-full">
+            lg:basis-1/5">
+                  <Card className="xl:h-60 lg:h-50 md:h-35 h-30 rounded-xl border border-[#22222280] shadow-0 ring-0 bg-white">
+                    <CardContent className="flex items-center justify-center h-full ">
                       <Image
                         src={item.logo}
                         alt={item.name}
@@ -117,7 +114,7 @@ export default function PlatformSlider() {
           </Carousel>
         </div>
 
-        <div className="flex justify-center items-center gap-[5px] mt-8">
+        <div className="flex justify-center items-center gap-1.25 mt-8">
           {platforms.map((_, index) => (
             <button
               key={index}

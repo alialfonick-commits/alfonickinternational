@@ -80,7 +80,7 @@ export default function FAQ() {
 
                 <div className="w-9 h-9 flex items-center justify-center p-3 rounded-[10px] bg-[#B81C15]">
                   <ArrowRight
-                    size={14}
+                    size={18}
                     strokeWidth={2.4}
                     className={`text-white text-sm transition-transform duration-300 ${openIndex === index ? "rotate-90" : ""}`}
                   />

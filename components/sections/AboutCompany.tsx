@@ -30,12 +30,11 @@ const AboutCompany = () => {
 
   return (
     <section>
-      <div className="container px-5 pt-20!">
+      <div className="max-w-430 m-auto px-5 sm:pt-22! pt-14!">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
           <div>
-            <div className="flex flex-col sm:flex-row items-start gap-4 pb-5">
-              <span className="px-6 py-3 rounded-full bg-[#B81C15]/5 text-[#B81C15] text-sm whitespace-nowrap italic">
+            <div className="flex flex-col sm:flex-row items-start gap-4 pb-5 [&>span]:text-base">
+              <span className="px-6 py-2  rounded-full bg-[#B81C15]/5 text-[#B81C15] text-sm whitespace-nowrap italic">
                 Who we are
               </span>
 
@@ -44,7 +43,7 @@ const AboutCompany = () => {
               </h2>
             </div>
 
-            <p className="text-[#555] xl:text-[22px] lg:text-[20px] sm:text-[18px] text-[17px] xl:leading-10 leading-6 font-[inter]!">
+            <p className="text-[#222] xl:text-[22px] lg:text-[20px] sm:text-[18px] text-[17px] xl:leading-10 leading-6 font-[inter]!">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown printer took Lorem Ipsum is
@@ -54,7 +53,7 @@ const AboutCompany = () => {
             </p>
           </div>
 
-          <div>
+          <div className="xl:pl-12.5 lg:pl:5 md:pl:0">
             <div className="flex flex-col gap-4">
               {services.map((item, index) => (
                 <div
@@ -63,21 +62,21 @@ const AboutCompany = () => {
                 >
                   <button
                     onClick={() => toggle(index)}
-                    className="w-full flex items-center justify-between px-4 py-5"
+                    className="w-full flex items-center justify-between pr-4 pl-1 md:py-5 py-4 cursor-pointer"
                   >
                     <div className="flex items-center">
                       <span className="text-[#222222] text-[16px] font-light min-w-11.25">
                         {String(index + 1).padStart(2, "0")}.
                       </span>
 
-                      <p className="text-[#222] text-[16px] md:text-[17px] lg:text-[18px] text-left">
+                      <p className="text-[#222] font-medium text-[16px] md:text-[17px] lg:text-[18px] text-left">
                         {item.question}
                       </p>
                     </div>
 
                     <div className="w-9 h-9 flex items-center justify-center rounded-[10px] bg-[#B81C15]">
                       <ArrowRight
-                        size={14}
+                        size={20}
                         strokeWidth={2.4}
                         className={`text-white text-sm transition-transform duration-300 ${
                           openIndex === index ? "rotate-90" : ""
@@ -93,8 +92,8 @@ const AboutCompany = () => {
                         : "max-h-0 opacity-0 pb-0"
                     }`}
                   >
-                    <div className="px-5 pl-16.25">
-                      <p className="text-[#555] text-[15px] leading-7">
+                    <div className="pr-5 pl-12.5 ">
+                      <p className="text-[#555] text-[15px] leading-7 ">
                         {item.answer}
                       </p>
                     </div>
@@ -103,7 +102,6 @@ const AboutCompany = () => {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

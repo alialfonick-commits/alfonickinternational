@@ -22,7 +22,7 @@ export default function CareersPage() {
         </div>
 
         <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 lg:col-span-5 bg-white border rounded-2xl p-6 relative shadow-md overflow-hidden">
+          <div className="col-span-12 lg:col-span-5 bg-white border border-[#e6e6e6] rounded-2xl p-6 relative shadow-md overflow-hidden">
             <div className="w-10 h-10 flex items-center justify-center bg-[#E31C1C1A] rounded-lg mb-10">
               <TrendingUp className="size-5 text-[#B81C15]" />
             </div>
@@ -46,7 +46,7 @@ export default function CareersPage() {
 
           <div className="col-span-12 lg:col-span-7">
             <div className="grid grid-cols-12 gap-6">
-              <div className="col-span-12 md:col-span-6 bg-white border rounded-2xl p-6 relative flex flex-col overflow-hidden">
+              <div className="col-span-12 md:col-span-6 bg-white border border-[#e6e6e6] rounded-2xl p-6 relative flex flex-col overflow-hidden">
                 <div className="w-10 h-10 flex items-center justify-center bg-[#E31C1C1A] rounded-lg mb-10">
                   <Lightbulb className="size-5 text-[#B81C15]" />
                 </div>
@@ -68,7 +68,7 @@ export default function CareersPage() {
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-[#E31C1C]" />
               </div>
 
-              <div className="col-span-12 md:col-span-6 bg-white border rounded-2xl p-6 relative flex flex-col overflow-hidden">
+              <div className="col-span-12 md:col-span-6 bg-white border border-[#e6e6e6] rounded-2xl p-6 relative flex flex-col overflow-hidden">
                 <div className="w-10 h-10 flex items-center justify-center bg-[#E31C1C1A] rounded-lg mb-10">
                   <Clock className="size-5 text-[#B81C15]" />
                 </div>
@@ -94,7 +94,7 @@ export default function CareersPage() {
 
           <div className="col-span-12 lg:col-span-7">
             <div className="grid grid-cols-12 gap-6">
-              <div className="col-span-12 md:col-span-6 bg-white border rounded-2xl p-6 relative flex flex-col overflow-hidden">
+              <div className="col-span-12 md:col-span-6 bg-white border border-[#e6e6e6] rounded-2xl p-6 relative flex flex-col overflow-hidden">
                 <div className="w-10 h-10 flex items-center justify-center bg-[#E31C1C1A] rounded-lg mb-10">
                   <Lightbulb className="size-5 text-[#B81C15]" />
                 </div>
@@ -116,7 +116,7 @@ export default function CareersPage() {
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-[#E31C1C]" />
               </div>
 
-              <div className="col-span-12 md:col-span-6 bg-white border rounded-2xl p-6 relative flex flex-col overflow-hidden">
+              <div className="col-span-12 md:col-span-6 bg-white border border-[#e6e6e6] rounded-2xl p-6 relative flex flex-col overflow-hidden">
                 <div className="w-10 h-10 flex items-center justify-center bg-[#E31C1C1A] rounded-lg mb-10">
                   <Clock className="size-5 text-[#B81C15]" />
                 </div>
@@ -139,7 +139,7 @@ export default function CareersPage() {
               </div>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-5 bg-white border relative rounded-2xl p-6 shadow-md overflow-hidden">
+          <div className="col-span-12 lg:col-span-5 bg-white border border-[#e6e6e6] relative rounded-2xl p-6 shadow-md overflow-hidden">
             <div className="w-10 h-10 flex items-center justify-center bg-[#E31C1C1A] rounded-lg mb-10">
               <TrendingUp className="size-5 text-[#B81C15]" />
             </div>

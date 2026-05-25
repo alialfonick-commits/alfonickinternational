@@ -2,6 +2,26 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+
+/* @import url(https://db.onlinewebfonts.com/c/aa4a0305ca8b9f59618acc4c461e514a?family=TrumpGothicPro); */
+
+
+.font-trump{
+  font-family: "TrumpGothicPro" !important;
+}
+
+.font-satoshi{
+ font-family: 'Satoshi', sans-serif !important;
+}
+
+.font-arial{
+ font-family: "Arial", "sans-serif" !important;
+}
+
+h1, h2, h3, h4{
+  font-weight: 500;
+}
+
 /* @custom-variant dark (&:is(.dark *));
 
 @theme inline {
