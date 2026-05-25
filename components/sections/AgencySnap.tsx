@@ -7,7 +7,7 @@ const AgencySnap = () => {
 
     <div className="max-w-371 mx-auto px-4 sm:pt-5 pt-10 pb-10">
       <div className="flex flex-col lg:flex-row items-start justify-between lg:gap-8 sm:gap-4 gap-2 pb-10">
-        <div className="flex flex-col sm:flex-row items-start gap-4 pb-5">
+        <div className="flex flex-col sm:flex-row items-center gap-4 pb-5">
           <span className="px-6 py-3 rounded-full bg-[#B81C15]/5 text-[#B81C15] text-sm whitespace-nowrap italic" style={{fontFamily: "Arial"}}>
             Who we are
           </span>

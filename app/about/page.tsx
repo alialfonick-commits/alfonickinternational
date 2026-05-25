@@ -28,8 +28,8 @@ const page = () => {
         <AboutCompany />
         <BrandMarquee />
         <Process />
-        <CoreValuesSection />
         <AboutWhyChoose />
+        <CoreValuesSection />
         <PlatformSlider />
         <AgencySnap />
         <FAQ />

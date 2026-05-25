@@ -66,7 +66,7 @@ export function ArticlesSection() {
           {articles.map((article) => (
             <article key={article.title} className="group">
               <Link href="#blogs" className="block">
-                <div className="relative aspect-[1.08/1] overflow-hidden rounded-xl bg-[#EFF0F0]">
+                <div className="relative aspect-[1.08/1] overflow-hidden bg-[#EFF0F0]">
                   <Image
                     src={article.image}
                     alt={article.title}
@@ -78,7 +78,7 @@ export function ArticlesSection() {
                   <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
                 </div>
 
-                <h3 className="font-archivo mt-6 max-w-[92%] text-[20px] font-medium leading-[1.25] tracking-[-0.03em] text-[#222222] transition-colors duration-300 group-hover:text-[#B81C15] sm:text-[22px]">
+                <h3 className="font-archivo mt-6 max-w-[92%] text-[20px] font-[300] leading-[1.25] tracking-[-0.03em] text-[#222222] transition-colors duration-300 group-hover:text-[#B81C15] sm:text-[22px]">
                   {article.title}
                 </h3>
 

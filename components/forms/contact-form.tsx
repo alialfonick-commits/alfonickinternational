@@ -54,7 +54,7 @@ export function ContactForm() {
       <div className="mt-6 flex items-center justify-center gap-3">
         <Button
           type="submit"
-          className="font-archivo group h-10 rounded-full bg-white px-6 text-[12px] font-semibold uppercase text-[#222222] hover:bg-[#F5D5D2]"
+          className="font-archivo group h-10 rounded-full bg-white px-6 text-[12px] font-semibold uppercase text-[#222222] hover:bg-[#F5D5D2] cursor-pointer"
         >
           <span className="size-1.5 rounded-full bg-[#222222]" />
           Send Message
@@ -63,7 +63,7 @@ export function ContactForm() {
         <Button
           type="button"
           size="icon"
-          className="size-11 rounded-full bg-white text-[#222222] hover:bg-[#F5D5D2] hover:text-[#B81C15]"
+          className="size-11 rounded-full bg-white text-[#222222] hover:bg-[#F5D5D2] hover:text-[#B81C15] cursor-pointer"
           aria-label="Open contact options"
         >
           <Menu size={19} />

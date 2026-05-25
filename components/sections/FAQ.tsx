@@ -52,7 +52,7 @@ export default function FAQ() {
   return (
 
     <main className="px-6 md:px-10 lg:px-20 sm:pt-16 pt-12 pb-22">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-250 mx-auto">
         <div className="pb-5 xl:[&>h2]:text-[50px] lg:[&>h2]:text-[46px] sm:[&>h2]:text-[36px] [&>h2]:mt-4 [&>h2]:text-[30px] sm:[&>h2]:pt-0 [&>h2]:pt-5 [&>h2]:leading-[1.1] [&>h2_span]:text-[#B81C15] [&>h2_span]:italic text-center [&>span]:px-6 [&>span]:py-3 [&>span]:italic [&>span]:rounded-4xl [&>span]:bg-[#B81C15]/5 [&>span]:text-[#B81C15]">
           <span className="" style={{fontFamily: "Arial"}}> Frequently Asked Questions </span>
           <h2>

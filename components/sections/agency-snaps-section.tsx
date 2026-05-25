@@ -94,7 +94,7 @@ export function AgencySnapsSection() {
                 alt={image.alt}
                 fill
                 sizes="(max-width: 640px) 320px, (max-width: 1024px) 520px, 720px"
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                className="object-cover cursor-pointer transition-transform duration-700 hover:scale-105"
               />
             </div>
           ))}

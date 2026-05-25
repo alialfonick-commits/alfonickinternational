@@ -58,7 +58,7 @@ export function Footer() {
       id="contact"
       className="bg-white px-5 py-4"
     >
-      <div className="relative overflow-hidden rounded-[18px] bg-[#090000] py-16 text-white px-16">
+      <div className="relative overflow-hidden rounded-[18px] bg-[#090000] pt-16 pb-8 text-white px-16">
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-70"
@@ -74,7 +74,7 @@ export function Footer() {
         <div className="relative z-10">
           {/* Contact form area */}
           <div className="mx-auto max-w-220 text-center">
-            <span className="font-archivo inline-flex rounded-full border border-white/25 bg-black/10 px-10 py-2 text-[11px] font-medium text-white backdrop-blur-md">
+            <span className="font-archivo inline-flex rounded-full border border-[#FFFFFF66] bg-[#B81C150D] px-10 py-2 text-[16px] font-medium text-white backdrop-blur-[20px]">
               Contact Us
             </span>
 
@@ -99,16 +99,16 @@ export function Footer() {
                   alt="Alfonick International"
                   width={190}
                   height={60}
-                  className="h-auto w-[223px]"
+                  className="h-auto w-55.75"
                 />
               </Link>
 
-              <p className="mt-6 max-w-67.5 font-[Arial] text-[15px] leading-[1.65] text-white">
+              <p className="mt-6 font-[Arial] text-[18px] max-w-97.5 leading-[1.65] text-white">
                 Lorem ipsum dolor sit amet, consectetur consectetur adipiscing
                 consect adipiscing.
               </p>
 
-              <p className="font-archivo mt-6 text-[11px] font-semibold tracking-[0.22em] text-white">
+              <p className="font-archivo mt-6 text-[16px] font-semibold tracking-[2px] pb-3 text-[#F9F9F9]">
                 Social Media
               </p>
 
@@ -132,7 +132,7 @@ export function Footer() {
 
             {/* Company */}
             <div>
-              <h3 className="font-archivo text-[20px] font-bold text-white">
+              <h3 className="font-archivo text-[22px] font-bold text-white">
                 Company
               </h3>
 
@@ -141,7 +141,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-[Arial] text-[16px] text-white transition-colors duration-300 hover:text-[#D93433]"
+                      className="font-[Arial] text-[18px] text-white tracking-[2%] transition-colors duration-300 hover:text-[#D93433]"
                     >
                       {link.name}
                     </Link>
@@ -152,7 +152,7 @@ export function Footer() {
 
             {/* Web Solution */}
             <div>
-              <h3 className="font-archivo text-[20px] font-bold text-white">
+              <h3 className="font-archivo text-[22px] font-bold text-white">
                 Web Solution
               </h3>
 
@@ -161,7 +161,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-[Arial] text-[16px] text-white transition-colors duration-300 hover:text-[#D93433]"
+                      className="font-[Arial] text-[18px] text-white transition-colors duration-300 hover:text-[#D93433]"
                     >
                       {link.name}
                     </Link>
@@ -172,7 +172,7 @@ export function Footer() {
 
             {/* Contact */}
             <div>
-              <h3 className="font-archivo text-[20px] font-bold text-white">
+              <h3 className="font-archivo text-[22px] font-bold text-white">
                 Contact
               </h3>
 
@@ -192,12 +192,12 @@ export function Footer() {
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="font-[Arial] text-[16px] leading-[1.45] text-white hover:text-[#D93433] transition-colors duration-200"
+                          className="font-[Arial] text-[18px] leading-[1.45] text-white hover:text-[#D93433] transition-colors duration-200"
                         >
                           {item.text}
                         </a>
                       ) : (
-                        <span className="font-[Arial] text-[16px] leading-[1.45] text-white">
+                        <span className="font-[Arial] text-[18px] leading-[1.45] text-white">
                           {item.text}
                         </span>
                       )}

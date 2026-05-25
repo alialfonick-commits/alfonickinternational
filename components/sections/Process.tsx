@@ -14,7 +14,7 @@ const Process = () => {
 
           <div className="max-w-3xl m-auto flex flex-col gap-5">
             <div className="flex flex-col sm:flex-row md:gap-14 gap-4 sm:mb-44 mb-2 relative before:hidden sm:before:block before:content-[''] before:absolute before:left-16 before:top-28 sm:before:h-full before:h-[90%] before:w-[2.8px] before:bg-linear-to-b before:from-white before:to-[#e4837f] px-4">
-              <div className="text-[#B81C15] text-center sm:text-left lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
+              <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-light lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
                 <strong style={{ fontFamily: "Unbounded" }}>01</strong>
               </div>
 
@@ -33,7 +33,7 @@ const Process = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row md:gap-14 gap-4 sm:mb-44 mb-2 relative before:hidden sm:before:block before:content-[''] before:absolute before:left-17 before:top-28 before:h-full before:w-[2.8px] before:bg-linear-to-b before:from-white before:to-[#e4837f] px-4">
-              <div className="text-[#B81C15] text-center sm:text-left lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
+              <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-light lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
                 <strong style={{ fontFamily: "Unbounded" }} >02</strong>
               </div>
 
@@ -52,7 +52,7 @@ const Process = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row md:gap-14 gap-4 sm:mb-44 mb-2 relative before:hidden sm:before:block before:content-[''] before:absolute before:left-17 before:top-28 before:h-full before:w-[2.8px] before:bg-linear-to-b before:from-white before:to-[#e4837f] px-4">
-              <div className="text-[#B81C15] text-center sm:text-left lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
+              <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-light lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
                 <strong style={{ fontFamily: "Unbounded" }}>03</strong>
               </div>
 
@@ -72,7 +72,7 @@ const Process = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row md:gap-14 gap-4 relative px-4">
-              <div className="text-[#B81C15] text-center sm:text-left lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
+              <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-light lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
                 <strong style={{ fontFamily: "Unbounded" }}>04</strong>
               </div>
 

@@ -95,13 +95,13 @@ export function CoreValuesSection() {
         <div className="relative flex items-center justify-center">
           <h2
             aria-label="Values"
-            className="font-archivo pointer-events-none select-none text-center text-[clamp(5.4rem,22vw,21rem)] font-black uppercase leading-none tracking-[-0.08em] text-[#222222]"
+            className="font-archivo pointer-events-none select-none text-center text-[clamp(5.4rem,22vw,21rem)] font-extrabold! uppercase leading-none tracking-[10%] text-[#222222]"
           >
             VALUES
           </h2>
 
           <div
-            className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-[#B81C15] bg-white/45 backdrop-blur-md"
+            className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-[#B81C15] bg-[#FFFFFF36] backdrop-blur-[20px]"
             style={{
               width: "clamp(20rem, 100%, 4rem)",
               height: "clamp(20rem, 100%, 4rem)",

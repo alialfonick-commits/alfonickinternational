@@ -27,7 +27,7 @@ export default function BrandMarquee() {
         </h2>
       </div>
 
-      <div className="max-w-397.5 mx-auto px-5 space-y-6 pt-[20px]">
+      <div className="max-w-390 mx-auto px-5 space-y-6 pt-[20px]">
         <div className="overflow-hidden">
           <div className="flex gap-3 animate-marquee whitespace-nowrap">
             {[...logos, ...logos].map((item, i) => (
@@ -38,7 +38,7 @@ export default function BrandMarquee() {
                     alt="brand"
                     width={100}
                     height={30}
-                    className="object-contain opacity-100 hover:opacity-100 transition"
+                    className="object-contain opacity-100 hover:invert-[1] transition"
                   />
                 </div>
               </Link>
@@ -56,7 +56,7 @@ export default function BrandMarquee() {
                     alt="brand"
                     width={100}
                     height={30}
-                    className="object-contain opacity-100 hover:opacity-100 transition"
+                    className="object-contain opacity-100 hover:invert-[1] transition"
                   />
                 </div>
               </Link>

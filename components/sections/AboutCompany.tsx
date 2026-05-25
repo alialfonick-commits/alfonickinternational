@@ -33,8 +33,8 @@ const AboutCompany = () => {
       <div className="max-w-430 m-auto px-5 sm:pt-22! pt-14!">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <div className="flex flex-col sm:flex-row items-start gap-4 pb-5 [&>span]:text-base">
-              <span className="px-6 py-2  rounded-full bg-[#B81C15]/5 text-[#B81C15] text-sm whitespace-nowrap italic">
+            <div className="flex flex-col sm:flex-row items-center gap-4 pb-5 [&>span]:text-base">
+              <span className="px-6 py-2  rounded-full bg-[#B81C150D] text-[#B81C15] backdrop-blur-[20px] border border-[#FFFFFF26] text-sm whitespace-nowrap italic">
                 Who we are
               </span>
 
@@ -58,7 +58,7 @@ const AboutCompany = () => {
               {services.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-[#eeeeee] border border-[#0D0D0D1A] rounded-[30px] overflow-hidden transition-all duration-300"
+                  className="bg-[#eeeeee] border border-[#22222226] rounded-[30px] overflow-hidden transition-all duration-300"
                 >
                   <button
                     onClick={() => toggle(index)}
