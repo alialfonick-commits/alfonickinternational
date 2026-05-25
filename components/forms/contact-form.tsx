@@ -23,7 +23,7 @@ const fields = [
   },
   {
     label: "Contact (With Country Code)",
-    placeholder: "(+91) ____________",
+    placeholder: "(+91) _ _ _ _ _ _ _ _ _ _ _ _",
     name: "phone",
     type: "tel",
   },
@@ -31,11 +31,11 @@ const fields = [
 
 export function ContactForm() {
   return (
-    <form className="mx-auto w-full max-w-[720px]">
-      <div className="rounded-[10px] bg-white/25 px-5 py-6 backdrop-blur-md sm:px-7 lg:px-9">
+    <form className="mx-auto w-full max-w-227.25">
+      <div className="rounded-[10px] bg-[#FFFFFF40] px-5 py-6  sm:px-7 lg:px-9">
         <div className="grid gap-x-6 gap-y-5 sm:grid-cols-2">
           {fields.map((field) => (
-            <label key={field.name} className="block">
+            <label key={field.name} className="block text-start">
               <span className="font-archivo mb-2 block text-[11px] font-medium uppercase tracking-[0.08em] text-white">
                 {field.label}
               </span>
@@ -54,14 +54,10 @@ export function ContactForm() {
       <div className="mt-6 flex items-center justify-center gap-3">
         <Button
           type="submit"
-          className="font-archivo group h-11 rounded-full bg-white px-5 text-[12px] font-semibold uppercase text-[#222222] hover:bg-[#F5D5D2]"
+          className="font-archivo group h-10 rounded-full bg-white px-6 text-[12px] font-semibold uppercase text-[#222222] hover:bg-[#F5D5D2]"
         >
-          <span className="mr-2 size-1.5 rounded-full bg-[#222222]" />
+          <span className="size-1.5 rounded-full bg-[#222222]" />
           Send Message
-          <ArrowRight
-            size={16}
-            className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-          />
         </Button>
 
         <Button

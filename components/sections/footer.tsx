@@ -56,18 +56,18 @@ export function Footer() {
   return (
     <footer
       id="contact"
-      className="bg-white px-4 py-8 sm:px-6 lg:px-8 xl:px-10"
+      className="bg-white px-5 py-4"
     >
-      <div className="relative mx-auto max-w-420 overflow-hidden rounded-[18px] bg-[#090000] px-5 py-14 text-white sm:px-8 sm:py-16 lg:px-16 xl:px-20">
+      <div className="relative overflow-hidden rounded-[18px] bg-[#090000] py-16 text-white px-16">
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-70"
           style={{ backgroundImage: "url('/images/hero-bg-img.png')" }}
         />
 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(184,28,21,0.38),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.65),rgba(80,0,0,0.82)_45%,rgba(110,10,5,0.78))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_67%,#b81c1585,#0000_50%),linear-gradient(#0000,#500000_45%,#0000009c)]" />
 
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 text-center font-archivo text-[17vw] font-bold leading-none tracking-tight text-[#B81C15]/12">
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 text-center font-archivo text-[18vw] font-bold leading-none tracking-tight text-[#B81C15]/12">
           ALFONICK
         </div>
 
@@ -95,11 +95,11 @@ export function Footer() {
             <div>
               <Link href="/" className="inline-flex">
                 <Image
-                  src="/images/alfonick-logo.png"
+                  src="/images/alfonick.webp"
                   alt="Alfonick International"
                   width={190}
                   height={60}
-                  className="h-auto w-37.5"
+                  className="h-auto w-[223px]"
                 />
               </Link>
 

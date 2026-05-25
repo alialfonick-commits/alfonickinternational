@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 const snapImages = [
   {
@@ -31,7 +30,7 @@ export function AgencySnapsSection() {
   return (
     <section
       id="agency-snaps"
-      className="overflow-hidden bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-10 xl:px-12 xl:py-24"
+      className="overflow-hidden bg-white px-0 py-16"
     >
       <style>
         {`
@@ -68,7 +67,7 @@ export function AgencySnapsSection() {
               </p>
             </div>
 
-            <p className="mt-10 max-w-[330px] font-[Arial] text-base leading-[1.65] text-[#22222299] sm:text-lg">
+            <p className="mt-10 max-w-87.5 font-[Arial] text-base leading-[1.65] text-[#22222299]">
               Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
               Industry. Lorem Ipsum Has Been The Industry&apos;s Standard Dummy
               Text Ever Since The 1500s,
@@ -77,7 +76,7 @@ export function AgencySnapsSection() {
 
           <h2 className="font-archivo text-[42px] font-medium leading-[1.06] tracking-[-0.055em] text-[#222222] sm:text-[58px] lg:text-[72px] xl:text-[82px]">
             Our Agency{" "}
-            <span className="font-medium italic text-[#B81C15]">Snaps</span>
+            <span className="italic text-[#B81C15]">Snaps</span>
           </h2>
         </div>
       </div>
@@ -106,14 +105,9 @@ export function AgencySnapsSection() {
       <div className="mt-10 flex justify-center sm:mt-12">
         <Link
           href="/gallery"
-          className="font-archivo group inline-flex items-center gap-4 rounded-full border border-[#C1C1C2] bg-white py-2.5 pl-2.5 pr-8 text-lg font-medium text-[#222222] transition-all duration-300 hover:border-[#B81C15] hover:bg-[#F5D5D2]"
+          className="headerBtn group relative inline-block border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pr-15 active:pl-5 text-black hover:text-white hover:border-[#b81c15] transition-all duration-300 mt-5 hover:bg-[#b81c15]"
         >
-          <span className="grid size-10 place-items-center rounded-full bg-[#B81C15] text-white transition-all duration-300 group-hover:scale-105 group-hover:bg-[#D93433]">
-            <ArrowRight
-              size={21}
-              strokeWidth={2.2}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
+          <span className="inline-block transition-all duration-300 lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px]">
           </span>
           View All
         </Link>

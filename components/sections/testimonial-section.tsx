@@ -13,9 +13,9 @@ const testimonials = [
     name: "Helena Wound",
     role: "Business Owner",
     images: [
-      "/images/agency-card-02.png",
-      "/images/section-img.png",
-      "/images/snap-gallery1.png",
+      "/images/personimage1.webp",
+      "/images/personimage2.webp",
+      "/images/personimage3.webp",
     ],
   },
   {
@@ -24,9 +24,9 @@ const testimonials = [
     name: "Sarah Mitchell",
     role: "Founder",
     images: [
-      "/images/section-img.png",
-      "/images/snap-gallery2.png",
-      "/images/agency-card-02.png",
+      "/images/personimage3.webp",
+      "/images/personimage2.webp",
+      "/images/personimage1.webp",
     ],
   },
   {
@@ -35,9 +35,9 @@ const testimonials = [
     name: "Daniel Brooks",
     role: "Marketing Director",
     images: [
-      "/images/snap-gallery3.png",
-      "/images/agency-card-02.png",
-      "/images/section-img.png",
+      "/images/personimage2.webp",
+      "/images/personimage1.webp",
+      "/images/personimage3.webp",
     ],
   },
 ];
@@ -181,7 +181,7 @@ export function TestimonialSection() {
                     className="mx-auto mb-4 text-[#D93433] lg:mx-0 sm:size-[68px] xl:size-19"
                   />
 
-                  <p className="mx-auto max-w-245 font-[Arial] text-[21px] leading-[1.42] text-white sm:text-[25px] md:text-[28px] lg:mx-0 lg:text-[30px] xl:text-[34px] 2xl:text-[36px]">
+                  <p className="mx-auto max-w-245 font-[Arial] text-[21px] leading-[1.2] text-white sm:text-[25px] md:text-[28px] lg:mx-0">
                     {item.quote}
                   </p>
 
@@ -210,7 +210,7 @@ export function TestimonialSection() {
                   type="button"
                   onClick={() => goToSlide(index)}
                   aria-label={`Go to testimonial ${index + 1}`}
-                  className={`relative overflow-hidden rounded-full transition-all duration-300 ${
+                  className={`relative overflow-hidden rounded-full transition-all cursor-pointer duration-300 ${
                     isActive
                       ? "h-11 w-3 bg-white/30"
                       : "size-3 bg-white hover:bg-[#D93433]"

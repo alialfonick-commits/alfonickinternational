@@ -47,8 +47,8 @@ export function AboutAgencyVideoSection() {
         </div>
 
         {/* Video container */}
-        <div className="relative mx-auto max-w-355">
-          <div className="absolute left-1/2 top-1/2 h-[55%] w-screen -translate-x-1/2 -translate-y-1/2 bg-[#EFF0F0]" />
+        <div className="relative mx-auto max-w-375 cursor-pointer">
+          <div className="absolute left-1/2 -bottom-1/2 h-[70%] w-screen -translate-x-1/2 -translate-y-1/2 bg-[#EEEEEE]" />
 
           <button
             type="button"
@@ -65,7 +65,7 @@ export function AboutAgencyVideoSection() {
             <video
               ref={videoRef}
               src={hasVideo ? videoSrc : undefined}
-              poster="/images/video-cover.png"
+              poster="/images/video-cover.webp"
               className="aspect-[16/7.6] w-full object-cover transition-transform duration-700 group-hover:scale-[1.015] max-lg:aspect-video max-sm:aspect-4/3"
               muted
               loop
@@ -76,11 +76,11 @@ export function AboutAgencyVideoSection() {
             />
 
             {/* Soft overlay */}
-            <div className="absolute inset-0 bg-black/10 transition-colors duration-300 group-hover:bg-black/5" />
+            <div className="absolute inset-0 bg-black/10 transition-colors duration-300 group-hover:bg-black/5 cursor-pointer" />
 
             {/* Play / Pause button */}
-            <div className="absolute left-1/2 top-1/2 grid size-24 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/85 bg-white/10 text-white backdrop-blur-[2px] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#B81C15]/80 sm:size-32">
-              <div className="grid size-16 place-items-center rounded-full border border-white/70 sm:size-24">
+            <div className="absolute left-1/2 top-1/2 grid size-24 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/85 bg-white/10 text-white backdrop-blur-[2px] transition-all duration-300 group-hover:scale-105 sm:size-32 cursor-pointer">
+              <div className="grid size-16 place-items-center sm:size-24">
                 {isPlaying ? (
                   <Pause
                     size={34}

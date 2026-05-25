@@ -39,11 +39,15 @@ export function SiteHeader() {
 
   return (
     <header
-      className="fixed left-0 top-0 z-50 w-full px-4 pt-5 sm:px-6 sm:pt-7 lg:px-14 lg:pt-9 xl:px-14.5"
-      style={{
-        transform: `translateY(${headerY}px)`,
-      }}
-    >
+    className={`fixed left-0 top-0 z-50 w-full px-4 pt-5 transition-all duration-300 sm:px-6 sm:pt-7 lg:px-14 lg:pt-9 xl:px-14.5 ${
+      scrollProgress > 0.05
+        ? "bg-[#22222245] backdrop-blur-[20px] pt-5! pb-3!"
+        : "bg-transparent"
+    }`}
+    style={{
+      transform: `translateY(${headerY}px)`,
+    }}
+  >
       <div className="mx-auto flex max-w-420 items-center justify-between">
         {/* Logo */}
         <Link

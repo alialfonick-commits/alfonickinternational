@@ -72,7 +72,7 @@ export function AgencyIntroSection() {
               </p>
             </div>
 
-            <h2 className="font-archivo max-w-190 text-[42px] font-semibold leading-[1.1] tracking-[-0.055em] text-black sm:text-[58px] md:text-[70px] xl:text-[78px]">
+            <h2 className="font-archivo max-w-190 text-[42px] font-[900] leading-[1.1] tracking-[-0.055em] text-black sm:text-[58px] md:text-[70px] xl:text-[78px]">
               We are <span className="text-[#B81C15]">CREATIVE</span>
               <br />
               Digital Marketing
