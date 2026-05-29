@@ -1,4 +1,4 @@
-import { ArrowRight, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -52,12 +52,37 @@ export function ContactForm() {
       </div>
 
       <div className="mt-6 flex items-center justify-center gap-3">
-        <Button
+        {/* <Button
           type="submit"
           className="font-archivo group h-10 rounded-full bg-white px-6 text-[12px] font-semibold uppercase text-[#222222] hover:bg-[#F5D5D2] cursor-pointer"
         >
           <span className="size-1.5 rounded-full bg-[#222222]" />
           Send Message
+          <ArrowRight
+            size={16}
+            className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+          />
+        </Button> */}
+
+        <Button className="font-archivo group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-full bg-white px-6 text-[11px] font-semibold uppercase tracking-[-0.01em] text-[#B81C15] transition-all duration-300 sm:min-h-12.5 sm:px-7 pl-11.25! hover:text-white! hover:bg-white "
+        >
+          {/* expanding white bg */}
+          <span className="absolute left-6 size-2 rounded-full bg-[#B81C15] transition-all duration-500 ease-out group-hover:left-0 group-hover:h-full group-hover:w-full" />
+
+          {/* text */}
+          <span className="relative z-10">Send Message</span>
+
+          {/* icon area */}
+          <div className="absolute z-10 left-6 right-auto group-hover:left-6 transition-all duration-300 top-0 bottom-0 m-auto w-fit h-fit">
+            {/* arrow after hover */}
+            <img
+              src="images/red-arrow.webp"
+              alt="Arrow Icon"
+              width={16}
+              height={16}
+              className="size-4 scale-50 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 -rotate-140 brightness-0 invert"
+            />
+          </div>
         </Button>
 
         <Button

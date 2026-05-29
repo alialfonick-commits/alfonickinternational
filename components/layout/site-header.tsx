@@ -90,7 +90,7 @@ export function SiteHeader() {
 
 
         <Link
-          href="#" className="headerBtn group border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 text-white transition-all duration-300">
+          href="#" className="headerBtn group border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pl-3 active:pr-12 text-white transition-all duration-300">
           <span className="inline-block transition-all duration-300 lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px]">
             Book A Demo
           </span>

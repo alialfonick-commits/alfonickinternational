@@ -83,30 +83,31 @@ function FeatureItem({
 }) {
   return (
     <article
-      className={`grid items-start gap-5 ${
+      className={`grid items-center lg:gap-9 gap-2 ${
         reverse
           ? "text-left sm:grid-cols-[1fr_auto] lg:text-right"
           : "text-left sm:grid-cols-[auto_1fr]"
       }`}
     >
       {!reverse && (
-        <span className="font-archivo text-[56px] font-semibold leading-none tracking-[-0.07em] text-[#222222] sm:text-[66px] lg:text-[74px]">
+        <span className="font-archivo xl:text-[56px] lg:text-[48px] md:text-[40px] text-[32px] font-semibold leading-none tracking-[-0.07em] text-[#222222] sm:text-[66px]">
           {item.number}
         </span>
       )}
 
-      <div>
-        <h3 className="font-archivo text-[24px] font-bold uppercase tracking-[0.08em] text-[#222222] sm:text-[28px]">
+      {/* lg:ml-auto right items ke content ko push krne k liye lg:text-right k sath wrap kia h */}
+      <div className={reverse ? "lg:ml-auto flex flex-col lg:items-end" : ""}>
+        <h3 className="font-archivo text-[24px] font-bold! uppercase tracking-[0.08em] text-[#222222] sm:text-[24px] leading-[1.3]">
           {item.title}
         </h3>
 
-        <p className="mt-5 max-w-90 font-[Arial] text-[16px] leading-[1.55] text-[#222222]/85 sm:text-[17px]">
+        <p className="mt-5 max-w-90 font-[Arial] text-[16px] leading-[1.4] text-[#222222]/85 sm:text-[17px]">
           {item.description}
         </p>
       </div>
 
       {reverse && (
-        <span className="font-archivo text-[56px] font-semibold leading-none tracking-[-0.07em] text-[#222222] sm:text-[66px] lg:text-[74px]">
+        <span className="font-archivo xl:text-[56px] lg:text-[48px] md:text-[40px] text-[32px] font-semibold leading-none tracking-[-0.07em] text-[#222222] sm:text-[66px]">
           {item.number}
         </span>
       )}
@@ -122,9 +123,7 @@ function ImageColumn({
   direction?: "up" | "down";
 }) {
   const animationClass =
-    direction === "up"
-      ? "alfonick-slider-up"
-      : "alfonick-slider-down";
+    direction === "up" ? "alfonick-slider-up" : "alfonick-slider-down";
 
   return (
     <div className="relative h-155 overflow-hidden rounded-[18px]">
@@ -134,7 +133,7 @@ function ImageColumn({
             {images.map((image, index) => (
               <div
                 key={`${image}-${group}-${index}`}
-                className="relative h-45 overflow-hidden rounded-2xl bg-[#EFF0F0] sm:h-52.5"
+                className="relative h-45 overflow-hidden rounded-2xl bg-[#EFF0F0] sm:h-80"
               >
                 <Image
                   src={image}

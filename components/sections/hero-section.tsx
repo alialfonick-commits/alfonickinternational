@@ -146,8 +146,8 @@ export function HeroSection() {
                 </Link> */}
 
                 <Link
-                  href="#contact"
-                  className="font-archivo group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-full bg-[#B81C15] px-6 text-[12px] font-semibold uppercase tracking-[-0.01em] text-white transition-all duration-300 sm:min-h-12.5 sm:px-7 pr-11.25! hover:text-[#B81C15]"
+                  href="#"
+                  className="font-archivo group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-full bg-[#B81C15] px-6 text-[11px] font-semibold uppercase tracking-[-0.01em] text-white transition-all duration-300 sm:min-h-12.5 sm:px-7 pr-11.25! hover:text-[#B81C15]"
                 >
                   {/* expanding white bg */}
                   <span className="absolute right-6 size-2 rounded-full bg-white transition-all duration-500 ease-out group-hover:right-0 group-hover:h-full group-hover:w-full" />
@@ -167,31 +167,41 @@ export function HeroSection() {
                       alt="Arrow Icon"
                       width={16}
                       height={16}
-                      className="size-4 scale-50 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
+                      className="size-4 scale-50 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 -rotate-40"
                     />
                   </div>
                 </Link>
 
-                <Link href="#" className="font-archivo group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-white px-6 text-[12px] font-semibold uppercase tracking-[-0.01em] text-[#B81C15] transition-all duration-300 sm:min-h-12.5 sm:px-7"
+                <Link
+                  href="#"
+                  className="font-archivo group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-full bg-white px-6 text-[11px] font-semibold uppercase tracking-[-0.01em] text-[#B81C15] transition-all duration-300 sm:min-h-12.5 sm:px-7 pr-11.25! hover:text-white! hover:bg-white "
                 >
-                  Get Free Quote
+                  {/* expanding white bg */}
+                  <span className="absolute right-6 size-2 rounded-full bg-[#B81C15] transition-all duration-500 ease-out group-hover:right-0 group-hover:h-full group-hover:w-full" />
+
+                  {/* text */}
+                  <span className="relative z-10">
+                    Get Free Quote
+                  </span>
+
+                  {/* icon area */}
+                  <div className="absolute z-10 left-0 -right-25 group-hover:-right-28 transition-all duration-300 top-0 bottom-0 m-auto w-fit h-fit">
 
 
-                  <div className="relative flex size-2 items-center justify-center">
-
-
-                    <span className="absolute size-2 rounded-full bg-[#B81C15] transition-all duration-300 group-hover:scale-0 group-hover:opacity-0" />
-
-
+                    {/* arrow after hover */}
                     <img
                       src="images/red-arrow.webp"
                       alt="Arrow Icon"
-                      width={16} height={16}
-                      className="absolute max-w-none size-4 opacity-0 scale-50 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-100 group-hover:opacity-100"
+                      width={16}
+                      height={16}
+                      className="size-4 scale-50 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 -rotate-40 brightness-0 invert"
                     />
-
                   </div>
                 </Link>
+
+
+
+
 
 
               </div>
