@@ -24,7 +24,7 @@ export default function AboutWhyChoose() {
         </div>
 
         <div>
-          <h3 className="text-[22px] md:text-[28px] lg:text-[32px] 2xl:text-[40px] font-semibold text-[#222] mb-2 lg:mb-4 leading-snug">
+          <h3 className="text-[22px] md:text-[28px] lg:text-[32px] 2xl:text-[40px] font-normal! text-[#222] mb-2 lg:mb-4 leading-snug">
             WHY BUSINESSES TRUST US TO DELIVER EXCELLENCE
           </h3>
 
@@ -57,7 +57,7 @@ export default function AboutWhyChoose() {
                 height={18}
                 className="lg:mt-1.25 mt-0"
               />
-              Need better digital marketing strategies
+              Struggling to communicate your brand's message
             </li>
 
             <li className="flex items-center mb-2 gap-3">
@@ -68,7 +68,7 @@ export default function AboutWhyChoose() {
                 height={18}
                 className="lg:mt-1.25 mt-0"
               />
-              Looking to grow your online presence
+              Struggling to communicate your brand's message
             </li>
 
             <li className="flex items-center mb-2 gap-3">
@@ -79,12 +79,26 @@ export default function AboutWhyChoose() {
                 height={18}
                 className="lg:mt-1.25 mt-0"
               />
-              Want creative branding solutions
+              Struggling to communicate your brand's message
             </li>
           </ul>
 
-          <Link href="#"  className="relative rounded-full bg-black hover:bg-[#b81c15] text-white py-3 pr-8 pl-12 uppercase cursor-pointer before:content-[''] before:absolute before:left-7 before:top-1/2 before:-translate-y-1/2 before:w-2 before:h-2 before:bg-white before:rounded-full mt-6 block w-fit">
-            Contact Us
+          <Link
+            href="#"
+            className="mt-3 font-archivo group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-full bg-black px-6 text-[16px] font-semibold uppercase tracking-[-0.01em] text-white transition-all duration-300 sm:min-h-12.5 sm:px-7 pl-11.25! hover:text-black"
+          >
+            {/* expanding white bg */}
+            <span className="absolute left-6 size-2 rounded-full bg-white transition-all duration-500 ease-out group-hover:left-0 group-hover:h-full group-hover:w-full" />
+
+            {/* text */}
+            <span className="relative z-10">
+              Contact Us
+            </span>
+
+            {/* icon area */}
+            <div className="absolute z-10 right-0 -left-25 group-hover:-left-38.5 transition-all duration-300 top-0 bottom-0 m-auto w-fit h-fit">
+
+            </div>
           </Link>
         </div>
       </div>

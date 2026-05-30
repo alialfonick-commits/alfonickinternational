@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-
 import { Archivo, Inter } from "next/font/google";
 
 import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 const archivo = Archivo({
@@ -22,23 +22,28 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className={`${archivo.variable} ${inter.variable}`}>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Unbounded:wght@200..900&display=swap"
-      rel="stylesheet" />
-  </head>
+        <link
+          href="https://db.onlinewebfonts.com/c/aa4a0305ca8b9f59618acc4c461e514a?family=TrumpGothicPro"
+          rel="stylesheet"
+        />
+      </head>
 
-  <body className="min-h-screen flex flex-col">
-    {children}
-  </body>
-</html>
+      <body className={`${archivo.className} min-h-screen flex flex-col`}>
+        {children}
+      </body>
+    </html>
   );
 }

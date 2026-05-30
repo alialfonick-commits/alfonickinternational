@@ -116,6 +116,9 @@ export function TestimonialSection() {
             })}
           </div>
 
+
+          {/* Text vertical slider */}
+          <div className="relative overflow-hidden text-center text-white min-h-[430px] md:min-h-[390px] lg:min-h-[340px] lg:text-left xl:min-h-[350px]">
           {/* Text section */}
           <div className="relative overflow-hidden text-center text-white lg:text-left lg:h-full h-92.5">
             {testimonials.map((item, index) => {

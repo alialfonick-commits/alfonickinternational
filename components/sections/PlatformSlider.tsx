@@ -68,16 +68,15 @@ export default function PlatformSlider() {
   return (
     <section className="sm:py-20 py-5 overflow-hidden">
       <div className="max-w-380 mx-auto px-4 ">
-        <div className="pb-5 xl:[&>h2]:text-[50px] lg:[&>h2]:text-[46px] sm:[&>h2]:text-[36px] [&>h2]:mt-4 [&>h2]:text-[30px] sm:[&>h2]:pt-0 [&>h2]:pt-5 [&>h2]:leading-[1.1] [&>h2>span]:text-[#B81C15] [&>h2>span]:italic text-center [&>span]:px-6 [&>span]:py-3 [&>span]:italic [&>span]:rounded-4xl [&>span]:bg-[#B81C15]/5 [&>span]:text-[#B81C15]">
+        <div className="pb-5 xl:[&>h2]:text-[50px] lg:[&>h2]:text-[46px] sm:[&>h2]:text-[36px] [&>h2]:mt-4 [&>h2]:text-[30px] sm:[&>h2]:pt-0 [&>h2]:pt-5 [&>h2]:leading-[1.1] [&>h2>span]:text-[#B81C15] [&>h2>span]:italic text-center [&>span]:px-6 [&>span]:py-3 [&>span]:font-bold [&>span]:italic [&>span]:rounded-4xl [&>span]:bg-[#B81C15]/5 [&>span]:text-[#B81C15]">
           <span>Core Values</span>
 
           <h2>
-            Platform We
-            <span> Use</span>
+            Platform <span> We Use</span>
           </h2>
         </div>
 
-        <div className="overflow-hidden md:px-5 px-0">
+        <div className="overflow-hidden md:px-5 px-0 pt-4">
           <Carousel
             setApi={setApi}
             opts={{
@@ -87,7 +86,7 @@ export default function PlatformSlider() {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-3 flex items-stretch">
+            <CarouselContent className="-ml-3 flex items-stretch cursor-grab active:cursor-grabbing">
               {platforms.map((item, index) => (
                 <CarouselItem
                   key={index}
@@ -120,7 +119,7 @@ export default function PlatformSlider() {
               key={index}
               onClick={() => api?.scrollTo(index)}
               className={`
-        w-4 h-4 rounded-full border-2
+        w-4 h-4 rounded-full cursor-pointer border-2
         flex items-center justify-center
         transition-all duration-300
         ${current === index ? "border-[#B81C15]" : "border-transparent"}
@@ -129,11 +128,10 @@ export default function PlatformSlider() {
               <span
                 className={`
           rounded-full transition-all duration-300
-          ${
-            current === index
-              ? "w-2 h-2 bg-[#B81C15]"
-              : "w-2.5 h-2.5 bg-[#1E1E1E]"
-          }
+          ${current === index
+                    ? "w-2 h-2 bg-[#B81C15]"
+                    : "w-2.5 h-2.5 bg-[#1E1E1E]"
+                  }
         `}
               />
             </button>

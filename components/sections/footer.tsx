@@ -63,7 +63,7 @@ export function Footer() {
       id="contact"
       className="bg-white px-5 py-4"
     >
-      <div className="relative overflow-hidden rounded-[18px] bg-[#090000] pt-16 pb-8 text-white px-16">
+      <div className="relative overflow-hidden rounded-[18px] bg-[#090000] pt-16 pb-8 text-white sm:px-16 px-4">
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-70"

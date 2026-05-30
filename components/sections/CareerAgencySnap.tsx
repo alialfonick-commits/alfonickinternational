@@ -31,7 +31,7 @@ export function CareerAgencySnap() {
   return (
     <section
       id="agency-snaps"
-      className="overflow-hidden bg-[#EEEEEE] mx-5 rounded-xl py-16 sm:py-20 xl:py-24"
+      className="overflow-hidden bg-[#EEEEEE] mx-5 rounded-xl py-20"
     >
       <style>
         {`
@@ -56,7 +56,7 @@ export function CareerAgencySnap() {
 
 <div className="text-center">
                     <h2 className="lg:text-[51px] md:text-5xl sm:text-4xl text-[34px] font-bold! leading-[1.1]">
-                        Life at the 
+                        Life at the {''}
                         <span className="text-[#B81C15] font-bold!">
                            Agency
                         </span>
@@ -75,7 +75,7 @@ export function CareerAgencySnap() {
           {duplicatedImages.map((image, index) => (
             <div
               key={`${image.src}-${index}`}
-              className="relative h-[230px] w-[320px] shrink-0 overflow-hidden rounded-[18px] bg-[#EFF0F0] sm:h-[300px] sm:w-[520px] lg:h-[390px] lg:w-[720px]"
+              className="relative h-[230px] w-[320px] cursor-pointer shrink-0 overflow-hidden rounded-[18px] bg-[#EFF0F0] sm:h-[300px] sm:w-[520px] lg:h-[390px] lg:w-[720px]"
             >
               <Image
                 src={image.src}
@@ -90,7 +90,7 @@ export function CareerAgencySnap() {
       </div>
 
       {/* Button */}
-      <div className="mt-10 flex justify-center sm:mt-12">
+      {/* <div className="mt-10 flex justify-center sm:mt-12">
         <Link
           href="/gallery"
           className="font-archivo group inline-flex items-center gap-4 rounded-full border border-[#C1C1C2] bg-white py-2.5 pl-2.5 pr-8 text-lg font-medium text-[#222222] transition-all duration-300 hover:border-[#B81C15] hover:bg-[#F5D5D2]"
@@ -104,7 +104,7 @@ export function CareerAgencySnap() {
           </span>
           View All
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 }

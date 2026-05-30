@@ -73,7 +73,7 @@ export default function Blog() {
   return (
 
     <section className="px-5 sm:pt-20 pt-16 sm:pb-20 :pb-15">
-      <div className="max-w-360 mx-auto">
+      <div className="max-w-351 mx-auto">
       <div className="text-center mb-12 [&>span]:text-[#B81C15] [&>span]:px-6 [&>span]:py-3 [&>span]:rounded-4xl [&>span]:w-fit [&>span]:m-auto [&>span]:bg-[#B81C15]/5">
         <span style={{fontFamily: "Arial"}}> LATEST NEWS & INSIGHTS </span>
 
