@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Quote } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-// const SLIDE_DURATION = 4800;
+const SLIDE_DURATION = 4800;
 
 const testimonials = [
   {
