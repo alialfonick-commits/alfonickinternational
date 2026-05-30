@@ -101,7 +101,7 @@ import Image from "next/image";
 export function BrandPotentialSection() {
   return (
     <div>
-      <section className="sm:pt-20 pt-14 pb-16">
+      <section className="sm:pt-20 pt-4 pb-16">
         <div className="max-w-290 mx-auto px-4 text-center">
           <h2 className="lg:text-[32px] md:text-[30px] text-[26px] xl:text-[40px] lg:leading-12 md:leading-10 leading-8 font-bold!">
             Unlock Your <span className="italic font-semi-bold!">Brand </span>{" "}
