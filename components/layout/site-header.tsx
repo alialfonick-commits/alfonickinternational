@@ -32,7 +32,6 @@ export function SiteHeader() {
           />
         </Link>
 
-<<<<<<< HEAD
         {/* Book Button */}
         {/* <Link
   href="#contact"
@@ -54,15 +53,11 @@ export function SiteHeader() {
 </Link> */}
 
 
-        <Link
-          href="#" className="headerBtn group border rounded-full pr-4 pl-15 py-3 hover:pr-15! hover:pl-4! text-white transition-all duration-300 sm:text-[18px] text-[16px]">
-         
-=======
-        <Link href="#" className="headerBtn group border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pl-5 sm:active:pr-15 active:pr-12 text-white transition-all duration-300">
+<Link
+          href="#" className="headerBtn group border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pl-3 active:pr-12 text-white transition-all duration-300">
           <span className="inline-block transition-all duration-300 lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px]">
->>>>>>> 583e4a47c7dad5e10658891ea74f4b98c5bcd0b1
             Book A Demo
- 
+          </span>
         </Link>
 
       </div>
