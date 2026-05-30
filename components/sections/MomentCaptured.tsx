@@ -153,17 +153,17 @@ export default function MomentCaptured() {
     </div>
   );
   return (
-    <section className="bg-[#EEEEEE] py-16 lg:p-24 pt-14 pb-10 m-5 rounded-[20px]">
+    <section className="bg-[#EEEEEE] py-16 lg:p-24 pt-14 pb-10 sm:m-5 m-3 rounded-[20px]">
       <div className="max-w-380 mx-auto px-5">
         <div className="text-center mb-10">
           <div className="span:text-[#B81C15] text-center px-6 py-3 rounded-4xl w-fit m-auto bg-[#B81C15]/5 text-[#B81C15]">
             <span style={{ fontFamily: "Arial" }}> Image Gallery </span>
           </div>
 
-          <h2 className="text-[36px] md:text-[44px] lg:text-[56px] font-semibold text-[#222] leading-[1.1] tracking-[-1px] mt-3.75">
+          <h2 className="text-[36px] md:text-[44px] lg:text-[56px] font-normal! text-[#222] leading-[1.1] tracking-[-1px] mt-3.75">
             {" "}
             Moments Captured in{" "}
-            <span className="text-[#B81C15] italic font-semibold">
+            <span className="text-[#B81C15] italic font-medium">
               {" "}
               Pixels{" "}
             </span>
@@ -198,7 +198,7 @@ export default function MomentCaptured() {
               value="birthdays"
               className="cursor-pointer shrink-0 md:shrink
         lg:px-5 px-4 lg:py-5 py-4 rounded-full xl:text-[18px] text-sm transition-all duration-300 border border-[#2222221A]
-        bg-white text-[#222]! data-[state=active]:bg-[#B81C15]data-[state=active]:text-white!
+        bg-white text-[#222]! data-[state=active]:bg-[#B81C15] data-[state=active]:text-white!
         data-[state=active]:border-[#2222221A] hover:bg-[#B81C15]
         hover:text-white! shadow-[4px_4px_20px_0_#91919140]
       "

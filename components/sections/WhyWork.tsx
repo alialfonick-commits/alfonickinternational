@@ -8,8 +8,8 @@ export default function CareersPage() {
           className="flex flex-col lg:flex-row justify-between lg:gap-10 gap-3 mb-8
          "
         >
-          <div className="[&>span]:text-[#B81C15] [&>span]:text-center [&>span]:px-6 [&>span]:py-3 [&>span]:italic [&>span]:rounded-4xl [&>span]:bg-[#B81C15]/5 [&>span]:font-[inter]!">
-            <span> Core Values </span>
+          <div className="[&>span]:text-[#B81C15] [&>span]:text-center [&>span]:px-6 [&>span]:py-3 [&>span]:rounded-4xl [&>span]:bg-[#B81C15]/5 [&>span]:font-[inter]!">
+            <span> OUR CULTURE</span>
             <h2 className="text-[36px] md:text-[44px] lg:text-[56px] font-bold text-[#222] leading-[1.1] tracking-[-1px] mt-3.75">
               Why Work{" "}
               <span className="text-[#B81C15] italic block">With Us</span>

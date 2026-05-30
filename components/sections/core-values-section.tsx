@@ -101,7 +101,7 @@ export function CoreValuesSection() {
           </h2>
 
           <div
-            className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-[#B81C15] bg-[#FFFFFF36] backdrop-blur-[20px]"
+            className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#B81C15] bg-[#FFFFFF36] backdrop-blur-[20px]"
             style={{
               width: "clamp(20rem, 100%, 4rem)",
               height: "clamp(20rem, 100%, 4rem)",
@@ -123,7 +123,7 @@ export function CoreValuesSection() {
               {valueLabels.map((item) => (
                 <span
                   key={item.label}
-                  className="font-archivo absolute z-10 max-w-[58%] whitespace-nowrap rounded-full bg-[#B81C15] px-2.5 py-1.5 text-center text-[9px] font-semibold leading-none text-white shadow-[0_15px_35px_rgba(184,28,21,0.32)] sm:px-3.5 sm:py-2 sm:text-[11px] md:px-4 md:text-[12px] lg:text-[13px]"
+                  className="font-satoshi absolute z-10 whitespace-nowrap rounded-full bg-[#B81C15] px-5 py-2 text-center font-normal leading-none text-white shadow-[0_15px_35px_rgba(184,28,21,0.32)] text-[14px]"
                   style={
                     {
                       left: `${item.x}%`,

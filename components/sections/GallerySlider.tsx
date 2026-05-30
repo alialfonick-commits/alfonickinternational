@@ -74,7 +74,7 @@ const GallerySlider = () => {
           align: "center",
           loop: true,
         }}
-        className="w-full relative"
+        className="w-full relative cursor-grab active:cursor-grabbing"
       >
         <div className="absolute left-0 top-0 z-20 h-full w-20 md:w-32 pointer-events-none bg-linear-to-r from-white/80 to-transparent" />
 

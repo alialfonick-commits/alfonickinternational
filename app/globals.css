@@ -149,6 +149,7 @@ h1, h2, h3, h4{
     @apply font-sans;
   }
 } */
+
  
 .font-archivo {
   font-family: var(--font-archivo), Arial, sans-serif;
@@ -231,7 +232,6 @@ h1, h2, h3, h4{
   .headerBtn::before {
    width: 15px;
    height:15px;
-   background-size: 12px;
    padding: 16px;
   } 
 

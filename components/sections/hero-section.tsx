@@ -112,7 +112,7 @@ export function HeroSection() {
           >
             <div className="mx-auto flex max-w-295 flex-col items-center">
               <div className="relative inline-block mb-5 [&_span]:absolute [&_span]:h-3 [&_span]:w-3 [&_span]:border-[#FFFFFF80] [&_span]:rounded-[1px]">
-                <p className="font-archivo mb-0! text-[42px] font-normal tracking-[-0.94px] text-[#EFF0F0] sm:mb-7">
+                <p className="font-archivo mb-0! md:text-[42px] sm:text-[34px] text-[24px] font-normal tracking-[-0.94px] text-[#EFF0F0] sm:mb-7">
                   Intelligence, unleashed.
                 </p>
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AgencyCulture() {
   return (
     <section className="bg-white pt-16 sm:pb-16 pb-12">
-      <div className="max-w-430 mx-auto px-5">
+      <div className="max-w-430 mx-auto lg:px-15 px-4">
         <div className="span:text-[#B81C15] text-center px-6 py-3 rounded-4xl w-fit m-auto bg-[#B81C15]/5 text-[#B81C15]">
           <span className="font-[inter]!"> OUR CULTURE </span>
         </div>
@@ -13,14 +13,14 @@ export default function AgencyCulture() {
             Agency <span className="text-[#B81C15] italic">Culture</span>
           </h2>
 
-          <p className="text-[#222] text-base lg:text-lg md:text-[17px] mt-4 font-[inter]!">
+          <p className="text-[#222] sm:text-[24px] text-[18px] mt-4 font-[inter]!">
             Where creativity meets collaboration
           </p>
         </div>
 
         <div className="grid grid-cols-12 gap-6">
-          <div className="grid col-span-12 lg:col-span-7 gap-[25px]">
-            <div className="gap-12.5! h-full relative rounded-2xl overflow-hidden">
+          <div className="grid col-span-12 lg:col-span-7 gap-6.25">
+            <div className="gap-12.5! h-full relative rounded-2xl overflow-hidden cursor-pointer">
               <Image
                 src="/images/AgencyCulture1.webp"
                 alt="team"
@@ -37,7 +37,7 @@ export default function AgencyCulture() {
             </div>
 
             <div className="grid grid-cols-12 gap-6.25 items-stretch">
-              <div className="col-span-12 sm:col-span-7 relative rounded-2xl overflow-hidden">
+              <div className="col-span-12 sm:col-span-7 relative rounded-2xl overflow-hidden cursor-pointer">
                 <Image
                   src="/images/AgencyCulture2.webp"
                   alt="team"
@@ -52,7 +52,7 @@ export default function AgencyCulture() {
                 </div>
               </div>
 
-              <div className="col-span-12 sm:col-span-5 relative rounded-2xl overflow-hidden">
+              <div className="col-span-12 sm:col-span-5 relative rounded-2xl overflow-hidden cursor-pointer">
                 <Image
                   src="/images/AgencyCulture3.webp"
                   alt="office"
@@ -68,7 +68,7 @@ export default function AgencyCulture() {
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-5 relative rounded-2xl overflow-hidden group h-full">
+          <div className="col-span-12 lg:col-span-5 relative rounded-2xl overflow-hidden cursor-pointer group h-full">
             <Image
               src="/images/AgencyCulture4.webp"
               alt="social"
