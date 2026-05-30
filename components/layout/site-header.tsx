@@ -50,10 +50,16 @@ export function SiteHeader() {
   </span>
 </Link> */}
 
+<<<<<<< HEAD
         <Link
           href="#"
           className="headerBtn group border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pl-5 sm:active:pr-15 active:pr-12 text-white transition-all duration-300"
         >
+=======
+
+<Link
+          href="#" className="headerBtn group border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pl-3 active:pr-12 text-white transition-all duration-300">
+>>>>>>> 37be8b24c24b3d25bbf4ee497dde00d7f70a55da
           <span className="inline-block transition-all duration-300 lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px]">
             Book A Demo
           </span>

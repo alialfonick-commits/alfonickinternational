@@ -165,6 +165,7 @@ export function TestimonialSection() {
               );
             })}
           </div>
+          </div>
 
           {/* Desktop dots */}
           <div className="hidden flex-col items-center justify-center gap-3 lg:flex">
