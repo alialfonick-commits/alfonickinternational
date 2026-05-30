@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Quote } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-// const SLIDE_DURATION = 4800;
+const SLIDE_DURATION = 4800;
 
 const testimonials = [
   {
@@ -144,7 +144,7 @@ export function TestimonialSection() {
                       className="mx-auto mb-4 text-[#D93433] lg:mx-0 sm:size-17 xl:size-19"
                     />
 
-                    <p className="mx-auto max-w-245 font-[Arial] text-[21px] leading-[1.2] text-white sm:text-[25px] md:text-[28px] lg:mx-0">
+                    <p className="max-w-270 font-[Arial] text-[21px] leading-[1.2] text-white sm:text-[25px] md:text-[28px] lg:mx-0">
                       {item.quote}
                     </p>
                   </div>

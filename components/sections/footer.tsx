@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { TiSocialFacebook } from "react-icons/ti";
+import { IoLogoTwitter } from "react-icons/io";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { AiFillInstagram } from "react-icons/ai";
+
 import {
   Briefcase,
   Camera,
@@ -112,7 +117,7 @@ export function Footer() {
                 Social Media
               </p>
 
-               <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
+               {/* <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
               <Link href="#">
                 <Globe size={20} />
               </Link>
@@ -125,7 +130,24 @@ export function Footer() {
               <Link href="#">
                 <Camera size={20} />
               </Link>
+            </div> */}
+
+
+            <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
+              <Link href="https://www.facebook.com/AlfonickInternational/">
+                <TiSocialFacebook />
+              </Link>
+              <Link href="#">
+                <IoLogoTwitter />
+              </Link>
+              <Link href="https://pk.linkedin.com/company/alfonickinternational">
+                <FaLinkedinIn />
+              </Link>
+              <Link href="">
+                <AiFillInstagram />
+              </Link>
             </div>
+
        
 
             </div>
