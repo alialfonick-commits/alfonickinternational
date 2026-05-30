@@ -116,13 +116,11 @@ export function TestimonialSection() {
             })}
           </div>
 
-<<<<<<< HEAD
+
           {/* Text vertical slider */}
           <div className="relative overflow-hidden text-center text-white min-h-[430px] md:min-h-[390px] lg:min-h-[340px] lg:text-left xl:min-h-[350px]">
-=======
           {/* Text section */}
           <div className="relative overflow-hidden text-center text-white lg:text-left lg:h-full h-92.5">
->>>>>>> 583e4a47c7dad5e10658891ea74f4b98c5bcd0b1
             {testimonials.map((item, index) => {
               const isActive = index === activeIndex;
               const isPrevious = index === previousIndex;
