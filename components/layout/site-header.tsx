@@ -68,29 +68,7 @@ export function SiteHeader() {
           />
         </Link>
 
-        {/* Book Button */}
-        {/* <Link
-  href="#contact"
-  className="group font-archivo inline-flex items-center gap-3 rounded-full border py-1.5 pl-1.5 pr-3 text-[12px] font-medium text-white transition-all duration-300 sm:pr-5 sm:text-[15px]"
->
-  <span className="transition-transform duration-300 group-hover:translate-x-1">
-    <span className="grid size-8 place-items-center rounded-full bg-[#D93433] text-white sm:size-10">
-      <ArrowUpRight size={17} strokeWidth={2.2} />
-    </span>
-  </span>
-
-  <span className="hidden whitespace-nowrap transition-transform duration-300 group-hover:-translate-x-1 sm:inline">
-    Book a Demo
-  </span>
-
-  <span className="whitespace-nowrap transition-transform duration-300 group-hover:-translate-x-1 sm:hidden">
-    Book
-  </span>
-</Link> */}
-
-
-        <Link
-          href="#" className="headerBtn group border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pl-3 active:pr-12 text-white transition-all duration-300">
+        <Link href="#" className="headerBtn group border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pl-5 sm:active:pr-15 active:pr-12 text-white transition-all duration-300">
           <span className="inline-block transition-all duration-300 lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px]">
             Book A Demo
           </span>

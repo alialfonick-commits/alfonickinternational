@@ -43,17 +43,15 @@ const rightItems = [
 ];
 
 const sliderImagesA = [
-  "/images/section-img.png",
-  "/images/snap-gallery1.png",
-  "/images/snap-gallery2.png",
-  "/images/services-spectrum.png",
+  "/images/Combine 1.webp",
+  "/images/Combine 2.webp",
+  "/images/Combine 3.webp",
 ];
 
 const sliderImagesB = [
-  "/images/snap-gallery3.png",
-  "/images/snap-gallery4.png",
-  "/images/snap-gallery5.png",
-  "/images/section-img.png",
+  "/images/Combine 4.webp",
+  "/images/Combine 1.webp",
+  "/images/Combine 2.webp",
 ];
 
 function Eyebrow() {
@@ -83,31 +81,31 @@ function FeatureItem({
 }) {
   return (
     <article
-      className={`grid items-center lg:gap-9 gap-2 ${
+      className={`grid items-center xl:gap-9 md:gap-5 gap-2 ${
         reverse
-          ? "text-left sm:grid-cols-[1fr_auto] lg:text-right"
-          : "text-left sm:grid-cols-[auto_1fr]"
+          ? "text-right grid-cols-[1fr_auto] lg:text-right"
+          : "text-left grid-cols-[auto_1fr]"
       }`}
     >
       {!reverse && (
-        <span className="font-archivo xl:text-[56px] lg:text-[48px] md:text-[40px] text-[32px] font-semibold leading-none tracking-[-0.07em] text-[#222222] sm:text-[66px]">
+        <span className="font-archivo xl:text-[56px] lg:text-[48px] md:text-[40px] text-[38px] font-semibold leading-none tracking-[-0.07em] text-[#222222] sm:text-[66px]">
           {item.number}
         </span>
       )}
 
       {/* lg:ml-auto right items ke content ko push krne k liye lg:text-right k sath wrap kia h */}
-      <div className={reverse ? "lg:ml-auto flex flex-col lg:items-end" : ""}>
-        <h3 className="font-archivo text-[24px] font-bold! uppercase tracking-[0.08em] text-[#222222] sm:text-[24px] leading-[1.3]">
+      <div className={reverse ? "lg:ml-auto ml-auto flex flex-col lg:items-end" : ""}>
+        <h3 className="font-archivo text-[20px] font-bold! uppercase tracking-[0.08em] text-[#222222] sm:text-[24px] leading-[1.3]">
           {item.title}
         </h3>
 
-        <p className="mt-5 max-w-90 font-[Arial] text-[16px] leading-[1.4] text-[#222222]/85 sm:text-[17px]">
+        <p className="sm:mt-5 mt-3 max-w-90 font-[Arial] text-[16px] leading-[1.4] text-[#222222]/85 sm:text-[17px]">
           {item.description}
         </p>
       </div>
 
       {reverse && (
-        <span className="font-archivo xl:text-[56px] lg:text-[48px] md:text-[40px] text-[32px] font-semibold leading-none tracking-[-0.07em] text-[#222222] sm:text-[66px]">
+        <span className="font-archivo xl:text-[56px] lg:text-[48px] md:text-[40px] text-[38px] font-semibold leading-none tracking-[-0.07em] text-[#222222] sm:text-[66px]">
           {item.number}
         </span>
       )}
@@ -153,7 +151,7 @@ function ImageColumn({
 
 export function CreativityStrategySection() {
   return (
-    <section className="overflow-hidden bg-[#EFF0F0] px-4 py-16 sm:px-6 sm:py-20 lg:px-10 xl:px-12 xl:py-24">
+    <section className="overflow-hidden bg-[#EFF0F0] py-16 sm:py-20 xl:py-24">
       <style>
         {`
           @keyframes alfonickSliderUp {
@@ -189,11 +187,11 @@ export function CreativityStrategySection() {
         `}
       </style>
 
-      <div className="mx-auto max-w-420">
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+      <div className="mx-auto max-w-410 px-5">
+        <div className="max-w-260 m-auto grid lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <Eyebrow />
 
-          <h2 className="font-archivo max-w-212.5 text-[44px] font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] sm:text-[62px] lg:text-[76px] xl:text-[84px]">
+          <h2 className="font-archivo max-w-212.5  font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] text-[40px] sm:text-[50px] lg:text-[60px] xl:text-[66px]">
             We Combine{" "}
             <span className="font-medium italic text-[#B81C15]">
               Creativity
@@ -206,7 +204,7 @@ export function CreativityStrategySection() {
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-12 lg:mt-16 lg:grid-cols-[1fr_440px_1fr] xl:grid-cols-[1fr_500px_1fr] xl:gap-16">
+        <div className="mt-14 grid gap-12 lg:mt-16 lg:grid-cols-[1fr_440px_1fr] xl:grid-cols-[1fr_500px_1fr] xl:gap-16 content-center">
           {/* Left list */}
           <div className="flex flex-col gap-14 lg:gap-20 lg:pt-12">
             {leftItems.map((item) => (

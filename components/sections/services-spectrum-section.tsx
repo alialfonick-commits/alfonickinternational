@@ -119,7 +119,7 @@ export function ServicesSpectrumSection() {
 
           {/* Right side */}
           <div className="lg:pt-5">
-            <h2 className="font-archivo max-w-245 text-[40px] font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] sm:text-[58px] lg:text-[72px] xl:text-[78px]">
+            <h2 className="font-archivo max-w-245 font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] text-[34px] sm:text-[50px] lg:text-[60px] xl:text-[66px]">
               Explore Our Full Spectrum
               <br />
               Of{" "}
