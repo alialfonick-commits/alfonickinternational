@@ -131,7 +131,7 @@ function ImageColumn({
             {images.map((image, index) => (
               <div
                 key={`${image}-${group}-${index}`}
-                className="relative h-45 overflow-hidden rounded-2xl bg-[#EFF0F0] sm:h-80"
+                className="relative h-70 overflow-hidden rounded-2xl bg-[#EFF0F0] sm:h-80"
               >
                 <Image
                   src={image}
@@ -151,7 +151,7 @@ function ImageColumn({
 
 export function CreativityStrategySection() {
   return (
-    <section className="overflow-hidden bg-[#EFF0F0] py-16 sm:py-20 xl:py-24">
+    <section className="overflow-hidden bg-[#ececec] pt-0 pb-14 sm:py-20 xl:pt-10 xl:pb-24">
       <style>
         {`
           @keyframes alfonickSliderUp {

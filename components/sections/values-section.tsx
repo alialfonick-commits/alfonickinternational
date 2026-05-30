@@ -27,7 +27,7 @@ const values = [
 
 export function ValuesSection() {
   return (
-    <section className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
+    <section className="bg-white px-4 py-12 sm:px-6 sm:pt-18 sm:pb-6 lg:px-10 xl:px-12">
       <div className="">
         <div className="relative overflow-hidden rounded-[18px] bg-black px-4 py-16 sm:px-8 sm:py-20 lg:px-12 2xl:px-30 xl:py-24 max-w-465 m-auto">
           {/* Background image */}
@@ -67,7 +67,7 @@ export function ValuesSection() {
                 return (
                   <article
                     key={item.number}
-                    className={`group h-fit rounded-2xl border border-white/10 bg-white/20 p-3 text-white shadow-[0_24px_60px_rgba(0,0,0,0.18)] backdrop-blur-md transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[#B81C15] hover:bg-transparent hover:shadow-[0_28px_80px_rgba(184,28,21,0.22)] sm:p-4 cursor-pointer ${offsetClass}`}
+                    className={`group h-fit rounded-2xl border border-white/10 bg-white/20 p-3 text-white backdrop-blur-md transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[#B81C15] hover:bg-transparent hover:shadow-[0_28px_80px_rgba(184,28,21,0.22)] sm:p-4 cursor-pointer ${offsetClass}`}
                   >
                     <div className="font-archivo text-[60px] font-bold leading-none tracking-[-0.06em] text-white transition-colors duration-500 lg:text-[96px] sm:text-[66px]">
                       {item.number}

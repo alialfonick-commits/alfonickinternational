@@ -67,7 +67,7 @@ export function Footer() {
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_67%,#b81c1585,#0000_50%),linear-gradient(#0000,#500000_45%,#0000009c)]" />
 
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 text-center font-archivo text-[18vw] font-bold leading-none tracking-tight text-[#B81C15]/12">
+        <div className="pointer-events-none absolute inset-x-0 lg:-bottom-8 bottom-0 text-center font-archivo text-[18vw] font-bold leading-none tracking-tight text-[#B81C15]/12">
           ALFONICK
         </div>
 

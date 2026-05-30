@@ -38,9 +38,20 @@ const services = [
 
 function SparkIcon({ className = "" }: { className?: string }) {
   return (
-    <span
-      className={`inline-block bg-[#B81C15] [clip-path:polygon(50%_0%,62%_38%,100%_50%,62%_62%,50%_100%,38%_62%,0%_50%,38%_38%)] ${className}`}
+    // <span
+    //   className={`inline-block bg-[#B81C15] [clip-path:polygon(50%_0%,62%_38%,100%_50%,62%_62%,50%_100%,38%_62%,0%_50%,38%_38%)] ${className}`}
+    // />
+
+    <Image
+      src="/images/new_star.png"
+      alt="Star"
+      width={70}
+      height={70}
+      
+      className="sm:w-17.5 w-13 sm:h-17.5 h-13"
     />
+
+
   );
 }
 
@@ -50,7 +61,7 @@ export function ServicesSpectrumSection() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden bg-white pt-14 sm:pt-20 lg:pt-24 pb-5"
     >
       <style>
         {`
@@ -101,7 +112,7 @@ export function ServicesSpectrumSection() {
               </p>
             </div>
 
-            <p className="max-w-82.5 font-[Arial] text-base leading-[1.65] text-[#777777]">
+            <p className="max-w-85 font-[Arial] text-base leading-[1.65] text-[#777777]">
               Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
               Industry. Lorem Ipsum Has Been The Industry&apos;s Standard
             </p>
@@ -118,7 +129,7 @@ export function ServicesSpectrumSection() {
           </div>
 
           {/* Right side */}
-          <div className="lg:pt-5">
+          <div className="">
             <h2 className="font-archivo max-w-245 font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] text-[34px] sm:text-[50px] lg:text-[60px] xl:text-[66px]">
               Explore Our Full Spectrum
               <br />

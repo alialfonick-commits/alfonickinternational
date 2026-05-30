@@ -45,7 +45,7 @@ export function ArticlesSection() {
     >
       <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="grid gap-8 lg:grid-cols-[410px_1fr] lg:items-start xl:grid-cols-[340px_1fr]">
+        <div className="max-w-260 m-auto grid gap-8 lg:grid-cols-[410px_1fr] lg:items-start xl:grid-cols-[340px_1fr]">
           <SectionEyebrow />
 
           <h2 className="font-archivo max-w-195 text-[42px] font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] sm:text-[58px] lg:text-[72px] xl:text-[82px]">

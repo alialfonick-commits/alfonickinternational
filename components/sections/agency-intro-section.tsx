@@ -56,7 +56,7 @@ export function AgencyIntroSection() {
   return (
     <section
       id="agency-intro"
-      className="relative z-10 bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-10 xl:px-12 xl:py-24"
+      className="relative z-10 bg-white px-4 pt-16 sm:px-6 sm:pt-20 lg:px-10 xl:px-12 xl:pt-24"
     >
       <div className="mx-auto max-w-420">
         <div className="grid items-start gap-12 lg:grid-cols-[1fr_0.92fr] xl:gap-16">
@@ -72,7 +72,7 @@ export function AgencyIntroSection() {
               </p>
             </div>
 
-            <h2 className="font-archivo max-w-190 text-[42px] font-[900] leading-[1.1] tracking-[-0.055em] text-black sm:text-[58px] md:text-[70px] xl:text-[78px]">
+            <h2 className="font-archivo max-w-190 text-[42px] leading-[1.1] tracking-[-0.055em] text-black sm:text-[58px] md:text-[70px] xl:text-[78px]">
               We are <span className="text-[#B81C15]">CREATIVE</span>
               <br />
               Digital Marketing
@@ -80,17 +80,17 @@ export function AgencyIntroSection() {
               Agency from Pakistan
             </h2>
 
-            <div className="absolute top-12 right-10">
+            <div className="absolute top-12 2xl:right-10 xl:-right-10 right-10 sm:block hidden">
               <Image
                 src="/images/star-img.png"
                 alt="red star"
                 width={70}
                 height={70}
-                className="animate-spin-slow"
+                className="animate-spin-slow "
               />
             </div>
 
-            <div className="absolute top-26 right-6">
+            <div className="absolute top-26 2xl:right-6 xl:-right-10 right-6 sm:block hidden">
               <Image
                 src="/images/grey-star-img.png"
                 alt="gray star"
