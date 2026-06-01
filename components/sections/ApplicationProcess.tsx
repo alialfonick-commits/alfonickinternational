@@ -69,9 +69,9 @@ export default function ApplicationProcess() {
               >
                 <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center z-20">
                   <h3
-                    className="md:text-[66px] text-[66px] font-semibold leading-none text-[#B81C15]!"
+                    className="md:text-[66px] text-[66px] font-normal! leading-none text-[#B81C15]!"
                     style={{
-                      textShadow: "0px 0px 30px rgba(221,66,66,0.9)", fontFamily: "Unbounded" }}>
+                      textShadow: "0px 1px 23px 0 #DD4242", fontFamily: "Unbounded" }}>
                     {item.id}
                   </h3>
 

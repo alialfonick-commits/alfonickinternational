@@ -46,7 +46,7 @@ export default function AgencyCulture() {
                   className="w-full h-full object-cover"
                 />
 
-                <div className="absolute bottom-8 left-4 lg:bottom-5 lg:left-5 xl:bottom-10 xl:left-2 backdrop-blur-2xl text-white border border-[#a1a1a7] px-6 py-2.5 xl:px-6 xl:py-2.5 lg:px-4 ml-[20px] lg:py-1.25 rounded-full text-sm flex items-center gap-2">
+                <div className="absolute bottom-8 left-4 lg:bottom-5 lg:left-5 xl:bottom-10 xl:left-2 backdrop-blur-2xl text-white border border-[#a1a1a7] px-6 py-2.5 xl:px-6 xl:py-2.5 lg:px-4 ml-5 lg:py-1.25 rounded-full text-sm flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#B81C15] rounded-full"></span>
                   TEAM WORK
                 </div>

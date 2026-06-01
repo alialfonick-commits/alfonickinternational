@@ -64,10 +64,10 @@ export function ContactForm() {
           />
         </Button> */}
 
-        <Button className="font-archivo group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-full bg-white px-6 text-[11px] font-semibold uppercase tracking-[-0.01em] text-black transition-all duration-300 sm:min-h-12.5 sm:px-7 pl-11.25! hover:text-white! hover:bg-white cursor-pointer"
+        <Button className="font-archivo group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-white px-5 py-5.25 pl-11! text-[12px] font-semibold uppercase tracking-[-0.01em] text-black transition-all duration-300 hover:text-white! hover:bg-white cursor-pointer"
         >
           {/* expanding white bg */}
-          <span className="absolute left-6 size-2 rounded-full bg-black transition-all duration-500 ease-out group-hover:left-0 group-hover:h-full group-hover:w-full" />
+          <span className="absolute left-5 size-2.5 rounded-full bg-black transition-all duration-500 ease-out group-hover:left-0 group-hover:h-full group-hover:w-full" />
 
           {/* text */}
           <span className="relative z-10">Send Message</span>

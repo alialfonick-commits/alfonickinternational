@@ -5,7 +5,7 @@ export default function AboutWhyChoose() {
   return (
     <section className="pt-22 pb-10 px-4 md:px-16">
       <div className="pb-5 xl:[&>h2]:text-[50px] lg:[&>h2]:text-[46px] sm:[&>h2]:text-[36px] [&>h2]:mt-4 [&>h2]:text-[30px] sm:[&>h2]:pt-0 [&>h2]:pt-5 [&>h2]:leading-[1.1] [&>h2>span]:text-[#B81C15] [&>h2>span]:italic text-center [&>span]:px-6 [&>span]:py-3 [&>span]:uppercase [&>span]:rounded-4xl [&>span]:bg-[#B81C15]/5 [&>span]:text-[#B81C15]">
-        <span style={{ fontFamily: "Arial" }}>Built For Intelligent</span>
+        <span className="font-Arial">Built For Intelligent</span>
 
         <h2>
           Why Choose <span className="block">Alfonick International</span>
@@ -29,7 +29,7 @@ export default function AboutWhyChoose() {
           </h3>
 
           <p
-            className="text-[#222] font-regular mb-4 text-[15px] md:text-[16px] lg:text-[17px] 2xl:text-[18px] leading-6"
+            className="text-[#222] font-regular mb-4 text-[15px] md:text-[16px] lg:text-[17px] 2xl:text-[18px] leading-[1.556]"
             style={{ fontFamily: "Arial" }}
           >
             At our agency, we combine creativity, strategy, and technology to

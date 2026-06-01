@@ -26,7 +26,7 @@ const articles = [
 function SectionEyebrow() {
   return (
     <div className="flex items-center gap-4">
-      <span className="relative h-[2px] w-16 bg-[#B81C15]">
+      <span className="relative h-0.5 w-16 bg-[#B81C15]">
         <span className="absolute -left-1.5 top-1/2 size-3 -translate-y-1/2 rounded-full bg-[#B81C15]" />
       </span>
 
@@ -43,7 +43,7 @@ export function ArticlesSection() {
       id="blogs"
       className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-10 xl:px-12 xl:py-24"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-290.25">
         {/* Header */}
         <div className="max-w-260 m-auto grid gap-8 lg:grid-cols-[410px_1fr] lg:items-start xl:grid-cols-[340px_1fr]">
           <SectionEyebrow />
@@ -78,19 +78,19 @@ export function ArticlesSection() {
                   <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
                 </div>
 
-                <h3 className="font-archivo mt-6 max-w-[92%] text-[20px] font-[300] leading-[1.25] tracking-[-0.03em] text-[#222222] transition-colors duration-300 group-hover:text-[#B81C15] sm:text-[22px]">
+                <h3 className="font-archivo mt-6 max-w-[92%] text-[18px] font-light! leading-tight tracking-[-0.03em] text-[#000000] transition-colors duration-300 group-hover:text-[#B81C15] sm:text-[20px]">
                   {article.title}
                 </h3>
 
-                <p className="mt-4 font-[Arial] text-sm text-[#777777]">
+                <p className="mt-4 font-archivo text-sm font-normal text-[#636466]">
                   {article.time}
                 </p>
 
-                <div className="mt-7 flex flex-wrap gap-2">
+                <div className="mt-7 flex flex-wrap gap-1">
                   {article.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="font-archivo rounded-full border border-[#C1C1C2] bg-[#EFF0F0] px-4 py-2 text-[12px] font-medium uppercase text-[#777777] transition-all duration-300 hover:border-[#B81C15]/40 hover:bg-[#F5D5D2] hover:text-[#B81C15]"
+                      className="font-archivo rounded-full border border-[#D0D1D1] bg-[#EFF0F0] px-3 py-2 text-[12px] font-medium uppercase text-[#636466] transition-all duration-300 hover:border-[#B81C15]/40 hover:bg-[#F5D5D2] hover:text-[#B81C15]"
                     >
                       {tag}
                     </span>

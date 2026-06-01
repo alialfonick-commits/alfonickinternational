@@ -56,7 +56,7 @@ const CareerHero = () => {
 
         <Link
           href="/careers"
-          className="relative z-30 inline-block bg-white hover:bg-[#B81C15] hover:text-white transition-all duration-300 sm:text-[18px] md:px-7 px-3 md:py-3 py-2 rounded-4xl text-[#B81C15] mt-5 cursor-pointer"
+          className="relative font-[inter]! z-30 inline-block bg-white hover:bg-[#B81C15] hover:text-white transition-all duration-300 sm:text-[18px] font-semibold md:px-7 px-3 md:py-3 py-2 rounded-4xl text-[#B81C15] mt-5 cursor-pointer"
         >
           View Open Positions
         </Link>

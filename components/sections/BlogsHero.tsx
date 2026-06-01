@@ -38,7 +38,7 @@ const CareerHero = () => {
 
         {/* Badge */}
         <span
-          className="relative z-10 bg-[#750200ad] border-2 border-white/30 shadow-[0_0_20px_2px_#B81C15] text-[#B81C15] sm:text-[16px] text-[14px] font-bold uppercase block text-center italic m-auto px-6 py-2 w-fit rounded-4xl mb-1"
+          className="relative z-10 bg-[#B81C150D] shadow-[0px_-1px_7px_-1px_#FFFFFF1A] backdrop-blur-[20px] border-2 border-[#FFFFFF33] text-[#B81C15] sm:text-[16px] text-[14px] font-bold uppercase block text-center italic m-auto px-6 py-[3.5px] w-fit rounded-4xl mb-1"
           style={{ fontFamily: "Arial" }}
         >
           Our Gallery

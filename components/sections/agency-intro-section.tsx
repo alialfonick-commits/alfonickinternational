@@ -72,7 +72,7 @@ export function AgencyIntroSection() {
               </p>
             </div>
 
-            <h2 className="font-archivo max-w-190 text-[42px] leading-[1.1] tracking-[-0.055em] text-black sm:text-[58px] md:text-[70px] xl:text-[78px]">
+            <h2 className="font-archivo max-w-190 text-[38px] leading-[1.1] tracking-[-0.055em] text-black sm:text-[58px] md:text-[70px] lg:text-[64px] 2xl:text-[78px]">
               We are <span className="text-[#B81C15]">CREATIVE</span>
               <br />
               Digital Marketing
@@ -137,7 +137,7 @@ export function AgencyIntroSection() {
                     type="button"
                     onClick={() => setActiveCard(index)}
                     onMouseEnter={() => setActiveCard(index)}
-                    className={`group relative overflow-hidden rounded-[14px] text-left transition-all duration-500 ease-out ${
+                    className={`group cursor-pointer relative overflow-hidden rounded-[14px] text-left transition-all duration-500 ease-out ${
                       isActive
                         ? "basis-[62%] sm:basis-[68%]"
                         : "basis-[19%] sm:basis-[16%]"

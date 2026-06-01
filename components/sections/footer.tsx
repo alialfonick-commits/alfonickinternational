@@ -56,7 +56,7 @@ export function Footer() {
   return (
     <footer
       id="contact"
-      className="bg-white px-5 py-4"
+      className="bg-white md:px-5 px-2 py-4"
     >
       <div className="relative overflow-hidden rounded-[18px] bg-[#090000] pt-16 pb-8 text-white sm:px-16 px-4">
         {/* Background */}
@@ -74,11 +74,11 @@ export function Footer() {
         <div className="relative z-10">
           {/* Contact form area */}
           <div className="mx-auto max-w-220 text-center">
-            <span className="font-archivo inline-flex rounded-full border border-[#FFFFFF66] bg-[#B81C150D] px-10 py-2 text-[16px] font-medium text-white backdrop-blur-[20px]">
+            <span className="font-archivo inline-flex rounded-full border border-[#FFFFFF66] bg-[#B81C150D] px-10 py-2 text-[16px] font-medium text-white shadow-[0px_-1px_7px_-1px_#FFFFFF1A] backdrop-blur-[20px]">
               Contact Us
             </span>
 
-            <h2 className="font-archivo mt-5 text-[32px] font-medium leading-tight tracking-[-0.04em] text-white sm:text-[42px] lg:text-[48px]">
+            <h2 className="font-archivo mt-5 text-[32px] font-medium leading-tight tracking-[-0.04em] text-[#E4E4E4] sm:text-[42px] lg:text-[48px]">
               Get In Touch with Us
             </h2>
 
@@ -90,7 +90,7 @@ export function Footer() {
           <div className="my-14 h-px w-full bg-white/55 sm:my-16 lg:my-20" />
 
           {/* Footer */}
-          <footer className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1.1fr_1.3fr] lg:gap-14">
+          <footer className="grid md:gap-12 gap-6 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1.1fr_1.3fr] lg:gap-14">
             {/* Brand */}
             <div>
               <Link href="/" className="inline-flex">
@@ -99,7 +99,7 @@ export function Footer() {
                   alt="Alfonick International"
                   width={190}
                   height={60}
-                  className="h-auto w-55.75"
+                  className="h-auto sm:w-55.75 w-40"
                 />
               </Link>
 
@@ -112,7 +112,7 @@ export function Footer() {
                 Social Media
               </p>
 
-               <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
+               <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:transition-colors [&_a]:duration-200 [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
               <Link href="#">
                 <Globe size={20} />
               </Link>
@@ -141,7 +141,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-[Arial] text-[18px] text-white tracking-[2%] transition-colors duration-300 hover:text-[#D93433]"
+                      className="font-[Arial] sm:text-[18px] text-[16px] text-white tracking-[2%] transition-colors duration-300 hover:text-[#D93433]"
                     >
                       {link.name}
                     </Link>
@@ -161,7 +161,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-[Arial] text-[18px] text-white transition-colors duration-300 hover:text-[#D93433]"
+                      className="font-[Arial] sm:text-[18px] text-[16px] text-white transition-colors duration-300 hover:text-[#D93433]"
                     >
                       {link.name}
                     </Link>
@@ -192,12 +192,12 @@ export function Footer() {
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="font-[Arial] text-[18px] leading-[1.45] text-white hover:text-[#D93433] transition-colors duration-200"
+                          className="font-[Arial] sm:text-[18px] text-[16px] leading-[1.45] text-white hover:text-[#D93433] transition-colors duration-200"
                         >
                           {item.text}
                         </a>
                       ) : (
-                        <span className="font-[Arial] text-[18px] leading-[1.45] text-white">
+                        <span className="font-[Arial] sm:text-[18px] text-[16px]leading-[1.45] text-white">
                           {item.text}
                         </span>
                       )}
@@ -212,22 +212,22 @@ export function Footer() {
 
           {/* Copyright */}
           <div className="mt-8 flex flex-col gap-4 text-center font-[Arial] text-[14px] text-white sm:flex-row sm:items-center sm:justify-between sm:text-left">
-            <p>©2026 Transparent. All rights reserved</p>
+            <p>©2026 Alfonick. All rights reserved</p>
 
             <div className="flex flex-wrap justify-center gap-x-2 gap-y-1 sm:justify-end">
-              <Link href="#" className="hover:text-[#D93433]">
+              <Link href="#" className="hover:text-[#D93433] transition-colors duration-200">
                 Privacy Policy
               </Link>
               <span>|</span>
-              <Link href="#" className="hover:text-[#D93433]">
+              <Link href="#" className="hover:text-[#D93433] transition-colors duration-200">
                 Terms & Conditions
               </Link>
               <span>|</span>
-              <Link href="#" className="hover:text-[#D93433]">
+              <Link href="#" className="hover:text-[#D93433] transition-colors duration-200">
                 Cookies Policy
               </Link>
               <span>|</span>
-              <Link href="#" className="hover:text-[#D93433]">
+              <Link href="#" className="hover:text-[#D93433] transition-colors duration-200">
                 Map
               </Link>
             </div>

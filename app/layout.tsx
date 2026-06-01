@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Inter } from "next/font/google";
+import { Archivo, Inter, Unbounded } from "next/font/google";
 
 import "./globals.css";
 
@@ -15,6 +15,12 @@ const archivo = Archivo({
   display: "swap",
 });
 
+const unbounded = Unbounded({
+  subsets: ["latin"],
+  variable: "--font-unbounded",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Alfonick International",
   description: "Marketing agency for creative business solutions",
@@ -26,7 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${inter.variable} ${archivo.variable} ${unbounded.variable}`}
+    >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

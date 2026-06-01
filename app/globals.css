@@ -6,15 +6,15 @@
 /* @import url(https://db.onlinewebfonts.com/c/aa4a0305ca8b9f59618acc4c461e514a?family=TrumpGothicPro); */
 
 
-.font-trump{
+.font-trump {
   font-family: "TrumpGothicPro" !important;
 }
 
-.font-satoshi{
+.font-satoshi {
  font-family: 'Satoshi', sans-serif !important;
 }
 
-.font-arial{
+.font-arial {
  font-family: "Arial", "sans-serif" !important;
 }
 
@@ -153,6 +153,14 @@ h1, h2, h3, h4{
  
 .font-archivo {
   font-family: var(--font-archivo), Arial, sans-serif;
+}
+
+.font-arial {
+  font-family: Arial, sans-serif !important;
+}
+
+.font-unbounded {
+  font-family: var(--font-unbounded), sans-serif !important;
 }
 
 .container{

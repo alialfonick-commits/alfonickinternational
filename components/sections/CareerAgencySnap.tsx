@@ -31,7 +31,7 @@ export function CareerAgencySnap() {
   return (
     <section
       id="agency-snaps"
-      className="overflow-hidden bg-[#EEEEEE] mx-5 rounded-xl py-20"
+      className="overflow-hidden bg-[#EEEEEE] mx-5 rounded-xl md:py-20 py-10 mb-6"
     >
       <style>
         {`
@@ -55,14 +55,14 @@ export function CareerAgencySnap() {
       </style>
 
 <div className="text-center">
-                    <h2 className="lg:text-[51px] md:text-5xl sm:text-4xl text-[34px] font-bold! leading-[1.1]">
+                    <h2 className="lg:text-[51px] md:text-5xl sm:text-4xl text-[34px] font-normal leading-[1.1]">
                         Life at the {''}
-                        <span className="text-[#B81C15] font-bold!">
+                        <span className="text-[#B81C15] italic">
                            Agency
                         </span>
                     </h2>
 
-                    <p className="text-[#22222299] text-base lg:text-xl mt-3">
+                    <p className="text-[#22222299] font-arial text-base lg:text-xl mt-3">
                         A glimpse into our day-to-day culture
                     </p>
                 </div>
@@ -75,7 +75,7 @@ export function CareerAgencySnap() {
           {duplicatedImages.map((image, index) => (
             <div
               key={`${image.src}-${index}`}
-              className="relative h-[230px] w-[320px] cursor-pointer shrink-0 overflow-hidden rounded-[18px] bg-[#EFF0F0] sm:h-[300px] sm:w-[520px] lg:h-[390px] lg:w-[720px]"
+              className="relative h-57.5 w-[320px] cursor-pointer shrink-0 overflow-hidden rounded-[18px] bg-[#EFF0F0] sm:h-75 sm:w-130 lg:h-97.5 lg:w-180"
             >
               <Image
                 src={image.src}

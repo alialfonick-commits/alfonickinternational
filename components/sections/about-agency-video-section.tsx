@@ -92,7 +92,7 @@ export function AboutAgencyVideoSection() {
             <div className="absolute inset-0 bg-black/10 transition-colors duration-300 group-hover:bg-black/5 cursor-pointer" />
 
             {/* Play / Pause button */}
-            <div className="absolute left-1/2 top-1/2 grid size-24 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/85 bg-white/10 text-white backdrop-blur-[2px] transition-all duration-300 group-hover:scale-105 sm:size-32 cursor-pointer">
+            <div className="absolute left-1/2 top-1/2 grid size-24 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/85 text-white transition-all duration-300 group-hover:scale-105 sm:size-32 cursor-pointer">
               <div className="grid size-16 place-items-center sm:size-24">
                 {isPlaying ? (
                   <Pause

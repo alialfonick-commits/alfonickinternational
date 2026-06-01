@@ -30,20 +30,20 @@ const AboutCompany = () => {
 
   return (
     <section>
-      <div className="max-w-430 m-auto sm:px-18 px-3 sm:pt-22! pt-14!">
+      <div className="max-w-430 m-auto xl:px-18 px-3 sm:pt-22! pt-14!">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <div className="flex flex-col sm:flex-row md:items-center gap-4 pb-5 [&>span]:text-base">
-              <span className="px-6 py-2  rounded-full bg-[#B81C150D] text-[#B81C15] backdrop-blur-[20px] border border-[#FFFFFF26] text-sm whitespace-nowrap italic">
+              <span className="px-6 py-2 w-fit rounded-full bg-[#B81C150D] text-[#B81C15] backdrop-blur-[20px] border border-[#FFFFFF26] text-sm whitespace-nowrap italic">
                 Who we are
               </span>
 
-              <h2 className="mt-2 sm:mt-0 text-[30px] sm:text-[36px] lg:text-[46px] xl:text-[56px] leading-[1.1] font-semibold">
+              <h2 className="mt-2 sm:mt-0 text-[30px] sm:text-[36px] lg:text-[46px] xl:text-[56px] leading-[1.1] font-normal!">
                 About our Company
               </h2>
             </div>
 
-            <p className="text-[#222] xl:text-[22px] lg:text-[20px] sm:text-[18px] text-[17px] xl:leading-10 leading-6 font-[inter]!">
+            <p className="text-[#222] lg:text-[21px] sm:text-[18px] text-[17px] xl:leading-10 leading-6 font-[inter]!">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown printer took Lorem Ipsum is

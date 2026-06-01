@@ -103,12 +103,12 @@ export function BrandPotentialSection() {
     <div>
       <section className="sm:pt-20 pt-4 pb-16">
         <div className="max-w-290 mx-auto px-4 text-center">
-          <h2 className="lg:text-[32px] md:text-[30px] text-[26px] xl:text-[40px] lg:leading-12 md:leading-10 leading-8 font-bold!">
-            Unlock Your <span className="italic font-semi-bold!">Brand </span>{" "}
+          <h2 className="lg:text-[32px] md:text-[30px] text-[26px] xl:text-[40px] lg:leading-12 md:leading-10 leading-8 font-extrabold!">
+            Unlock Your <span className="italic font-normal!">Brand's </span>{" "}
             Potential With
-            <span className="text-[#B81C15] font-bold!"> Strategic</span>{" "}
+            <span className="text-[#B81C15] font-semibold"> Strategic</span>{" "}
             Digital Marketing
-            <span className="italic">That </span> Drives Engagement,{" "}
+            <span className="italic font-normal!">That </span> Drives Engagement,{" "}
             <Image
               src="/images/count img_1.webp"
               alt="logo"

@@ -156,7 +156,7 @@ export default function MomentCaptured() {
     <section className="bg-[#EEEEEE] py-16 lg:p-24 pt-14 pb-10 sm:m-5 m-3 rounded-[20px]">
       <div className="max-w-380 mx-auto px-5">
         <div className="text-center mb-10">
-          <div className="span:text-[#B81C15] text-center px-6 py-3 rounded-4xl w-fit m-auto bg-[#B81C15]/5 text-[#B81C15]">
+          <div className="[&_span]:uppercase [&_span]:text-[#B81C15] text-center px-6 py-3 rounded-4xl w-fit m-auto bg-[#B81C15]/5">
             <span style={{ fontFamily: "Arial" }}> Image Gallery </span>
           </div>
 
@@ -164,8 +164,7 @@ export default function MomentCaptured() {
             {" "}
             Moments Captured in{" "}
             <span className="text-[#B81C15] italic font-medium">
-              {" "}
-              Pixels{" "}
+              Pixels
             </span>
           </h2>
         </div>

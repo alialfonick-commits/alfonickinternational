@@ -99,7 +99,7 @@ function FeatureItem({
           {item.title}
         </h3>
 
-        <p className="sm:mt-5 mt-3 max-w-90 font-[Arial] text-[16px] leading-[1.4] text-[#222222]/85 sm:text-[17px]">
+        <p className="xl:mt-5 mt-2 max-w-90 font-[Arial] text-[16px] leading-[1.4] text-[#222222]/85 sm:text-[17px]">
           {item.description}
         </p>
       </div>
@@ -191,7 +191,7 @@ export function CreativityStrategySection() {
         <div className="max-w-260 m-auto grid lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <Eyebrow />
 
-          <h2 className="font-archivo max-w-212.5  font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] text-[40px] sm:text-[50px] lg:text-[60px] xl:text-[66px]">
+          <h2 className="font-archivo max-w-212.5 font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] text-[34px] sm:text-[50px] lg:text-[60px] xl:text-[66px]">
             We Combine{" "}
             <span className="font-medium italic text-[#B81C15]">
               Creativity

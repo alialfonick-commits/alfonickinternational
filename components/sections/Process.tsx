@@ -12,18 +12,18 @@ const Process = () => {
             </h2>
           </div>
 
-          <div className="max-w-3xl m-auto flex flex-col gap-5 [&>h3]:font-archivo! [&>p]:font-normal! [&>p]:text-[#222222]">
+          <div className="max-w-3xl m-auto flex flex-col gap-5 [&>h3]:font-archivo! [&>p]:font-normal! [&_p]:text-[#2222228a]!">
             <div className="flex flex-col sm:flex-row md:gap-14 gap-4 sm:mb-44 mb-2 relative before:hidden sm:before:block before:content-[''] before:absolute before:left-16 before:top-28 sm:before:h-full before:h-[90%] before:w-[2.8px] before:bg-linear-to-b before:from-white before:to-[#e4837f] px-4">
-              <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-light lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
-                <strong style={{ fontFamily: "Unbounded" }}>01</strong>
+              <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-normal lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_23px_0_#DD4242]">
+                <strong className="font-unbounded">01</strong>
               </div>
 
-              <div className="bg-white rounded-[30px] md:py-6 md:px-7 p-5 [&>span]:text-[#B81C15] [&>span]:font-bold! [&>span]:text-[11px] [&>span]:uppercase [&>h3]:text-2xl [&>h3]:font-semibold! [&>h3]:pt-2 [&>h3]:leading-[-0.1px] [&>h3]:pb-2 [&>p]:text-[16px] ">
-                <span className="font-satoshi font-[900]">Step 01</span>
+              <div className="bg-white rounded-[30px] md:py-6 md:px-7 p-5 [&>span]:text-[#B81C15] [&>span]:font-bold! [&>span]:text-[11px] [&>span]:uppercase [&>h3]:text-2xl [&>h3]:font-semibold! [&>h3]:pt-2 [&>h3]:leading-[-0.1px] [&>h3]:pb-2 [&>p]:text-[16px] [&>p]:font-normal!">
+                <span className="font-unbounded font-[900]">Step 01</span>
 
                 <h3>Discovery Phase</h3>
 
-                <p style={{ fontFamily: "Arial" }}>
+                <p className="font-arial">
                   During this initial stage, we delve deep into understanding
                   your business goals, target audience, and market landscape. We
                   conduct thorough research and analysis to identify
@@ -33,16 +33,16 @@ const Process = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row md:gap-14 gap-4 sm:mb-44 mb-2 relative before:hidden sm:before:block before:content-[''] before:absolute before:left-17 before:top-28 before:h-full before:w-[2.8px] before:bg-linear-to-b before:from-white before:to-[#e4837f] px-4">
-              <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-light lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
-                <strong style={{ fontFamily: "Unbounded" }} >02</strong>
+            <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-normal lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_23px_0_#DD4242]">
+                <strong className="font-unbounded">02</strong>
               </div>
 
-              <div className="bg-white rounded-[30px] md:py-6 md:px-7 p-5 [&>span]:text-[#B81C15] [&>span]:font-bold! [&>span]:text-[11px] [&>span]:uppercase [&>h3]:text-2xl [&>h3]:font-semibold! [&>h3]:pt-4 [&>h3]:pb-2 [&>p]:text-[16px]">
-                <span className="font-satoshi font-[900]">Step 02</span>
+              <div className="bg-white rounded-[30px] md:py-6 md:px-7 p-5 [&>span]:text-[#B81C15] [&>span]:font-bold! [&>span]:text-[11px] [&>span]:uppercase [&>h3]:text-2xl [&>h3]:font-semibold! [&>h3]:pt-4 [&>h3]:pb-2 [&>p]:text-[16px] [&>p]:font-normal!">
+                <span className="font-unbounded font-[900]">Step 02</span>
 
                 <h3>Strategy Development</h3>
 
-                <p style={{ fontFamily: "Arial" }}>
+                <p className="font-arial">
                   With insights gathered from the discovery phase, we develop a
                   customized strategy tailored to your specific needs and
                   objectives. This comprehensive plan outlines the key tactics,
@@ -52,16 +52,16 @@ const Process = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row md:gap-14 gap-4 sm:mb-44 mb-2 relative before:hidden sm:before:block before:content-[''] before:absolute before:left-17 before:top-28 before:h-full before:w-[2.8px] before:bg-linear-to-b before:from-white before:to-[#e4837f] px-4">
-              <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-light lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
-                <strong style={{ fontFamily: "Unbounded" }}>03</strong>
+            <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-normal lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_23px_0_#DD4242]">
+                <strong className="font-unbounded">03</strong>
               </div>
 
-              <div className="bg-white rounded-[30px] md:py-6 md:px-7 p-5 [&>span]:text-[#B81C15] [&>span]:font-bold! [&>span]:text-[11px] [&>span]:uppercase [&>h3]:text-2xl [&>h3]:font-semibold! [&>h3]:pt-4 [&>h3]:pb-2 [&>p]:text-[16px]">
-                <span className="font-satoshi font-[900]">Step 03</span>
+              <div className="bg-white rounded-[30px] md:py-6 md:px-7 p-5 [&>span]:text-[#B81C15] [&>span]:font-bold! [&>span]:text-[11px] [&>span]:uppercase [&>h3]:text-2xl [&>h3]:font-semibold! [&>h3]:pt-4 [&>h3]:pb-2 [&>p]:text-[16px] [&>p]:font-normal!">
+                <span className="font-unbounded font-[900]">Step 03</span>
 
                 <h3>Implementation and Execution</h3>
 
-                <p style={{ fontFamily: "Arial" }}>
+                <p className="font-arial">
                   Once the strategy is finalized and approved, we roll up our
                   sleeves and put the plan into action. Our expert team utilizes
                   cutting-edge tools and techniques to execute each component of
@@ -72,14 +72,14 @@ const Process = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row md:gap-14 gap-4 relative px-4">
-              <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-light lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_13px_0_#DD4242]">
-                <strong style={{ fontFamily: "Unbounded" }}>04</strong>
+            <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-normal lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_23px_0_#DD4242]">
+                <strong className="font-unbounded">04</strong>
               </div>
 
-              <div className="bg-white rounded-[30px] md:py-6 md:px-7 p-5 [&>span]:text-[#B81C15] [&>span]:font-bold! [&>span]:text-[11px] [&>span]:uppercase [&>h3]:text-2xl [&>h3]:font-semibold! [&>h3]:pt-4 [&>h3]:pb-2 [&>p]:text-[16px]">
-                <span className="font-satoshi font-[900]">Step 04</span>
+              <div className="bg-white rounded-[30px] md:py-6 md:px-7 p-5 [&>span]:text-[#B81C15] [&>span]:font-bold! [&>span]:text-[11px] [&>span]:uppercase [&>h3]:text-2xl [&>h3]:font-semibold! [&>h3]:pt-4 [&>h3]:pb-2 [&>p]:text-[16px] [&>p]:font-normal!">
+                <span className="font-unbounded font-[900]">Step 04</span>
                 <h3>Monitoring and Optimization</h3>
-                <p style={{ fontFamily: "Arial" }}>
+                <p className="font-arial">
                   Continuous monitoring and optimization are essential to
                   ensuring the success and effectiveness of our campaigns. We
                   closely track key performance indicators (KPIs) and metrics,

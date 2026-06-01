@@ -47,7 +47,7 @@ export function ValuesSection() {
           <div className="absolute left-[-12%] top-[20%] h-105 w-105 rounded-full bg-[#B81C15]/25 blur-3xl" />
 
           <div className="relative z-10 max-w-365 m-auto">
-            <div className="mt-2 sm:mt-4 max-w-236 m-auto text-center [&>span]:border [&>span]:border-[#FFFFFF26] [&>span]:text-white [&>span]:w-fit [&>span]:m-auto [&>span]:block [&>span]:shadow-[0_1px_7px_1px_#FFFFFF1A] [&>span]:rounded-full [&>span]:px-10 [&>span]:py-3 [&>span]:text-sm [&>h2]:text-[28px] sm:[&>h2]:text-[36px] md:[&>h2]:text-[42px] lg:[&>h2]:text-[56px] [&>h2]:text-white! [&>h2]:mb-4 [&>h2]:mt-6 sm:[&>h2]:mt-4">
+            <div className="mt-2 sm:mt-4 max-w-236 m-auto text-center [&>span]:border [&>span]:border-[#FFFFFF26] [&>span]:bg-[#B81C150D] [&>span]:text-white [&>span]:w-fit [&>span]:m-auto [&>span]:block [&>span]:shadow-[0_-1px_7px_1px_#FFFFFF1A] [&>span]:backdrop-blur-[20px] [&>span]:rounded-full [&>span]:px-10 [&>span]:py-3 [&>span]:text-sm [&>h2]:text-[28px] sm:[&>h2]:text-[36px] md:[&>h2]:text-[42px] lg:[&>h2]:text-[56px] [&>h2]:text-white! [&>h2]:mb-4 [&>h2]:mt-6 sm:[&>h2]:mt-4">
               <span style={{ fontFamily: "Arial" }}>Our Culture</span>
               <h2>Values That Define Us</h2>
             </div>
@@ -67,9 +67,9 @@ export function ValuesSection() {
                 return (
                   <article
                     key={item.number}
-                    className={`group h-fit rounded-2xl border border-white/10 bg-white/20 p-3 text-white backdrop-blur-md transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[#B81C15] hover:bg-transparent hover:shadow-[0_28px_80px_rgba(184,28,21,0.22)] sm:p-4 cursor-pointer ${offsetClass}`}
+                    className={`group h-fit rounded-[20px] bg-[#FFFFFF40] p-3 text-white transition-all duration-500 ease-out hover:-translate-y-2 hover:bg-transparent hover:shadow-[0_28px_80px_rgba(184,28,21,0.22)] sm:p-4 cursor-pointer ${offsetClass}`}
                   >
-                    <div className="font-archivo text-[60px] font-bold leading-none tracking-[-0.06em] text-white transition-colors duration-500 lg:text-[96px] sm:text-[66px]">
+                    <div className="font-arial text-[60px] font-bold leading-none tracking-[-0.06em] text-white transition-colors duration-500 lg:text-[96px] sm:text-[66px]">
                       {item.number}
                     </div>
 

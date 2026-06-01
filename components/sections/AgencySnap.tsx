@@ -18,7 +18,7 @@ const AgencySnap = () => {
         </div>
 
         <div className="max-w-150">
-          <p className="text-[#222222] lg:text-[21px] sm:text-[20px] text-[17px] leading-[1.3]">
+          <p className="text-[#222222] lg:text-[21px] sm:text-[20px] text-[17px] leading-loose">
             Let&apos;s get acquainted! We&apos;re not your average digital marketing
             agency - we&apos;re a team of passionate individuals who eat, sleep, and
             breathe creativity, innovation, and all things digital.
