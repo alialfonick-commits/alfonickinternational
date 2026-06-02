@@ -66,7 +66,7 @@ export function ArticlesSection() {
           {articles.map((article) => (
             <article key={article.title} className="group">
               <Link href="#blogs" className="block">
-                <div className="relative aspect-[1.08/1] overflow-hidden bg-[#EFF0F0]">
+                <div className="relative aspect-[1.08/1] overflow-hidden rounded-[12px] bg-[#EFF0F0]">
                   <Image
                     src={article.image}
                     alt={article.title}
