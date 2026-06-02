@@ -44,7 +44,7 @@ export function AboutAgencyVideoSection() {
           </div> */}
 
           
-           <div className="flex justify-center lg:[&>h2]:text-[98px] md:[&>h2]:text-[70px] sm:[&>h2]:text-[50px] [&>h2]:text-[34px] [&>h2]:font-bold! [&>h2]:uppercase items-center gap-2">
+           <div className="flex justify-center lg:[&>h2]:text-[98px] md:[&>h2]:text-[70px] sm:[&>h2]:text-[50px] [&>h2]:text-[34px] [&>h2]:font-extrabold! [&>h2]:tracking-[-0.8px]! [&>h2]:uppercase items-center gap-2">
           <div className="flex flex-col items-center text-end lg:[&_span]:text-[45px] md:[&_span]:text-[32px] sm:[&_span]:text-[30px] [&_span]:text-[24px] sm:-mb-7 -mb-3">
             <span className="text-white font-extrabold! [-webkit-text-stroke:0.54px_black] uppercase tracking-[-0.5px] leading-[0.8px] lg:pt-2.5 pt-0 ">
               About
@@ -53,7 +53,7 @@ export function AboutAgencyVideoSection() {
               Our
             </span>
           </div>
-          <h2 className="tracking-[-0.8px]!">Agency</h2>
+          <h2>Agency</h2>
         </div>  
 
 
@@ -61,7 +61,7 @@ export function AboutAgencyVideoSection() {
 
         {/* Video container */}
         <div className="relative mx-auto max-w-375 cursor-pointer">
-          <div className="absolute left-1/2 -bottom-1/2 lg:h-[70%] md:h-[60%] h-[45%] w-screen -translate-x-1/2 -translate-y-1/2 bg-[#EEEEEE]" />
+          <div className="absolute left-1/2 -bottom-1/2 lg:h-[70%] md:h-[60%] h-[45%] w-screen -translate-x-1/2 -translate-y-1/2 bg-[#EEEEEE] pointer-events-none" />
 
           <button
             type="button"

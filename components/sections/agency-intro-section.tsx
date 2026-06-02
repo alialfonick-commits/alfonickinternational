@@ -72,7 +72,7 @@ export function AgencyIntroSection() {
               </p>
             </div>
 
-            <h2 className="font-archivo max-w-190 text-[38px] leading-[1.1] tracking-[-0.055em] text-black sm:text-[58px] md:text-[70px] lg:text-[64px] 2xl:text-[78px]">
+            <h2 className="font-archivo max-w-190 text-[34px] leading-[1.1] tracking-[-0.055em] text-black sm:text-[58px] md:text-[70px] lg:text-[58px] 2xl:text-[78px]">
               We are <span className="text-[#B81C15]">CREATIVE</span>
               <br />
               Digital Marketing
@@ -108,7 +108,7 @@ export function AgencyIntroSection() {
 
             <Link
               href="#"
-              className="headerBtn group relative inline-block border rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pr-15 active:pl-5 text-black hover:text-white hover:border-[#b81c15] transition-all duration-300 mt-5 hover:bg-[#b81c15]"
+              className="headerBtn group relative inline-block border border-[#2222224D] rounded-full md:py-3 sm:py-4 py-3! sm:pr-5 pr-3 sm:pl-15 pl-12 hover:pr-15 hover:pl-5 active:pr-15 active:pl-5 text-black hover:text-white hover:border-[#b81c15] transition-all duration-300 mt-5 hover:bg-[#b81c15]"
             >
               <span className="inline-block transition-all duration-300 lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px]">
                 Read more
@@ -203,10 +203,10 @@ export function AgencyIntroSection() {
           {services.map((service) => (
             <article key={service.number} className="max-w-120">
               <h3 className="font-archivo flex items-end gap-2 text-3xl font-semibold leading-none text-black sm:text-4xl">
-                <span className="text-[56px] font-medium leading-none text-white [-webkit-text-stroke:1px_#222222] sm:text-[64px]">
+                <span className="text-[56px] font-semibold leading-none text-white [-webkit-text-stroke:1px_#222222] md:text-[56px] 2xl:text-[64px]" style={{ fontFamily: "var(--font-dm-sans)" }}>
                   {service.number}
                 </span>
-                <span className="mb-2">{service.title}</span>
+                <span className="mb-2 font-semibold">{service.title}</span>
               </h3>
 
               <p className="mt-4 font-[Arial] text-base leading-[1.65] text-[#777777] sm:text-lg">

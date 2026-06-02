@@ -3,15 +3,16 @@
 @import "shadcn/tailwind.css";
 
 
-/* @import url(https://db.onlinewebfonts.com/c/aa4a0305ca8b9f59618acc4c461e514a?family=TrumpGothicPro); */
-
-
 .font-trump {
   font-family: "TrumpGothicPro" !important;
 }
 
 .font-satoshi {
  font-family: 'Satoshi', sans-serif !important;
+}
+
+.font-dm-sans {
+  font-family: var(--font-dm-sans), sans-serif !important;
 }
 
 .font-arial {

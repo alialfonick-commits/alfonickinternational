@@ -111,7 +111,7 @@ export function TestimonialSection() {
                     pointerEvents: isActive ? "auto" : "none",
                   }}
                 >
-                  <div className="relative overflow-hidden rounded-[12px] bg-black/30 sm:rounded-[14px]">
+                  <div className="relative overflow-hidden rounded-xl bg-black/30 sm:rounded-[14px]">
                     <Image
                       src={item.images[0]}
                       alt=""
@@ -121,7 +121,7 @@ export function TestimonialSection() {
                     />
                   </div>
 
-                  <div className="relative overflow-hidden rounded-[12px] bg-black/30 sm:rounded-[14px]">
+                  <div className="relative overflow-hidden rounded-xl bg-black/30 sm:rounded-[14px]">
                     <Image
                       src={item.images[1]}
                       alt=""
@@ -131,7 +131,7 @@ export function TestimonialSection() {
                     />
                   </div>
 
-                  <div className="relative overflow-hidden rounded-[12px] bg-black/30 sm:rounded-[14px]">
+                  <div className="relative overflow-hidden rounded-xl bg-black/30 sm:rounded-[14px]">
                     <Image
                       src={item.images[2]}
                       alt=""
@@ -141,12 +141,12 @@ export function TestimonialSection() {
                     />
                   </div>
 
-                  <div className="grid place-items-center rounded-[12px] bg-[#1b1b1b] sm:rounded-[14px]">
+                  <div className="grid place-items-center rounded-xl bg-[#1b1b1b] sm:rounded-[14px]">
                     <Quote
                       size={46}
                       strokeWidth={0}
                       fill="currentColor"
-                      className="text-white sm:size-[58px]"
+                      className="text-white sm:size-14.5"
                     />
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export function TestimonialSection() {
           </div>
 
           {/* Text vertical slider */}
-          <div className="relative sm:min-h-[430px] min-h-[350px] overflow-hidden text-center text-white md:min-h-[390px] lg:min-h-[340px] lg:text-left xl:min-h-[350px]">
+          <div className="relative sm:min-h-107.5 min-h-87.5 overflow-hidden text-center text-white md:min-h-[390px] lg:min-h-[340px] lg:text-left xl:min-h-[350px]">
             {testimonials.map((item, index) => {
               const isActive = index === activeIndex;
               const isPrevious = index === previousIndex;

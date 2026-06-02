@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 
 const articles = [
   {
@@ -48,7 +47,7 @@ export function ArticlesSection() {
         <div className="max-w-260 m-auto grid gap-8 lg:grid-cols-[410px_1fr] lg:items-start xl:grid-cols-[340px_1fr]">
           <SectionEyebrow />
 
-          <h2 className="font-archivo max-w-195 text-[42px] font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] sm:text-[58px] lg:text-[72px] xl:text-[82px]">
+          <h2 className="font-archivo max-w-195 text-[32px] font-medium leading-[1.08] tracking-[-0.055em] text-[#222222] sm:text-[58px] lg:text-[68px] 2xl:text-[82px]">
             Explore{" "}
             <span className="font-medium italic text-[#B81C15]">
               Articles And
@@ -66,7 +65,7 @@ export function ArticlesSection() {
           {articles.map((article) => (
             <article key={article.title} className="group">
               <Link href="#blogs" className="block">
-                <div className="relative aspect-[1.08/1] overflow-hidden rounded-[12px] bg-[#EFF0F0]">
+                <div className="relative aspect-[1.08/1] overflow-hidden rounded-xl bg-[#EFF0F0]">
                   <Image
                     src={article.image}
                     alt={article.title}

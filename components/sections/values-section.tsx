@@ -27,9 +27,9 @@ const values = [
 
 export function ValuesSection() {
   return (
-    <section className="bg-white px-4 py-12 sm:px-6 sm:pt-18 sm:pb-6 lg:px-10 xl:px-12">
+    <section className="bg-white px-4 py-12 md:px-6 sm:pt-18 sm:pb-6">
       <div className="">
-        <div className="relative overflow-hidden rounded-[18px] bg-black px-4 py-16 sm:px-8 sm:py-20 lg:px-12 2xl:px-30 xl:py-24 max-w-465 m-auto">
+        <div className="relative overflow-hidden rounded-[18px] bg-black px-4 py-16 sm:px-8 sm:py-20 2xl:px-30 xl:py-24 max-w-465 m-auto">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"

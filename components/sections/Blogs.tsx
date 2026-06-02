@@ -83,7 +83,7 @@ export default function Blog() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:gap-12 gap-8">
         {articles.map((item) => (
           <div key={item.id}>
             <Link href={item.link} className="block overflow-hidden rounded-[20px]">

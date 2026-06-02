@@ -1,7 +1,7 @@
 const GalleryHero = () => {
   return (
     <>
-      <section className="sm:mt-5 mt-3 sm:mx-5 mx-3 rounded-[20px] relative overflow-hidden bg-black pt-35 sm:pb-30 pb-25 z-0">
+      <section className="2xl:mt-5 mt-2 sm:mx-5 mx-3 rounded-[20px] relative overflow-hidden bg-black pt-35 sm:pb-30 pb-25 z-0">
 
         {/* Background Glow Layer 1 (Core Red Ellipse) */}
         <div

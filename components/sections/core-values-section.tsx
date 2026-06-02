@@ -95,7 +95,7 @@ export function CoreValuesSection() {
         <div className="relative flex items-center justify-center">
           <h2
             aria-label="Values"
-            className="font-archivo pointer-events-none select-none text-center text-[clamp(5.4rem,22vw,21rem)] font-extrabold! uppercase leading-none tracking-[10%] text-[#222222]"
+            className="font-archivo pointer-events-none select-none text-center text-[clamp(5.4rem,20vw,21rem)] font-extrabold! uppercase leading-none tracking-[10%] text-[#222222]"
           >
             VALUES
           </h2>

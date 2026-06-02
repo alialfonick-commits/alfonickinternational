@@ -81,7 +81,7 @@ function FeatureItem({
 }) {
   return (
     <article
-      className={`grid items-center xl:gap-9 md:gap-5 gap-2 ${
+      className={`grid items-center 2xl:gap-9 md:gap-5 gap-2 ${
         reverse
           ? "text-right grid-cols-[1fr_auto] lg:text-right"
           : "text-left grid-cols-[auto_1fr]"
@@ -204,7 +204,7 @@ export function CreativityStrategySection() {
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-12 lg:mt-16 lg:grid-cols-[1fr_440px_1fr] xl:grid-cols-[1fr_500px_1fr] xl:gap-16 content-center">
+        <div className="mt-14 grid gap-8 lg:mt-16 lg:grid-cols-[1fr_440px_1fr] xl:grid-cols-[1fr_500px_1fr] 2xl:gap-16 content-center">
           {/* Left list */}
           <div className="flex flex-col gap-14 lg:gap-20 lg:pt-12">
             {leftItems.map((item) => (
@@ -213,7 +213,7 @@ export function CreativityStrategySection() {
           </div>
 
           {/* Center dual infinite slider */}
-          <div className="relative mx-auto grid w-full max-w-130 grid-cols-2 gap-3 overflow-hidden">
+          <div className="relative mx-auto grid w-full max-w-130 grid-cols-2 gap-3 overflow-hidden [&_img]:cursor-pointer">
             <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-20 bg-linear-to-b from-[#EFF0F0] to-transparent" />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-20 bg-linear-to-t from-[#EFF0F0] to-transparent" />
 

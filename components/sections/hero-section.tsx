@@ -112,7 +112,7 @@ export function HeroSection() {
      >
       <div className="mx-auto flex max-w-295 flex-col items-center">
        <div className="relative inline-block mb-5 [&_span]:absolute sm:[&_span]:h-3 [&_span]:h-1.5 sm:[&_span]:w-3 [&_span]:w-1.5 [&_span]:border-[#FFFFFF80] [&_span]:rounded-[1px]">
-        <p className="font-archivo mb-0! lg:text-[42px] md:text-[38px] sm:text-[34px] text-[20px] font-normal tracking-[-0.94px] text-[#EFF0F0] sm:mb-7">
+        <p className="font-archivo mb-0! 2xl:text-[42px] sm:text-[28px] text-[20px] font-normal tracking-[-0.94px] text-[#EFF0F0] sm:mb-7">
          Intelligence, unleashed.
         </p>
 
@@ -125,12 +125,12 @@ export function HeroSection() {
         <span className="bottom-0 -right-1 border-r border-b" />
        </div>
 
-       <h1 className="font-archivo max-w-280 text-[38px] font-medium leading-[0.96] tracking-tighter text-white sm:text-[56px] md:text-[68px] lg:text-[92px] 2xl:text-[102px] xl:text-[90px]">
+       <h1 className="font-archivo max-w-280 text-[30px] font-medium leading-[0.96] tracking-tighter text-white sm:text-[56px] md:text-[68px] lg:text-[86px] 2xl:text-[102px] xl:text-[90px]">
         Marketing agency for
         <br className="hidden sm:block" /> creative business solutions
        </h1>
 
-       <p className="mt-6 max-w-230 font-[Arial] text-[14px] leading-[1.45] text-white sm:mt-7 sm:text-[15px] md:text-[18px] font-normal">
+       <p className="mt-6 max-w-230 font-[Arial] text-[14px] leading-[1.45] text-white sm:mt-7 sm:text-[15px] md:text-[16px] 2xl:text-[18px] font-normal">
         We specialize in website development, branding, and promotion
         for developers, large manufacturing companies, transportation
         companies, and FMCG companies.

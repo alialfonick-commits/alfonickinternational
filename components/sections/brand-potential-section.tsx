@@ -103,7 +103,7 @@ export function BrandPotentialSection() {
     <div>
       <section className="sm:pt-20 pt-4 pb-16">
         <div className="max-w-290 mx-auto px-4 text-center">
-          <h2 className="lg:text-[32px] md:text-[30px] text-[26px] xl:text-[40px] lg:leading-12 md:leading-10 leading-8 font-extrabold!">
+          <h2 className="lg:text-[32px] md:text-[30px] text-[22px] xl:text-[40px] lg:leading-12 md:leading-10 leading-8 font-extrabold!">
             Unlock Your <span className="italic font-normal!">Brand's </span>{" "}
             Potential With
             <span className="text-[#B81C15] font-semibold"> Strategic</span>{" "}
@@ -128,7 +128,7 @@ export function BrandPotentialSection() {
             Today Competitive.
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10 [&_div>h3]:md:leading-20 [&_div>h3]:sm:leading-12 [&_div>h3]:leading-10 [&_div>h3]:xl:text-[80px] [&_div>h3]:md:text-[60px] [&_div>h3]:sm:text-[40px] [&_div>h3]:text-[34px] [&_div>h3]:font-bold! xl:[&_div_p]:text-2xl lg:[&_div_p]:text-xl sm:[&_div_p]:text-base [&_div_p]:font-[inter]! [&_div_p]:font-bold!">
+          <div className="grid grid-cols-2 md:grid-cols-4 md:gap-8 gap-3 mt-10 [&_div>h3]:md:leading-20 [&_div>h3]:sm:leading-12 [&_div>h3]:leading-10 [&_div>h3]:xl:text-[80px] [&_div>h3]:md:text-[60px] [&_div>h3]:sm:text-[40px] [&_div>h3]:text-[34px] [&_div>h3]:font-bold! xl:[&_div_p]:text-2xl lg:[&_div_p]:text-xl sm:[&_div_p]:text-base [&_div_p]:font-[inter]! [&_div_p]:font-bold!">
             <div>
               <h3>12K</h3>
               <p>Overall Experience</p>

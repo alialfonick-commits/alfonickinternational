@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Inter, Unbounded } from "next/font/google";
+import { Archivo, Inter, Unbounded, DM_Sans } from "next/font/google";
 
 import "./globals.css";
 
@@ -21,6 +21,12 @@ const unbounded = Unbounded({
   display: "swap",
 });
 
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Alfonick International",
   description: "Marketing agency for creative business solutions",
@@ -34,7 +40,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${archivo.variable} ${unbounded.variable}`}
+      className={`
+        ${inter.variable}
+        ${archivo.variable}
+        ${unbounded.variable}
+        ${dmSans.variable}
+      `}
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />

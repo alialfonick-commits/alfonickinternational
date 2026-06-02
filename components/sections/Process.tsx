@@ -12,7 +12,7 @@ const Process = () => {
             </h2>
           </div>
 
-          <div className="max-w-3xl m-auto flex flex-col gap-5 [&>h3]:font-archivo! [&>p]:font-normal! [&_p]:text-[#2222228a]!">
+          <div className="max-w-3xl m-auto flex flex-col 2xl:gap-5 [&>h3]:font-archivo! [&>p]:font-normal! [&_p]:text-[#2222228a]!">
             <div className="flex flex-col sm:flex-row md:gap-14 gap-4 sm:mb-44 mb-2 relative before:hidden sm:before:block before:content-[''] before:absolute before:left-16 before:top-28 sm:before:h-full before:h-[90%] before:w-[2.8px] before:bg-linear-to-b before:from-white before:to-[#e4837f] px-4">
               <div className="text-[#B81C15] text-center sm:text-left [&>strong]:font-normal lg:[&>strong]:text-[66px] [&>strong]:text-[50px] [text-shadow:0_1px_23px_0_#DD4242]">
                 <strong className="font-unbounded">01</strong>

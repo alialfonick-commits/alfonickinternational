@@ -38,7 +38,7 @@ const AboutCompany = () => {
                 Who we are
               </span>
 
-              <h2 className="mt-2 sm:mt-0 text-[30px] sm:text-[36px] lg:text-[46px] xl:text-[56px] leading-[1.1] font-normal!">
+              <h2 className="mt-2 sm:mt-0 text-[30px] sm:text-[36px] lg:text-[42px] 2xl:text-[56px] leading-[1.1] font-normal!">
                 About our Company
               </h2>
             </div>

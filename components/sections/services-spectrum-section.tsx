@@ -86,7 +86,7 @@ export function ServicesSpectrumSection() {
           {[...marqueeItems, ...marqueeItems].map((item, index) => (
             <div key={`${item}-${index}`} className="flex items-center gap-10">
               <h3
-                className={`font-archivo text-[34px] font-bold uppercase leading-none tracking-[-0.04em] sm:text-[48px] lg:text-[50px] xl:text-[58px] ${
+                className={`font-archivo text-[34px] font-bold uppercase leading-none tracking-[-0.04em] sm:text-[46px] xl:text-[58px] ${
                   index % 2 === 1 ? "text-[#B81C15]" : "text-[#000000]"
                 }`}
               >
@@ -151,7 +151,7 @@ export function ServicesSpectrumSection() {
                     onClick={() => setActiveService(index)}
                     className={`group grid w-full items-center cursor-pointer rounded-[10px] px-5 py-5 text-left transition-all duration-300 sm:grid-cols-[1fr_0.9fr_auto] sm:px-7 ${
                       isActive
-                        ? "bg-[#B81C15] text-white shadow-[0_18px_40px_rgba(184,28,21,0.22)]"
+                        ? "bg-[#B81C15] text-white"
                         : "bg-[#EFF0F0] text-[#222222] hover:bg-[#F5D5D2]"
                     }`}
                    >
@@ -164,7 +164,7 @@ export function ServicesSpectrumSection() {
                         {service.number}
                       </span>
 
-                      <h3 className="font-archivo text-[24px] font-semibold tracking-[-0.04em] sm:text-[30px]">
+                      <h3 className="font-archivo text-[24px] font-semibold tracking-[-0.04em] sm:text-[26px] 2xl:text-[30px]">
                         {service.title}
                       </h3>
                     </div>
@@ -180,16 +180,16 @@ export function ServicesSpectrumSection() {
                     <span
                       className={`mt-4 grid size-12 place-items-center rounded-full transition-all duration-400 sm:mt-0 ${
                         isActive
-                          ? "bg-white text-[#222222]"
-                          : "bg-[#D9D9D9] text-black group-hover:bg-white"
+                          ? "bg-white text-[#222222] rotate-35"
+                          : "bg-[#CCCCCC] transition-transform duration-400 text-[#222222] group-hover:bg-white -rotate-35"
                       }`}
                     >
                       <ArrowUpRight
                         size={24}
                         strokeWidth={2.3}
-                        className={`transition-transform rotate-45 duration-400 ${
+                        className={`transition-transform rotate-35 duration-400${
                           isActive
-                            ? "group-hover:rotate-90"
+                            ? "group-hover:-rotate-35"
                             : "group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                         }`}
                       />

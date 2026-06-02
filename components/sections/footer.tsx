@@ -63,7 +63,7 @@ export function Footer() {
       id="contact"
       className="bg-white md:px-5 px-2 py-4"
     >
-      <div className="relative overflow-hidden rounded-[18px] bg-[#090000] pt-16 pb-8 text-white sm:px-16 px-4">
+      <div className="relative overflow-hidden rounded-[18px] bg-[#090000] pt-16 pb-8 text-white md:px-8 2xl:px-16 px-4">
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-70"
@@ -133,7 +133,7 @@ export function Footer() {
             </div> */}
 
 
-            <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
+            <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:transition-colors [&_a]:duration-300 [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
               <Link href="https://www.facebook.com/AlfonickInternational/">
                 <TiSocialFacebook />
               </Link>
@@ -143,7 +143,7 @@ export function Footer() {
               <Link href="https://pk.linkedin.com/company/alfonickinternational">
                 <FaLinkedinIn />
               </Link>
-              <Link href="">
+              <Link href="#">
                 <AiFillInstagram />
               </Link>
             </div>
