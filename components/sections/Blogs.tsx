@@ -8,7 +8,7 @@ const articles = [
     date: "June 24, 2025",
     category: "TECH",
     title: "Aladdin: unlocking the magic of imaginative design top-notch",
-    link: "/#",
+    link: "#",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const articles = [
     date: "June 24, 2025",
     category: "TECH",
     title: "Aladdin: unlocking the magic of imaginative design top-notch",
-    link: "/#",
+    link: "#",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const articles = [
     date: "June 24, 2025",
     category: "TECH",
     title: "Aladdin: unlocking the magic of imaginative design top-notch",
-    link: "/#",
+    link: "#",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const articles = [
     date: "June 24, 2025",
     category: "TECH",
     title: "Aladdin: unlocking the magic of imaginative design top-notch",
-    link: "/#",
+    link: "#",
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ const articles = [
     date: "June 24, 2025",
     category: "TECH",
     title: "Aladdin: unlocking the magic of imaginative design top-notch",
-    link: "/#",
+    link: "#",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ const articles = [
     date: "June 24, 2025",
     category: "TECH",
     title: "Aladdin: unlocking the magic of imaginative design top-notch",
-    link: "/#",
+    link: "#",
   },
   {
     id: 7,
@@ -56,7 +56,7 @@ const articles = [
     date: "June 24, 2025",
     category: "TECH",
     title: "Aladdin: unlocking the magic of imaginative design top-notch",
-    link: "/#",
+    link: "#",
   },
   {
     id: 8,
@@ -65,25 +65,25 @@ const articles = [
     category: "TECH",
     title: "Aladdin: unlocking the magic of imaginative design top-notch",
     tag: "",
-    link: "/#",
+    link: "#",
   },
 ];
 
 export default function Blog() {
   return (
 
-    <section className="px-5 pt-22 pb-12">
+    <section className="px-5 pt-12 md:pt-22 md:pb-12 pb-2">
       <div className="max-w-351 mx-auto">
       <div className="text-center mb-12 [&>span]:text-[#B81C15] [&>span]:px-6 [&>span]:py-3 [&>span]:rounded-4xl [&>span]:w-fit [&>span]:m-auto [&>span]:bg-[#B81C15]/5">
         <span style={{fontFamily: "Arial"}}> LATEST NEWS & INSIGHTS </span>
 
-        <h2 className="text-[40px] md:text-[50px] lg:text-[70px] xl:text-[100px] 2xl:text-[120px] font-bold! text-[#222] leading-[0.917] mt-6.25 uppercase font-trump tracking-[1px]">
+        <h2 className="text-[50px] lg:text-[70px] xl:text-[100px] 2xl:text-[120px] font-bold! text-[#222] leading-[0.917] mt-6.25 uppercase font-trump tracking-[1px]">
           Simple Tips That{" "}
           <span className="block font-bold!"> Actually Work</span>
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 2xl:gap-12 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:gap-12 md:gap-8 gap-2">
         {articles.map((item) => (
           <div key={item.id}>
             <Link href={item.link} className="block overflow-hidden rounded-[20px]">

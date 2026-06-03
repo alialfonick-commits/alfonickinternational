@@ -4,7 +4,7 @@ const CareerHero = () => {
   return (
     <>
 
-      <section className="2xl:mt-5 mt-2 mx-5 rounded-[20px] relative overflow-hidden bg-black pt-35 pb-30 z-0">
+      <section className="2xl:mt-5 mt-2 sm:mx-5 mx-2 rounded-[20px] relative overflow-hidden bg-black sm:py-40 pt-33 pb-33 z-0">
 
         {/* Background Glow Layer 1 (Core Elliptical Glow) */}
         <div

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutWhyChoose() {
   return (
-    <section className="pt-22 pb-10 px-4 md:px-16">
+    <section className="pt-22 pb-10 px-4 2xl:px-16">
       <div className="pb-5 xl:[&>h2]:text-[50px] lg:[&>h2]:text-[46px] sm:[&>h2]:text-[36px] [&>h2]:mt-4 [&>h2]:text-[30px] sm:[&>h2]:pt-0 [&>h2]:pt-5 [&>h2]:leading-[1.1] [&>h2>span]:text-[#B81C15] [&>h2>span]:italic text-center [&>span]:px-6 [&>span]:py-3 [&>span]:uppercase [&>span]:rounded-4xl [&>span]:bg-[#B81C15]/5 [&>span]:text-[#B81C15]">
         <span className="font-Arial">Built For Intelligent</span>
 
@@ -12,7 +12,7 @@ export default function AboutWhyChoose() {
         </h2>
       </div>
 
-      <div className="max-w-371 m-auto sm:px-4 px-0 pt-4 grid md:grid-cols-2 gap-6 lg:gap-16 items-center">
+      <div className="max-w-371 m-auto sm:px-4 px-0 pt-4 grid md:grid-cols-2 gap-6 lg:gap-10 2xl:gap-16 items-center">
         <div className="rounded-2xl overflow-hidden">
           <Image
             src="/images/About Why Choose.webp"
