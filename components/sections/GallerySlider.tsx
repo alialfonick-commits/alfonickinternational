@@ -17,26 +17,21 @@ const GallerySlider = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const images = [
+  const videos = [
     {
-      image: "/images/Gallery img_1.webp",
-      // title: "Modern Interior Design",
+      video: "https://www.w3schools.com/Html/mov_bbb.mp4",
     },
     {
-      image: "/images/Gallery img_1.webp",
-      // title: "Creative Workspace",
+      video: "https://www.w3schools.com/Html/mov_bbb.mp4",
     },
     {
-      image: "/images/Gallery img_1.webp",
-      // title: "Luxury Living Room",
+      video: "https://www.w3schools.com/Html/mov_bbb.mp4",
     },
     {
-      image: "/images/Gallery img_1.webp",
-      // title: "Minimal Architecture",
+      video: "https://www.w3schools.com/Html/mov_bbb.mp4",
     },
     {
-      image: "/images/Gallery img_1.webp",
-      // title: "Elegant Home Style",
+      video: "https://www.w3schools.com/Html/mov_bbb.mp4",
     },
   ];
 
@@ -82,7 +77,7 @@ const GallerySlider = () => {
         <div className="absolute right-0 top-0 z-20 h-full w-20 md:w-32 pointer-events-none bg-linear-to-l from-white/80 to-transparent" />
 
         <CarouselContent className="pt-5 pb-14 -ml-2 md:-ml-4">
-          {images.map((item, index) => {
+          {videos.map((item, index) => {
             const isActive = index === activeIndex;
 
             return (
@@ -91,20 +86,21 @@ const GallerySlider = () => {
                 className="pl-2 md:pl-3 md:pr-4 basis-[88%] sm:basis-[72%] md:basis-[58%] lg:basis-[50%]"
               >
                 <div
-                  className={`relative rounded-3xl overflow-hidden border border-gray-200 transform-gpu transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    isActive
+                  className={`relative rounded-3xl overflow-hidden border border-gray-200 transform-gpu transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${isActive
                       ? "scale-110 opacity-100"
                       : "scale-[0.92] opacity-100"
-                  }`}
+                    }`}
                 >
                   <div className="w-full h-65 sm:h-82.5 md:h-95">
-                    <Image
-                      src={item.image}
-                      alt="gallery"
-                      width={1000}
-                      height={1000}
+                    <video
+                      src={item.video}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
                       className="w-full h-full object-cover"
-                    />
+                    ></video>
                   </div>
 
                   {/* Text */}
@@ -121,12 +117,12 @@ const GallerySlider = () => {
 
         <div className="sm:mt-8 mt-0 flex items-center justify-center gap-4">
           <CarouselPrevious className="w-10 h-10 static translate-y-0 shadow-none border border-black group hover:bg-[#B81C15] hover:border-[#B81C15] transition-colors cursor-pointer">
-            <ArrowLeft className="w-13 h-13 text-black group-hover:text-white transition-colors" />
+            <ArrowLeft className="w-13 h-13 text-black cursor-pointer group-hover:text-white transition-colors" />
           </CarouselPrevious>
 
           <CarouselNext className="w-10 h-10 static translate-y-0 shadow-none border border-black group hover:bg-[#B81C15] hover:border-[#B81C15] transition-colors">
 
-            <ArrowLeft className="w-13 h-13 text-black group-hover:text-white transition-colors rotate-180" />
+            <ArrowLeft className="w-13 h-13 text-black cursor-pointer group-hover:text-white transition-colors rotate-180" />
           </CarouselNext>
         </div>
       </Carousel>

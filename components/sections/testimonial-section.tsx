@@ -89,10 +89,10 @@ export function TestimonialSection() {
 
   return (
     <section className="overflow-hidden bg-[#222222] px-4 py-12 sm:px-6 sm:py-14 md:py-16 lg:px-10 xl:px-12">
-      <div className="mx-auto max-w-[1680px]">
+      <div className="mx-auto max-w-420">
         <div className="grid items-center gap-8 md:gap-10 lg:grid-cols-[300px_1fr_36px] xl:grid-cols-[380px_1fr_46px] xl:gap-14 2xl:grid-cols-[430px_1fr_50px] 2xl:gap-16">
           {/* Left image grid */}
-          <div className="relative mx-auto aspect-square w-full max-w-[280px] overflow-hidden sm:max-w-[340px] md:max-w-[380px] lg:max-w-none">
+          <div className="relative mx-auto aspect-square w-full max-w-70 overflow-hidden sm:max-w-85 md:max-w-95 lg:max-w-none">
             {testimonials.map((item, index) => {
               const isActive = index === activeIndex;
               const isPrevious = index === previousIndex;
@@ -155,7 +155,7 @@ export function TestimonialSection() {
           </div>
 
           {/* Text vertical slider */}
-          <div className="relative sm:min-h-107.5 min-h-87.5 overflow-hidden text-center text-white md:min-h-[390px] lg:min-h-[340px] lg:text-left xl:min-h-[350px]">
+          <div className="relative sm:min-h-107.5 min-h-87.5 overflow-hidden text-center text-white md:min-h-97.5 lg:min-h-85 lg:text-left xl:min-h-87.5">
             {testimonials.map((item, index) => {
               const isActive = index === activeIndex;
               const isPrevious = index === previousIndex;
@@ -178,19 +178,19 @@ export function TestimonialSection() {
                     size={58}
                     strokeWidth={0}
                     fill="currentColor"
-                    className="mx-auto mb-4 text-[#D93433] lg:mx-0 sm:size-[68px] xl:size-19"
+                    className="mx-auto mb-4 text-[#D93433] lg:mx-0 sm:size-17 xl:size-19"
                   />
 
-                  <p className="mx-auto max-w-245 font-[Arial] text-[21px] leading-[1.2] text-white sm:text-[25px] md:text-[28px] lg:mx-0">
+                  <p className="mx-auto max-w-245 font-[Arial] text-[20px] leading-[1.2] text-white sm:text-[25px] 2xl:text-[28px] lg:mx-0">
                     {item.quote}
                   </p>
 
                   <div className="mt-9 sm:mt-11 xl:mt-14">
-                    <h3 className="font-archivo text-[25px] font-bold leading-none tracking-[-0.03em] text-white sm:text-[30px] xl:text-[34px]">
+                    <h3 className="font-archivo text-[25px] font-bold leading-none tracking-[-0.03em] text-white sm:text-[26px] 2xl:text-[34px]">
                       {item.name}
                     </h3>
 
-                    <p className="mt-2 font-[Arial] text-[17px] leading-none text-white sm:text-[20px] xl:text-[22px]">
+                    <p className="mt-2 font-[Arial] text-[17px] leading-none text-white sm:text-[18px] xl:text-[22px]">
                       {item.role}
                     </p>
                   </div>

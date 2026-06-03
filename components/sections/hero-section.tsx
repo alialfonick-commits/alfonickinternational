@@ -125,7 +125,7 @@ export function HeroSection() {
         <span className="bottom-0 -right-1 border-r border-b" />
        </div>
 
-       <h1 className="font-archivo max-w-280 text-[30px] font-medium leading-[0.96] tracking-tighter text-white sm:text-[56px] md:text-[68px] lg:text-[86px] 2xl:text-[102px] xl:text-[90px]">
+       <h1 className="font-archivo max-w-280 text-[30px] font-medium leading-[0.96] tracking-tighter text-white sm:text-[56px] md:text-[68px] lg:text-[79px] 2xl:text-[102px] xl:text-[90px]">
         Marketing agency for
         <br className="hidden sm:block" /> creative business solutions
        </h1>

@@ -31,6 +31,7 @@ const companyLinks = [
 const serviceLinks = [
   { name: "Web Development", href: "#" },
   { name: "UI/UX DESIGN", href: "#" },
+  { name: "Digital Marketing Services", href: "#" },
   { name: "Branding & Communication", href: "#" },
   { name: "Ecommerce Web Development", href: "#" },
   { name: "Mobile App Development", href: "#" },
@@ -72,7 +73,7 @@ export function Footer() {
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_67%,#b81c1585,#0000_50%),linear-gradient(#0000,#500000_45%,#0000009c)]" />
 
-        <div className="pointer-events-none absolute inset-x-0 lg:-bottom-8 bottom-0 text-center font-archivo text-[18vw] font-bold leading-none tracking-tight text-[#B81C15]/12">
+        <div className="pointer-events-none absolute inset-x-0 lg:-bottom-5 -bottom-2 text-center font-archivo text-[18vw] font-bold leading-none tracking-tight text-[#B81C15] opacity-10">
           ALFONICK
         </div>
 
@@ -104,7 +105,7 @@ export function Footer() {
                   alt="Alfonick International"
                   width={190}
                   height={60}
-                  className="h-auto sm:w-55.75 w-40"
+                  className="h-auto md:w-46 2xl:w-55.75 w-40"
                 />
               </Link>
 
@@ -163,7 +164,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-[Arial] sm:text-[18px] text-[16px] text-white tracking-[2%] transition-colors duration-300 hover:text-[#D93433]"
+                      className="font-[Arial] 2xl:text-[18px] text-[16px] text-white tracking-[2%] transition-colors duration-300 hover:text-[#D93433]"
                     >
                       {link.name}
                     </Link>
@@ -183,7 +184,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-[Arial] sm:text-[18px] text-[16px] text-white transition-colors duration-300 hover:text-[#D93433]"
+                      className="font-[Arial] 2xl:text-[18px] text-[16px] text-white transition-colors duration-300 hover:text-[#D93433]"
                     >
                       {link.name}
                     </Link>
@@ -219,7 +220,7 @@ export function Footer() {
                           {item.text}
                         </a>
                       ) : (
-                        <span className="font-[Arial] sm:text-[18px] text-[16px]leading-[1.45] text-white">
+                        <span className="font-[Arial] 2xl:text-[18px] text-[16px]leading-[1.45] text-white">
                           {item.text}
                         </span>
                       )}

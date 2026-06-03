@@ -53,7 +53,7 @@ export function AgencySnapsSection() {
         `}
       </style>
 
-      <div className="mx-auto max-w-420 xl:px-15 px-3">
+      <div className="mx-auto max-w-420 xl:px-15 md:px-12 px-3">
         {/* Top heading area */}
         <div className="grid gap-8 lg:grid-cols-[340px_1fr] lg:items-start xl:grid-cols-[390px_1fr]">
           <div>
