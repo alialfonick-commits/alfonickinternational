@@ -9,7 +9,7 @@ function clamp(value: number, min: number, max: number) {
 
 export function SiteHeader() {
   return (
-    <header className="absolute left-0 top-0 z-50 w-full px-4 bg-transparent pt-5 transition-all duration-300 sm:px-6 lg:px-14 2xl:pt-9 xl:px-14.5">
+    <header className="absolute left-0 top-0 z-50 w-full bg-transparent pt-5 transition-all duration-300 px-7 sm:px-10 lg:px-14 2xl:pt-9 xl:px-14.5">
       <div className="mx-auto flex max-w-420 items-center justify-between">
         {/* Logo */}
         <Link

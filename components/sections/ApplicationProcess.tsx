@@ -71,7 +71,7 @@ export default function ApplicationProcess() {
                   <h3
                     className="md:text-[66px] text-[66px] font-normal! leading-none text-[#B81C15]!"
                     style={{
-                      textShadow: "0px 1px 23px 0 #DD4242", fontFamily: "Unbounded" }}>
+                      textShadow: "0px 1px 23px #DD4242", fontFamily: "Unbounded" }}>
                     {item.id}
                   </h3>
 
@@ -88,7 +88,7 @@ export default function ApplicationProcess() {
 
                 <div
                   className={`absolute top-0 ${
-                    item.side === "left" ? "sm:right-[60%] right-[54%]" : "sm:left-[61%] left-[55%]"
+                    item.side === "left" ? "sm:right-[63%] right-[54%]" : "sm:left-[65%] left-[55%]"
                   }`}
                 >
                   <div
@@ -102,10 +102,10 @@ export default function ApplicationProcess() {
                       }`}
                     >
                       <div className="w-10 h-10 rounded-xl bg-[#E31C1C1A] flex items-center justify-center">
-                        <Icon className="size-5 text-[#B81C15]" />
+                        <Icon className="size-5 text-[#E31C1C]" />
                       </div>
 
-                      <span className="text-[12px] font-bold tracking-[-0.6px] text-[#B81C15] uppercase">
+                      <span className="text-[12px] font-bold tracking-[-0.6px] text-[#E31C1C] uppercase">
                         {item.step}
                       </span>
                     </div>

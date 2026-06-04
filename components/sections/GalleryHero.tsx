@@ -35,7 +35,7 @@ const GalleryHero = () => {
 
         {/* Badge */}
         <span
-          className="relative z-10 border-2 border-white/30 text-[#B81C15] sm:text-[16px] text-[14px] font-bold uppercase block text-center italic m-auto px-6 py-2 w-fit rounded-4xl mb-1"
+          className="relative z-10 border-2 border-white/30 text-[#B81C15] sm:text-[16px] text-[14px] font-bold uppercase block text-center italic m-auto px-6 py-2 w-fit rounded-4xl lg:mb-1 mb-4"
           style={{ fontFamily: "Arial" }}
         >
           Our Gallery

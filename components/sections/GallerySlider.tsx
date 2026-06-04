@@ -116,13 +116,13 @@ const GallerySlider = () => {
         </CarouselContent>
 
         <div className="sm:mt-8 mt-0 flex items-center justify-center gap-4">
-          <CarouselPrevious className="w-10 h-10 static translate-y-0 shadow-none border border-black group hover:bg-[#B81C15] hover:border-[#B81C15] transition-colors cursor-pointer">
-            <ArrowLeft className="w-13 h-13 text-black cursor-pointer group-hover:text-white transition-colors" />
+          <CarouselPrevious className="sm:w-12 w-10 sm:h-12 h-10 static translate-y-0 shadow-none border border-black group hover:bg-[#B81C15] hover:border-[#B81C15] transition-colors cursor-pointer">
+            <ArrowLeft className="w-15 h-15 text-black cursor-pointer group-hover:text-white transition-colors" />
           </CarouselPrevious>
 
-          <CarouselNext className="w-10 h-10 static translate-y-0 shadow-none border border-black group hover:bg-[#B81C15] hover:border-[#B81C15] transition-colors">
+          <CarouselNext className="sm:w-12 w-10 sm:h-12 h-10 static translate-y-0 shadow-none border border-black group hover:bg-[#B81C15] hover:border-[#B81C15] transition-colors">
 
-            <ArrowLeft className="w-13 h-13 text-black cursor-pointer group-hover:text-white transition-colors rotate-180" />
+            <ArrowLeft className="w-15 h-13 text-black cursor-pointer group-hover:text-white transition-colors rotate-180" />
           </CarouselNext>
         </div>
       </Carousel>

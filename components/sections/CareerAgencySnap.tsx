@@ -31,7 +31,7 @@ export function CareerAgencySnap() {
   return (
     <section
       id="agency-snaps"
-      className="overflow-hidden bg-[#EEEEEE] mx-5 rounded-xl md:py-20 py-10 mb-6"
+      className="overflow-hidden bg-[#EEEEEE] mx-5 rounded-[20px] md:py-20 py-10 sm:mb-24 mb-10"
     >
       <style>
         {`

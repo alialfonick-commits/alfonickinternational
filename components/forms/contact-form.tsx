@@ -32,11 +32,11 @@ const fields = [
 export function ContactForm() {
   return (
     <form className="mx-auto w-full max-w-227.25">
-      <div className="rounded-[10px] bg-[#FFFFFF40] px-5 py-6  sm:px-7 lg:px-9">
+      <div className="rounded-[10px] bg-[#FFFFFF40] px-5 pt-8 pb-10 sm:px-7 lg:px-9">
         <div className="grid gap-x-6 gap-y-5 sm:grid-cols-2">
           {fields.map((field) => (
             <label key={field.name} className="block text-start">
-              <span className="font-archivo mb-2 block text-[11px] font-medium uppercase tracking-[0.08em] text-white">
+              <span className="font-archivo mb-2 block text-[14px] font-medium uppercase tracking-[0.67px] text-white">
                 {field.label}
               </span>
 

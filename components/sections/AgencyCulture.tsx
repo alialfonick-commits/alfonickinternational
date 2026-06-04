@@ -5,15 +5,15 @@ export default function AgencyCulture() {
     <section className="bg-white pt-16 sm:pb-16 pb-12">
       <div className="max-w-430 mx-auto lg:px-15 px-4">
         <div className="span:text-[#B81C15] text-center px-6 py-3 rounded-4xl w-fit m-auto bg-[#B81C15]/5 text-[#B81C15]">
-          <span className="font-[inter]!"> OUR CULTURE </span>
+          <span style={{ fontFamily: 'Arial, sans-serif', }}> OUR CULTURE </span>
         </div>
 
         <div className="text-center sm:mb-12 mb-6 [&>h2]">
-          <h2 className="text-[36px] md:text-[44px] lg:text-[56px] font-bold text-[#222] leading-[1.1] tracking-[-1px] mt-3.75">
+          <h2 className="text-[36px] md:text-[44px] lg:text-[52px] font-bold text-[#222] leading-[1.1] tracking-[-1px] mt-3.75">
             Agency <span className="text-[#B81C15] italic">Culture</span>
           </h2>
 
-          <p className="text-[#222] sm:text-[24px] text-[18px] mt-4 font-[inter]!">
+          <p className="text-[#222] sm:text-[24px] text-[18px] mt-4" style={{ fontFamily: 'Arial, sans-serif', }} >
             Where creativity meets collaboration
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function AgencyCulture() {
               />
 
               <div className="absolute sm:top-8 sm:left-7 top-5 left-5 md:top-8 md:left-9 
-              backdrop-blur-2xl text-white border border-[#a1a1a7] md:px-7 md:py-3 px-5 py-1.75 rounded-full text-sm flex items-center gap-2 sm:text-[24px]! text-[16px]!">
+              backdrop-blur-2xl text-white border border-[#a1a1a7] md:px-7 md:py-3 px-5 py-1.75 rounded-full text-sm flex items-center gap-2 sm:text-[22px]! text-[16px]!">
                 <span className="w-3 h-3 bg-[#B81C15] rounded-full"></span>
                 TEAM WORK
               </div>
@@ -46,7 +46,7 @@ export default function AgencyCulture() {
                   className="w-full h-full object-cover"
                 />
 
-                <div className="absolute bottom-8 left-4 lg:bottom-5 lg:left-5 xl:bottom-10 xl:left-2 backdrop-blur-2xl text-white border border-[#a1a1a7] px-6 py-2.5 xl:px-6 xl:py-2.5 lg:px-4 ml-5 lg:py-1.25 rounded-full text-sm flex items-center gap-2">
+                <div className="absolute bottom-8 left-4 lg:bottom-5 lg:left-5 xl:bottom-10 xl:left-2 backdrop-blur-2xl text-white border border-[#a1a1a7] px-6 py-2.5 xl:px-6 xl:py-2.5 lg:px-4 ml-5 lg:py-1.25 rounded-full text-[16px] flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#B81C15] rounded-full"></span>
                   TEAM WORK
                 </div>
@@ -61,7 +61,7 @@ export default function AgencyCulture() {
                   className="w-full h-full object-cover"
                 />
 
-                <p className="absolute 2xl:left-3 2xl:bottom-4 lg:left-2.5 lg:bottom-5 text-white font-normal lg:text-[24px] 2xl:text-[28px]">
+                <p className="absolute 2xl:left-3 2xl:bottom-4 lg:left-2.5 lg:bottom-5 text-white font-normal lg:text-[24px] 2xl:text-[32px]">
                   Office Vibes
                 </p>
               </div>
@@ -77,7 +77,7 @@ export default function AgencyCulture() {
               className="w-full h-full object-cover transition duration-700 ease-in-out group-hover:scale-110"
             />
 
-            <div className="absolute top-7 sm:top-27 md:top-22 lg:top-15 left-7.5 sm:left-0 sm:right-0 sm:mx-auto w-fit bg-[#363938]/70 backdrop-blur-2xl border border-[#a1a1a7] text-white px-5 py-2 sm:px-7 sm:py-3 rounded-full text-sm flex items-center gap-2 sm:text-[24px]! text-[16px]! z-20">
+            <div className="absolute top-7 sm:top-27 md:top-22 lg:top-20 left-7.5 sm:left-0 sm:right-0 sm:mx-auto w-fit bg-[#363938]/70 backdrop-blur-2xl border border-[#a1a1a7] text-white px-5 py-2 sm:px-7 sm:py-3 rounded-full text-sm flex items-center gap-2 sm:text-[22px]! text-[16px]! z-20">
               <span className="w-3 h-3 bg-[#B81C15] rounded-full"></span>
               SOCIAL FREAKS
             </div>

@@ -8,7 +8,7 @@ export default function MomentCaptured() {
     all: [
       "/images/Agency Snap_1.webp",
       "/images/agency_1.webp",
-      "/images/agency_2.webp",
+      "/images/agency_2_new.webp",
       "/images/agency_4.webp",
       "/images/Agency Snap_5.webp",
       "/images/agency_1.webp",
@@ -19,19 +19,19 @@ export default function MomentCaptured() {
     fun: [
       "/images/agency_4.webp",
       "/images/agency_1.webp",
-      "/images/agency_2.webp",
+      "/images/agency_2_new.webp",
       "/images/agency_1.webp",
     ],
 
     birthdays: [
       "/images/Agency Snap_1.webp",
-      "/images/agency_2.webp",
+      "/images/agency_2_new.webp",
       "/images/agency_1.webp",
       "/images/Agency Snap_5.webp",
     ],
 
     team: [
-      "/images/agency_2.webp",
+      "/images/agency_2_new.webp",
       "/images/Agency Snap_5.webp",
       "/images/agency_1.webp",
       "/images/Agency Snap_1.webp",
@@ -41,7 +41,7 @@ export default function MomentCaptured() {
       "/images/agency_4.webp",
       "/images/agency_1.webp",
       "/images/Agency Snap_5.webp",
-      "/images/agency_2.webp",
+      "/images/agency_2_new.webp",
     ],
   };
 
@@ -55,7 +55,7 @@ export default function MomentCaptured() {
               alt="gallery"
               width={500}
               height={300}
-              className="w-full h-62.5 sm:h-75 md:h-100 object-cover rounded-xl"
+              className="w-full h-62.5 sm:h-75 md:h-100 object-fill rounded-xl"
             />
           </div>
         )}
@@ -67,7 +67,7 @@ export default function MomentCaptured() {
               alt="gallery"
               width={1000}
               height={300}
-              className="w-full h-62.5 sm:h-75 md:h-100 object-cover rounded-xl"
+              className="w-full h-62.5 sm:h-75 md:h-100 object-fill rounded-xl"
             />
           </div>
         )}
@@ -81,7 +81,7 @@ export default function MomentCaptured() {
               alt="gallery"
               width={1000}
               height={300}
-              className="w-full h-62.5 sm:h-75 md:h-100 object-cover rounded-xl"
+              className="w-full h-62.5 sm:h-75 md:h-100 object-fill rounded-xl"
             />
           </div>
         )}
@@ -93,7 +93,7 @@ export default function MomentCaptured() {
               alt="gallery"
               width={500}
               height={300}
-              className="w-full h-62.5 sm:h-75 md:h-100 object-cover rounded-xl"
+              className="w-full h-62.5 sm:h-75 md:h-100 object-fill rounded-xl"
             />
           </div>
         )}
@@ -107,7 +107,7 @@ export default function MomentCaptured() {
               alt="gallery"
               width={500}
               height={300}
-              className="w-full h-62.5 sm:h-75 md:h-100 object-cover rounded-xl"
+              className="w-full h-62.5 sm:h-75 md:h-100 object-fill rounded-xl"
             />
           </div>
         )}
@@ -119,7 +119,7 @@ export default function MomentCaptured() {
               alt="gallery"
               width={1000}
               height={300}
-              className="w-full h-52.5 sm:h-75 md:h-100 object-cover rounded-xl"
+              className="w-full h-52.5 sm:h-75 md:h-100 object-fill rounded-xl"
             />
           </div>
         )}
@@ -160,7 +160,7 @@ export default function MomentCaptured() {
             <span style={{ fontFamily: "Arial" }}> Image Gallery </span>
           </div>
 
-          <h2 className="text-[36px] md:text-[44px] lg:text-[56px] font-normal! text-[#222] leading-[1.1] tracking-[-1px] mt-3.75">
+          <h2 className="text-[36px] md:text-[44px] lg:text-[52px] font-normal! text-[#222] leading-[1.1] tracking-[-1px] mt-3.75">
             {" "}
             Moments Captured in{" "}
             <span className="text-[#B81C15] italic font-medium">
@@ -171,7 +171,7 @@ export default function MomentCaptured() {
 
         <Tabs defaultValue="all" className="w-full">
           <TabsList
-            className="flex justify-start! md:flex-wrap md:justify-center gap-3 mb-10 bg-transparent h-auto p-0 w-full md:w-auto md:max-w-4xl
+            className="flex justify-start! md:flex-wrap md:justify-center gap-3 sm:mb-12 mb-8 bg-transparent h-auto p-0 w-full md:w-auto md:max-w-4xl
     mx-auto md:overflow-visible overflow-x-auto flex-nowrap whitespace-nowrap scroll-smooth no-scrollbar px-2"
           >
             <TabsTrigger

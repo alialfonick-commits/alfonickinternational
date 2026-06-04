@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import { ContactForm } from "@/components/forms/contact-form";
 
-
 const companyLinks = [
   { name: "About", href: "/about" },
   { name: "Service", href: "#" },
@@ -26,7 +25,6 @@ const companyLinks = [
   { name: "Career", href: "/careers" },
   { name: "Blog", href: "/blogs" },
 ];
-
 
 const serviceLinks = [
   { name: "Web Development", href: "#" },
@@ -60,10 +58,7 @@ const contactInfo = [
 
 export function Footer() {
   return (
-    <footer
-      id="contact"
-      className="bg-white md:px-5 px-2 py-4"
-    >
+    <footer id="contact" className="bg-white md:px-5 px-2 py-4">
       <div className="relative overflow-hidden rounded-[18px] bg-[#090000] pt-16 pb-8 text-white md:px-8 2xl:px-16 px-4">
         {/* Background */}
         <div
@@ -118,7 +113,7 @@ export function Footer() {
                 Social Media
               </p>
 
-               {/* <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
+              {/* <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
               <Link href="#">
                 <Globe size={20} />
               </Link>
@@ -133,29 +128,25 @@ export function Footer() {
               </Link>
             </div> */}
 
-
-            <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:transition-colors [&_a]:duration-300 [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
-              <Link href="https://www.facebook.com/AlfonickInternational/">
-                <TiSocialFacebook />
-              </Link>
-              <Link href="#">
-                <IoLogoTwitter />
-              </Link>
-              <Link href="https://pk.linkedin.com/company/alfonickinternational">
-                <FaLinkedinIn />
-              </Link>
-              <Link href="#">
-                <AiFillInstagram />
-              </Link>
-            </div>
-
-       
-
+              <div className="flex gap-3 [&_a]:bg-white [&_a]:hover:bg-[#b91b15] [&_a]:transition-colors [&_a]:duration-300 [&_a]:rounded-full [&_a]:p-2 [&_a]:hover:text-white [&_a]:text-[#b91b15] [&_a]:inline-flex [&_a]:items-center [&_a]:justify-center [&_a]:text-xl">
+                <Link href="https://www.facebook.com/AlfonickInternational/">
+                  <TiSocialFacebook />
+                </Link>
+                <Link href="#">
+                  <IoLogoTwitter />
+                </Link>
+                <Link href="https://pk.linkedin.com/company/alfonickinternational">
+                  <FaLinkedinIn />
+                </Link>
+                <Link href="#">
+                  <AiFillInstagram />
+                </Link>
+              </div>
             </div>
 
             {/* Company */}
             <div>
-              <h3 className="font-archivo text-[22px] font-bold text-white">
+              <h3 className="font-archivo text-[24px] font-bold! tracking-[0.8px] text-white">
                 Company
               </h3>
 
@@ -164,7 +155,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-[Arial] 2xl:text-[18px] text-[16px] text-white tracking-[2%] transition-colors duration-300 hover:text-[#D93433]"
+                      className="font-[Arial] 2xl:text-[20px] sm:text-[18px] text-[16px] text-white tracking-[2%] transition-colors duration-300 hover:text-[#D93433]"
                     >
                       {link.name}
                     </Link>
@@ -175,7 +166,7 @@ export function Footer() {
 
             {/* Web Solution */}
             <div>
-              <h3 className="font-archivo text-[22px] font-bold text-white">
+              <h3 className="font-archivo text-[24px] font-bold! tracking-[0.8px] text-white">
                 Web Solution
               </h3>
 
@@ -184,7 +175,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-[Arial] 2xl:text-[18px] text-[16px] text-white transition-colors duration-300 hover:text-[#D93433]"
+                      className="font-[Arial] 2xl:text-[20px] sm:text-[18px] text-[16px] text-white transition-colors duration-300 hover:text-[#D93433]"
                     >
                       {link.name}
                     </Link>
@@ -195,7 +186,7 @@ export function Footer() {
 
             {/* Contact */}
             <div>
-              <h3 className="font-archivo text-[22px] font-bold text-white">
+              <h3 className="font-archivo text-[24px] font-bold! tracking-[0.8px] text-white">
                 Contact
               </h3>
 
@@ -220,7 +211,7 @@ export function Footer() {
                           {item.text}
                         </a>
                       ) : (
-                        <span className="font-[Arial] 2xl:text-[18px] text-[16px]leading-[1.45] text-white">
+                        <span className="font-[Arial] 2xl:text-[20px] sm:text-[18px] text-[16px] leading-[1.45] text-white">
                           {item.text}
                         </span>
                       )}
@@ -234,23 +225,35 @@ export function Footer() {
           <div className="mt-14 h-px w-full bg-white/50" />
 
           {/* Copyright */}
-          <div className="mt-8 flex flex-col gap-4 text-center font-[Arial] text-[14px] text-white sm:flex-row sm:items-center sm:justify-between sm:text-left">
+          <div className="mt-8 flex flex-col gap-4 text-center font-[Arial] 2xl:text-[18px] sm:text-[17px] text-[16px] text-white sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <p>©2026 Alfonick. All rights reserved</p>
 
             <div className="flex flex-wrap justify-center gap-x-2 gap-y-1 sm:justify-end">
-              <Link href="#" className="hover:text-[#D93433] transition-colors duration-200">
+              <Link
+                href="#"
+                className="hover:text-[#D93433] transition-colors duration-200"
+              >
                 Privacy Policy
               </Link>
               <span>|</span>
-              <Link href="#" className="hover:text-[#D93433] transition-colors duration-200">
+              <Link
+                href="#"
+                className="hover:text-[#D93433] transition-colors duration-200"
+              >
                 Terms & Conditions
               </Link>
               <span>|</span>
-              <Link href="#" className="hover:text-[#D93433] transition-colors duration-200">
+              <Link
+                href="#"
+                className="hover:text-[#D93433] transition-colors duration-200"
+              >
                 Cookies Policy
               </Link>
               <span>|</span>
-              <Link href="#" className="hover:text-[#D93433] transition-colors duration-200">
+              <Link
+                href="#"
+                className="hover:text-[#D93433] transition-colors duration-200"
+              >
                 Map
               </Link>
             </div>
