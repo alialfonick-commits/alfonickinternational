@@ -13,6 +13,11 @@ export function HeroSection() {
  const sectionRef = useRef<HTMLElement | null>(null);
  const [progress, setProgress] = useState(0);
 
+ const [isHeroVisible, setIsHeroVisible] = useState(false);
+ const [typedIntro, setTypedIntro] = useState("");
+
+ const fullIntroText = "Intelligence, unleashed.";
+
  useEffect(() => {
   let frame = 0;
 
@@ -48,6 +53,74 @@ export function HeroSection() {
    window.removeEventListener("resize", updateProgress);
   };
  }, []);
+
+ /*
+  * Restart animation whenever hero enters viewport
+  */
+ useEffect(() => {
+  const section = sectionRef.current;
+
+  if (!section) return;
+
+  const observer = new IntersectionObserver(
+   ([entry]) => {
+    if (entry.isIntersecting) {
+     setIsHeroVisible(true);
+    } else {
+     setIsHeroVisible(false);
+     setTypedIntro("");
+    }
+   },
+   {
+    threshold: 0.25,
+   }
+  );
+
+  observer.observe(section);
+
+  return () => {
+   observer.disconnect();
+  };
+ }, []);
+
+ /*
+  * Character-by-character typing animation
+  */
+ useEffect(() => {
+  if (!isHeroVisible) {
+   setTypedIntro("");
+   return;
+  }
+
+  let currentCharacter = 0;
+  let typingInterval: ReturnType<typeof setInterval> | null = null;
+
+  setTypedIntro("");
+
+  const startTyping = setTimeout(() => {
+   typingInterval = setInterval(() => {
+    currentCharacter++;
+
+    setTypedIntro(
+     fullIntroText.substring(0, currentCharacter)
+    );
+
+    if (currentCharacter >= fullIntroText.length) {
+     if (typingInterval) {
+      clearInterval(typingInterval);
+     }
+    }
+   }, 115);
+  }, 950);
+
+  return () => {
+   clearTimeout(startTyping);
+
+   if (typingInterval) {
+    clearInterval(typingInterval);
+   }
+  };
+ }, [isHeroVisible]);
 
  const heroTranslateY = progress * -22;
  const backgroundScale = 1 + progress * 0.05;
@@ -112,8 +185,8 @@ export function HeroSection() {
      >
       <div className="mx-auto flex max-w-295 flex-col items-center">
        <div className="relative inline-block mb-5 [&_span]:absolute sm:[&_span]:h-3 [&_span]:h-1.5 sm:[&_span]:w-3 [&_span]:w-1.5 [&_span]:border-[#FFFFFF80] [&_span]:rounded-[1px]">
-        <p className="font-archivo mb-0! 2xl:text-[42px] sm:text-[28px] text-[20px] font-normal tracking-[-0.94px] text-[#EFF0F0] sm:mb-7">
-         Intelligence, unleashed.
+        <p className="font-archivo mb-0! 2xl:text-[42px] sm:text-[28px] text-[22px] font-normal tracking-[-0.94px] text-[#EFF0F0] sm:mb-7">
+         {typedIntro}
         </p>
 
         <span className="-left-1 top-0 border-l border-t" />

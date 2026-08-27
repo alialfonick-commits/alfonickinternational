@@ -3,16 +3,16 @@ import React from "react";
 const BlogSearch = () => {
   return (
     <div className="w-full">
-      <div className="flex items-center border-b border-[#d9d9d9]">
+      <div className="flex items-center border border-[#66666680] rounded-[10px] overflow-hidden">
         <input
           type="text"
           placeholder="Search"
-          className="w-full h-[48px] bg-transparent outline-none text-[13px] placeholder:text-[#777]"
+          className="w-full h-[42px] bg-transparent outline-none text-[13px] placeholder:text-[#777]"
         />
 
         <button
           type="button"
-          className="w-[42px] h-[42px] bg-[#a62429] text-white flex items-center justify-center shrink-0 hover:bg-black transition-colors"
+          className="w-[42px] h-[42px] bg-[#a62429] rounded-tr-[10px] rounded-br-[10px] text-white flex items-center justify-center shrink-0 hover:bg-black transition-colors"
         >
           <svg
             width="16"

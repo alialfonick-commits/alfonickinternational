@@ -1,12 +1,10 @@
-import React from "react";
-
 const tags = [
-  "Digital",
-  "Creative",
-  "Branding",
-  "Design",
-  "Marketing",
-  "Business",
+  { name: "Digital", href: "#" },
+  { name: "Creative", href: "#" },
+  { name: "Branding", href: "#" },
+  { name: "Design", href: "#" },
+  { name: "Marketing", href: "#" },
+  { name: "Business", href: "#" },
 ];
 
 const BlogTags = () => {
@@ -23,15 +21,15 @@ const BlogTags = () => {
       <div className="flex flex-wrap gap-2">
         {tags.map((tag, index) => (
           <a
-            href="#"
-            key={tag}
-            className={`px-4 py-[7px] rounded-full border text-[10px] transition-colors ${
+            href={tag.href}
+            key={tag.name}
+            className={`px-4 py-[7px] rounded-full border text-[14px] transition-colors ${
               index === 0
-                ? "bg-[#b51f24] border-[#b51f24] text-white"
-                : "border-[#cfcfcf] text-[#555] hover:bg-[#b51f24] hover:border-[#b51f24] hover:text-white"
+                ? "bg-[#B81C15] border-[#B81C15] text-[#FFFFFFCC]"
+                : "border-[#666666] text-[#000000CC] hover:bg-[#B81C15] hover:border-[#B81C15] hover:text-[#FFFFFFCC]"
             }`}
           >
-            {tag}
+            {tag.name}
           </a>
         ))}
       </div>

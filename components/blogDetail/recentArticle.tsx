@@ -1,5 +1,3 @@
-import React from "react";
-
 const articles = [
   {
     title: "The Anatomy of a Brand That Outlives Trends",
@@ -37,14 +35,14 @@ const RecentArticle = () => {
             key={index}
             className="flex items-center gap-3 group"
           >
-            <div className="w-[62px] h-[58px] rounded-[10px] bg-[#bdbdbd] shrink-0"></div>
+            <div className="w-[62px] h-[58px] rounded-[20px] bg-[#66666680] shrink-0"></div>
 
             <div>
-              <h4 className="text-[15px] leading-[1.4] font-medium group-hover:text-[#b51f24] transition-colors">
+              <h4 className="text-[16px] leading-[1.4] font-medium group-hover:text-[#b51f24] transition-colors">
                 {article.title}
               </h4>
 
-              <p className="text-[10px] text-[#888] mt-1">
+              <p className="text-[14px] text-[#222222B2] mt-1 font-medium">
                 {article.date}
               </p>
             </div>

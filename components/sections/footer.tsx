@@ -75,7 +75,7 @@ export function Footer() {
         <div className="relative z-10">
           {/* Contact form area */}
           <div className="mx-auto max-w-220 text-center">
-            <span className="font-archivo inline-flex rounded-full border border-[#FFFFFF66] bg-[#B81C150D] px-10 py-2 text-[16px] font-medium text-white shadow-[0px_-1px_7px_-1px_#FFFFFF1A] backdrop-blur-[20px]">
+            <span className="font-archivo inline-flex rounded-full border border-[#FFFFFF66] bg-[#B81C150D] px-6 py-2 text-[16px] font-medium text-white shadow-[0px_-1px_7px_-1px_#FFFFFF1A] backdrop-blur-[20px]">
               Contact Us
             </span>
 
@@ -150,7 +150,7 @@ export function Footer() {
                 Company
               </h3>
 
-              <ul className="mt-7 space-y-4">
+              <ul className="md:mt-7 mt-4 space-y-4">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
                     <Link
@@ -170,7 +170,7 @@ export function Footer() {
                 Web Solution
               </h3>
 
-              <ul className="mt-7 space-y-4">
+              <ul className="md:mt-7 mt-4 space-y-4">
                 {serviceLinks.map((link) => (
                   <li key={link.name}>
                     <Link
@@ -190,7 +190,7 @@ export function Footer() {
                 Contact
               </h3>
 
-              <ul className="mt-7 space-y-5">
+              <ul className="md:mt-7 mt-4 space-y-4">
                 {contactInfo.map((item) => {
                   const Icon = item.icon;
 
@@ -230,14 +230,14 @@ export function Footer() {
 
             <div className="flex flex-wrap justify-center gap-x-2 gap-y-1 sm:justify-end">
               <Link
-                href="#"
+                href="/privacy-policy"
                 className="hover:text-[#D93433] transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <span>|</span>
               <Link
-                href="#"
+                href="/terms-condition"
                 className="hover:text-[#D93433] transition-colors duration-200"
               >
                 Terms & Conditions

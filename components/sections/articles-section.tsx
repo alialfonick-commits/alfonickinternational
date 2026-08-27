@@ -81,11 +81,11 @@ export function ArticlesSection() {
                   {article.title}
                 </h3>
 
-                <p className="mt-4 font-archivo text-sm font-normal text-[#636466]">
+                <p className="md:mt-4 mt-3 font-archivo text-sm font-normal text-[#636466]">
                   {article.time}
                 </p>
 
-                <div className="mt-7 flex flex-wrap gap-1">
+                <div className="md:mt-7 mt-3 flex flex-wrap gap-1">
                   {article.tags.map((tag) => (
                     <span
                       key={tag}
