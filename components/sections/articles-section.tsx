@@ -61,10 +61,17 @@ export function ArticlesSection() {
         </div>
 
         {/* Cards */}
+        {/* Cards */}
         <div className="mt-14 grid gap-8 md:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-8 xl:gap-10">
           {articles.map((article) => (
-            <article key={article.title} className="group">
-              <Link href="#blogs" className="block">
+            <article
+              key={article.title}
+              className="group h-full"
+            >
+              <Link
+                href="#blogs"
+                className="flex h-full flex-col"
+              >
                 <div className="relative aspect-[1.08/1] overflow-hidden rounded-xl bg-[#EFF0F0]">
                   <Image
                     src={article.image}
@@ -81,19 +88,22 @@ export function ArticlesSection() {
                   {article.title}
                 </h3>
 
-                <p className="md:mt-4 mt-3 font-archivo text-sm font-normal text-[#636466]">
-                  {article.time}
-                </p>
+                {/* Push time + tags to same bottom position */}
+                <div className="mt-auto pt-4">
+                  <p className="font-archivo text-sm font-normal text-[#636466]">
+                    {article.time}
+                  </p>
 
-                <div className="md:mt-7 mt-3 flex flex-wrap gap-1">
-                  {article.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-archivo rounded-full border border-[#D0D1D1] bg-[#EFF0F0] px-3 py-2 text-[12px] font-medium uppercase text-[#636466] transition-all duration-300 hover:border-[#B81C15]/40 hover:bg-[#F5D5D2] hover:text-[#B81C15]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  <div className="mt-7 flex flex-nowrap gap-1">
+                    {article.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="font-archivo whitespace-nowrap rounded-full border border-[#D0D1D1] bg-[#EFF0F0] px-3 py-2 text-[12px] font-medium uppercase text-[#636466] transition-all duration-300 hover:border-[#B81C15]/40 hover:bg-[#F5D5D2] hover:text-[#B81C15]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </Link>
             </article>

@@ -56,7 +56,7 @@ export function AgencyIntroSection() {
   return (
     <section
       id="agency-intro"
-      className="relative z-10 bg-white px-4 pt-16 sm:px-6 sm:pt-20 lg:px-10 xl:px-12 xl:pt-24"
+      className="relative z-20 min-h-svh bg-white px-4 pt-16 sm:px-6 sm:pt-20 lg:px-10 xl:px-12 xl:pt-24 will-change-transform"
     >
       <div className="mx-auto max-w-420">
         <div className="grid items-start gap-12 lg:grid-cols-[1fr_0.92fr] xl:gap-16">
@@ -86,7 +86,7 @@ export function AgencyIntroSection() {
                 alt="red star"
                 width={70}
                 height={70}
-                className="animate-spin-slow "
+                className="animate-spin-slow"
               />
             </div>
 
@@ -114,19 +114,10 @@ export function AgencyIntroSection() {
                 Read more
               </span>
             </Link>
-            
           </div>
 
           {/* Right expanding cards */}
           <div className="relative">
-            {/* Stars */}
-            {/* <div className="pointer-events-none absolute -left-20 top-8 hidden lg:block">
-              <div className="relative size-28">
-                <span className="absolute left-0 top-0 h-20 w-20 bg-[#B81C15] [clip-path:polygon(50%_0%,62%_38%,100%_50%,62%_62%,50%_100%,38%_62%,0%_50%,38%_38%)]" />
-                <span className="absolute bottom-0 right-0 h-14 w-14 bg-[#C1C1C2] [clip-path:polygon(50%_0%,62%_38%,100%_50%,62%_62%,50%_100%,38%_62%,0%_50%,38%_38%)]" />
-              </div>
-            </div> */}
-
             <div className="flex h-90 gap-3 sm:h-107.5 md:h-125 lg:h-110 xl:h-125">
               {cards.map((card, index) => {
                 const isActive = activeCard === index;
@@ -137,60 +128,123 @@ export function AgencyIntroSection() {
                     type="button"
                     onClick={() => setActiveCard(index)}
                     onMouseEnter={() => setActiveCard(index)}
-                    className={`group cursor-pointer relative overflow-hidden rounded-[14px] text-left transition-all duration-500 ease-out ${
+                    className={`group cursor-pointer relative overflow-hidden rounded-[14px] text-left transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                       isActive
                         ? "basis-[62%] sm:basis-[68%]"
                         : "basis-[19%] sm:basis-[16%]"
                     }`}
                     aria-label={`Open ${card.title}`}
                   >
+                    {/* Image */}
                     <Image
                       src={card.image}
                       alt={card.title}
                       fill
                       sizes="(max-width: 768px) 80vw, 40vw"
-                      className={`object-cover transition-all duration-700 ease-out ${
+                      className={`object-cover transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                         isActive
                           ? "scale-100 grayscale-0"
                           : "scale-110 grayscale"
                       }`}
                     />
 
-                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-black/10" />
+                    {/* Dark overlay */}
+                    <div
+                      className={`absolute inset-0 transition-all duration-700 ${
+                        isActive
+                          ? "bg-linear-to-t from-black/85 via-black/25 to-black/5"
+                          : "bg-linear-to-t from-black/80 via-black/20 to-black/10"
+                      }`}
+                    />
 
-                    {!isActive && (
-                      <>
-                        <p className="font-archivo absolute right-4 top-5 origin-top-right rotate-90 whitespace-nowrap text-sm font-medium uppercase tracking-[0.16em] text-white">
-                          {card.title}
-                        </p>
+                    {/* Collapsed card content */}
+                    <div
+                      className={`absolute inset-0 transition-all duration-500 ease-out ${
+                        isActive
+                          ? "pointer-events-none opacity-0"
+                          : "opacity-100"
+                      }`}
+                    >
+                      <p
+                        className={`font-archivo absolute right-4 top-5 origin-top-right rotate-90 whitespace-nowrap text-sm font-medium uppercase tracking-[0.16em] text-white transition-all duration-500 ease-out ${
+                          isActive
+                            ? "translate-y-4 opacity-0 blur-[3px]"
+                            : "translate-y-0 opacity-100 blur-0"
+                        }`}
+                      >
+                        {card.title}
+                      </p>
 
-                        <p className="font-archivo absolute bottom-7 left-1/2 -translate-x-1/2 text-[54px] font-medium leading-none text-white/80 [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_rgba(255,255,255,0.9)]">
+                      <p
+                        className={`font-archivo absolute bottom-7 left-1/2 -translate-x-1/2 text-[54px] font-medium leading-none text-white/80 [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_rgba(255,255,255,0.9)] transition-all duration-500 ease-out ${
+                          isActive
+                            ? "translate-y-5 opacity-0 blur-[3px]"
+                            : "translate-y-0 opacity-100 blur-0"
+                        }`}
+                      >
+                        {card.number}
+                      </p>
+                    </div>
+
+                    {/* Active card content */}
+                    <div
+                      className={`absolute inset-x-0 bottom-0 p-5 text-white sm:p-7 transition-all duration-500 ${
+                        isActive
+                          ? "pointer-events-auto opacity-100"
+                          : "pointer-events-none opacity-0"
+                      }`}
+                    >
+                      {/* Title */}
+                      <h3
+                        className={`font-archivo text-2xl font-bold uppercase tracking-[-0.04em] sm:text-3xl transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                          isActive
+                            ? "translate-y-0 opacity-100 blur-0 delay-150"
+                            : "translate-y-8 opacity-0 blur-[5px] delay-0"
+                        }`}
+                      >
+                        {card.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p
+                        className={`mt-3 max-w-110 font-[Arial] text-sm font-medium leading-[1.55] text-white/90 sm:text-base transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                          isActive
+                            ? "translate-y-0 opacity-100 blur-0 delay-250"
+                            : "translate-y-8 opacity-0 blur-[5px] delay-0"
+                        }`}
+                      >
+                        {card.description}
+                      </p>
+
+                      {/* Arrow + Number */}
+                      <div
+                        className={`mt-5 flex items-end gap-3 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                          isActive
+                            ? "translate-y-0 opacity-100 blur-0 delay-350"
+                            : "translate-y-10 opacity-0 blur-[5px] delay-0"
+                        }`}
+                      >
+                        <span className="grid size-11 place-items-center rounded-full border border-white/40 bg-black/35 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-[#B81C15]">
+                          <ArrowUpRight
+                            size={20}
+                            strokeWidth={2.2}
+                            className={`transition-transform duration-700 ${
+                              isActive ? "rotate-0" : "rotate-45"
+                            }`}
+                          />
+                        </span>
+
+                        <span
+                          className={`font-archivo text-[68px] font-medium leading-none text-white/70 [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_rgba(255,255,255,0.95)] sm:text-[82px] transition-all duration-700 ease-out ${
+                            isActive
+                              ? "translate-x-0 opacity-100 delay-350"
+                              : "translate-x-8 opacity-0 delay-0"
+                          }`}
+                        >
                           {card.number}
-                        </p>
-                      </>
-                    )}
-
-                    {isActive && (
-                      <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-7">
-                        <h3 className="font-archivo text-2xl font-bold uppercase tracking-[-0.04em] sm:text-3xl">
-                          {card.title}
-                        </h3>
-
-                        <p className="mt-3 max-w-110 font-[Arial] text-sm font-medium leading-[1.55] text-white/90 sm:text-base">
-                          {card.description}
-                        </p>
-
-                        <div className="mt-5 flex items-end gap-3">
-                          <span className="grid size-11 place-items-center rounded-full border border-white/40 bg-black/35 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-[#B81C15]">
-                            <ArrowUpRight size={20} strokeWidth={2.2} />
-                          </span>
-
-                          <span className="font-archivo text-[68px] font-medium leading-none text-white/70 [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_rgba(255,255,255,0.95)] sm:text-[82px]">
-                            {card.number}
-                          </span>
-                        </div>
+                        </span>
                       </div>
-                    )}
+                    </div>
                   </button>
                 );
               })}
@@ -203,10 +257,16 @@ export function AgencyIntroSection() {
           {services.map((service) => (
             <article key={service.number} className="max-w-120">
               <h3 className="font-archivo flex items-end gap-2 text-3xl font-semibold leading-none text-black sm:text-4xl">
-                <span className="text-[56px] font-semibold leading-none text-white [-webkit-text-stroke:1px_#222222] md:text-[56px] 2xl:text-[64px]" style={{ fontFamily: "var(--font-dm-sans)" }}>
+                <span
+                  className="text-[56px] font-semibold leading-none text-white [-webkit-text-stroke:1px_#222222] md:text-[56px] 2xl:text-[64px]"
+                  style={{ fontFamily: "var(--font-dm-sans)" }}
+                >
                   {service.number}
                 </span>
-                <span className="mb-2 font-semibold">{service.title}</span>
+
+                <span className="mb-2 font-semibold">
+                  {service.title}
+                </span>
               </h3>
 
               <p className="mt-4 font-[Arial] text-base leading-[1.65] text-[#777777] sm:text-lg">

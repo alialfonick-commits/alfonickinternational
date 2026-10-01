@@ -1,5 +1,3 @@
-import React from "react";
-
 import { SiteHeader } from "@/components/layout/site-header";
 import Blogs from "@/components/sections/Blogs";
 import { Footer } from "@/components/sections/footer";
@@ -11,11 +9,35 @@ import BlogTags from "@/components/blogDetail/blogTags";
 
 const page = () => {
   return (
-    <div>
+    <div className="blog-detail-page">
+
+      <style>{`
+
+        .blog-detail-page header a[aria-label="Alfonick International"] {
+          width: 110px;
+          height: 34px;
+          background-image: url("/images/alfonick-black.webp");
+          background-size: contain;
+          background-position: left center;
+          background-repeat: no-repeat;
+        }
+
+        .blog-detail-page header a[aria-label="Alfonick International"] img {
+          opacity: 0;
+          width: 110px !important;
+        }
+
+        .blog-detail-page header .headerBtn {
+          border: 1px solid #222222 !important;
+          color: #222222 !important;
+          background: #ffffff !important;
+        }
+      `}</style>
+
       <SiteHeader />
 
       <main>
-        <section className="pt-40 lg:pb-16">
+        <section className="pt-40">
           <div className="px-5 md:px-8">
 
 
@@ -29,7 +51,7 @@ const page = () => {
             </div>
 
             <div className="mt-6">
-              <p className="text-[#B81C15] text-[16px] font-semibold mb-2">
+              <p className="text-[#B81C15] text-[18px] font-semibold mb-2">
                 Digital Marketing
               </p>
 
@@ -59,10 +81,11 @@ const page = () => {
             </div>
 
             {/* Content + Sidebar */}
-            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-12 lg:gap-16 mt-12 ">
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_415px] lg:gap-16 mt-8">
 
               {/* LEFT CONTENT */}
-              <article className="blog-detail-content [&_h2]:text-[25px] [&_h2]:md:text-[30px] [&_h2]:leading-tight [&_h2]:font-medium [&_h2]:mb-3 [&_p]:text-[16px] [&_p]:md:text-[18px] [&_p]:leading-[1.8] [&_p]:text-[#555] [&_p]:mb-7 [&_ul]:text-[16px] [&_ul]:md:text-[18px] [&_ul]:leading-loose [&_ul]:text-[#555] [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-8">
+              <article className="blog-detail-content [&_h2]:text-[25px] [&_h2]:md:text-[30px] [&_h2]:leading-tight [&_h2]:font-medium [&_h2]:mb-3 [&_p]:text-[16px] [&_p]:md:text-[18px] [&_p]:leading-[1.8] [&_p]:text-[#222222B2] [&_p]:mb-7 [&_ul]:text-[16px] [&_ul]:md:text-[18px] [&_ul]:leading-loose [&_ul]:text-[#222222B2] [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-8">
+
                 <h2>
                   Digital Marketing: Building Brands That Glow Online
                 </h2>
@@ -120,6 +143,7 @@ const page = () => {
                 <p>
                   Digital marketing is no longer optional—it's an essential part of every successful business strategy. By leveraging the right channels, creating valuable content, and continuously optimizing campaigns, businesses can stay ahead of the competition and build meaningful connections with their audience. Whether your goal is to increase brand awareness, generate leads, or grow revenue, a well-executed digital marketing strategy can deliver lasting results.
                 </p>
+
               </article>
 
               {/* RIGHT SIDEBAR */}
@@ -132,6 +156,7 @@ const page = () => {
 
                 <BlogTags />
               </aside>
+
             </div>
           </div>
         </section>

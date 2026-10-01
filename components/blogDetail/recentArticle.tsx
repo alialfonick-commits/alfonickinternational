@@ -2,19 +2,23 @@ const articles = [
   {
     title: "The Anatomy of a Brand That Outlives Trends",
     date: "12 July 2026",
+    image: "/images/grey.png",
   },
   {
     title: "Attribution Is Broken. Here's What Replaces It",
     date: "21 Jun 2026",
+    image: "/images/grey.png",
   },
   {
     title: "Designing Identity Systems for Scale",
-    date: "02 march 2026",
+    date: "02 March 2026",
+    image: "/images/grey.png",
   },
   {
     title: "Attribution Is Broken. Here's What Replaces It",
     date: "12 Jun 2026",
-  }
+    image: "/images/grey.png",
+  },
 ];
 
 const RecentArticle = () => {
@@ -31,11 +35,15 @@ const RecentArticle = () => {
       <div className="space-y-4">
         {articles.map((article, index) => (
           <a
-            href="/blogDetail"
+            href="#"
             key={index}
             className="flex items-center gap-3 group"
           >
-            <div className="w-[62px] h-[58px] rounded-[20px] bg-[#66666680] shrink-0"></div>
+            <img
+              src={article.image}
+              alt={article.title}
+              className="w-[90px] h-[75px] rounded-[20px] object-cover shrink-0"
+            />
 
             <div>
               <h4 className="text-[16px] leading-[1.4] font-medium group-hover:text-[#b51f24] transition-colors">
@@ -49,7 +57,6 @@ const RecentArticle = () => {
           </a>
         ))}
       </div>
-
     </div>
   );
 };
