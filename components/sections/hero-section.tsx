@@ -52,7 +52,16 @@ export function HeroSection() {
   };
  }, []);
 
- 
+ /*
+  * One tiny downward wheel / swipe while the hero is active
+  * smoothly brings Agency Intro completely over the hero.
+  *
+  * EASY SPEED CONTROL:
+  * 900  = fast
+  * 1400 = balanced
+  * 1800 = slow
+  * 2200 = very slow
+  */
  useEffect(() => {
   const SNAP_DURATION = 1200;
   const SWIPE_THRESHOLD = 10;
@@ -118,14 +127,44 @@ export function HeroSection() {
 
    const targetY =
     window.scrollY +
-    agencySection.getBoundingClientRect().top;
+    agencyRect.top;
+
+   smoothScrollTo(targetY, SNAP_DURATION);
+  };
+
+  const snapToHero = () => {
+   if (isSnapping) return;
+
+   const heroSection = sectionRef.current;
+   const agencySection = document.getElementById("agency-intro");
+
+   if (!heroSection || !agencySection) return;
+
+   const agencyRect = agencySection.getBoundingClientRect();
+
+   /*
+    * Only snap back when Agency Intro is at / very near
+    * the top of the viewport. Normal scrolling further
+    * down the section stays untouched.
+    */
+   const agencyIsAtTop =
+    agencyRect.top <= 1 &&
+    agencyRect.top >= -80;
+
+   if (!agencyIsAtTop) return;
+
+   isSnapping = true;
+
+   const heroRect = heroSection.getBoundingClientRect();
+
+   const targetY =
+    window.scrollY +
+    heroRect.top;
 
    smoothScrollTo(targetY, SNAP_DURATION);
   };
 
   const onWheel = (event: WheelEvent) => {
-   if (event.deltaY <= 0) return;
-
    const heroSection = sectionRef.current;
    const agencySection = document.getElementById("agency-intro");
 
@@ -134,9 +173,25 @@ export function HeroSection() {
    const heroRect = heroSection.getBoundingClientRect();
    const agencyRect = agencySection.getBoundingClientRect();
 
-   if (heroRect.bottom > 1 && agencyRect.top > 1) {
+   /* Tiny scroll DOWN: Hero -> Agency Intro */
+   if (
+    event.deltaY > 0 &&
+    heroRect.bottom > 1 &&
+    agencyRect.top > 1
+   ) {
     event.preventDefault();
     snapToAgency();
+    return;
+   }
+
+   /* Tiny scroll UP: Agency Intro -> Hero */
+   if (
+    event.deltaY < 0 &&
+    agencyRect.top <= 1 &&
+    agencyRect.top >= -80
+   ) {
+    event.preventDefault();
+    snapToHero();
    }
   };
 
@@ -151,9 +206,20 @@ export function HeroSection() {
    const swipeDistance =
     touchStartY - touchEndY;
 
+   /* Swipe UP: Hero -> Agency Intro */
    if (swipeDistance > SWIPE_THRESHOLD) {
     snapToAgency();
+    return;
    }
+
+   /* Swipe DOWN: Agency Intro -> Hero */
+   if (swipeDistance < -SWIPE_THRESHOLD) {
+    snapToHero();
+   }
+  };
+
+  const onSnapButtonClick = () => {
+   snapToAgency();
   };
 
   window.addEventListener("wheel", onWheel, {
@@ -172,6 +238,11 @@ export function HeroSection() {
    { passive: true }
   );
 
+  window.addEventListener(
+   "hero-snap-to-agency",
+   onSnapButtonClick
+  );
+
   return () => {
    cancelAnimationFrame(animationFrame);
 
@@ -188,6 +259,11 @@ export function HeroSection() {
    window.removeEventListener(
     "touchend",
     onTouchEnd
+   );
+
+   window.removeEventListener(
+    "hero-snap-to-agency",
+    onSnapButtonClick
    );
   };
  }, []);
@@ -398,6 +474,13 @@ export function HeroSection() {
      <div className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3 sm:bottom-10">
       <Link
        href="#agency-intro"
+       onClick={(event) => {
+        event.preventDefault();
+
+        window.dispatchEvent(
+         new Event("hero-snap-to-agency")
+        );
+       }}
        className="font-archivo group inline-flex h-11.5 items-center rounded-full bg-white px-6 text-[15px] font-medium text-[#222222] shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all duration-300 hover:scale-[1.02] hover:bg-[#EFF0F0]"
       >
        Scroll to Discover
@@ -406,6 +489,13 @@ export function HeroSection() {
       <Link
        href="#agency-intro"
        aria-label="Scroll to Discover"
+       onClick={(event) => {
+        event.preventDefault();
+
+        window.dispatchEvent(
+         new Event("hero-snap-to-agency")
+        );
+       }}
        className="group grid size-11.5 place-items-center rounded-full bg-white text-[#222222] shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all duration-300 hover:scale-105 hover:bg-[#F5D5D2] hover:text-[#B81C15]"
       >
        <Menu

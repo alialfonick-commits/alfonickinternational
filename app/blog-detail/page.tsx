@@ -14,8 +14,8 @@ const page = () => {
       <style>{`
 
         .blog-detail-page header a[aria-label="Alfonick International"] {
-          width: 110px;
-          height: 34px;
+          width: 154px;
+          height: 36px;
           background-image: url("/images/alfonick-black.webp");
           background-size: contain;
           background-position: left center;
@@ -24,7 +24,7 @@ const page = () => {
 
         .blog-detail-page header a[aria-label="Alfonick International"] img {
           opacity: 0;
-          width: 110px !important;
+          width: 154px !important;
         }
 
         .blog-detail-page header .headerBtn {
