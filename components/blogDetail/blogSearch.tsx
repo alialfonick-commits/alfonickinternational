@@ -1,5 +1,3 @@
-import React from "react";
-
 const BlogSearch = () => {
   return (
     <div className="w-full">
@@ -7,16 +5,16 @@ const BlogSearch = () => {
         <input
           type="text"
           placeholder="Search"
-          className="w-full h-[42px] bg-transparent outline-none text-[13px] placeholder:text-[#777]"
+          className="w-full h-13.75 bg-transparent px-5 outline-none text-[18px] placeholder:text-[#222222B2]"
         />
 
         <button
           type="button"
-          className="w-[42px] h-[42px] bg-[#a62429] rounded-tr-[10px] rounded-br-[10px] text-white flex items-center justify-center shrink-0 hover:bg-black transition-colors"
+          className="w-16.25 h-13.75 bg-[#a62429] rounded-tr-[10px] rounded-br-[10px] text-white flex items-center justify-center shrink-0 hover:bg-black transition-colors cursor-pointer"
         >
           <svg
-            width="16"
-            height="16"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"

@@ -5,52 +5,266 @@ import Image from "next/image";
 import { Menu } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-function clamp(value: number, min: number, max: number) {
- return Math.min(Math.max(value, min), max);
-}
-
 export function HeroSection() {
  const sectionRef = useRef<HTMLElement | null>(null);
- const [progress, setProgress] = useState(0);
 
  const [isHeroVisible, setIsHeroVisible] = useState(false);
  const [typedIntro, setTypedIntro] = useState("");
+ const [heroCovered, setHeroCovered] = useState(false);
 
  const fullIntroText = "Intelligence, unleashed.";
 
+ /*
+  * Keep the hero fixed while Agency Intro moves over it.
+  * Once Agency Intro has completely covered the viewport,
+  * hide the fixed hero so it cannot interfere with later sections.
+  */
  useEffect(() => {
   let frame = 0;
 
-  const updateProgress = () => {
-   if (!sectionRef.current) return;
+  const updateHeroState = () => {
+   const agencySection = document.getElementById("agency-intro");
 
-   const section = sectionRef.current;
-   const rect = section.getBoundingClientRect();
-   const scrollable = section.offsetHeight - window.innerHeight;
-
-   if (scrollable <= 0) {
-    setProgress(0);
+   if (!agencySection) {
+    setHeroCovered(false);
     return;
    }
 
-   const next = clamp(Math.abs(rect.top) / scrollable, 0, 1);
-   setProgress(next);
+   const agencyTop = agencySection.getBoundingClientRect().top;
+
+   setHeroCovered(agencyTop <= 1);
   };
 
   const onScroll = () => {
    cancelAnimationFrame(frame);
-   frame = requestAnimationFrame(updateProgress);
+   frame = requestAnimationFrame(updateHeroState);
   };
 
-  updateProgress();
+  updateHeroState();
 
   window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", updateProgress);
+  window.addEventListener("resize", updateHeroState);
 
   return () => {
    cancelAnimationFrame(frame);
    window.removeEventListener("scroll", onScroll);
-   window.removeEventListener("resize", updateProgress);
+   window.removeEventListener("resize", updateHeroState);
+  };
+ }, []);
+
+ /*
+  * One tiny downward wheel / swipe while the hero is active
+  * smoothly brings Agency Intro completely over the hero.
+  *
+  * EASY SPEED CONTROL:
+  * 900  = fast
+  * 1400 = balanced
+  * 1800 = slow
+  * 2200 = very slow
+  */
+ useEffect(() => {
+  const SNAP_DURATION = 1200;
+  const SWIPE_THRESHOLD = 10;
+
+  let isSnapping = false;
+  let touchStartY = 0;
+  let animationFrame = 0;
+
+  const easeInOutCubic = (value: number) => {
+   return value < 0.5
+    ? 4 * value * value * value
+    : 1 - Math.pow(-2 * value + 2, 3) / 2;
+  };
+
+  const smoothScrollTo = (
+   targetY: number,
+   duration: number
+  ) => {
+   cancelAnimationFrame(animationFrame);
+
+   const startY = window.scrollY;
+   const distance = targetY - startY;
+   const startTime = performance.now();
+
+   const animate = (currentTime: number) => {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeInOutCubic(progress);
+
+    window.scrollTo(
+     0,
+     startY + distance * easedProgress
+    );
+
+    if (progress < 1) {
+     animationFrame = requestAnimationFrame(animate);
+    } else {
+     isSnapping = false;
+    }
+   };
+
+   animationFrame = requestAnimationFrame(animate);
+  };
+
+  const snapToAgency = () => {
+   if (isSnapping) return;
+
+   const heroSection = sectionRef.current;
+   const agencySection = document.getElementById("agency-intro");
+
+   if (!heroSection || !agencySection) return;
+
+   const heroRect = heroSection.getBoundingClientRect();
+   const agencyRect = agencySection.getBoundingClientRect();
+
+   const heroIsStillActive =
+    heroRect.bottom > 1 &&
+    agencyRect.top > 1;
+
+   if (!heroIsStillActive) return;
+
+   isSnapping = true;
+
+   const targetY =
+    window.scrollY +
+    agencyRect.top;
+
+   smoothScrollTo(targetY, SNAP_DURATION);
+  };
+
+  const snapToHero = () => {
+   if (isSnapping) return;
+
+   const heroSection = sectionRef.current;
+   const agencySection = document.getElementById("agency-intro");
+
+   if (!heroSection || !agencySection) return;
+
+   const agencyRect = agencySection.getBoundingClientRect();
+
+   /*
+    * Only snap back when Agency Intro is at / very near
+    * the top of the viewport. Normal scrolling further
+    * down the section stays untouched.
+    */
+   const agencyIsAtTop =
+    agencyRect.top <= 1 &&
+    agencyRect.top >= -80;
+
+   if (!agencyIsAtTop) return;
+
+   isSnapping = true;
+
+   const heroRect = heroSection.getBoundingClientRect();
+
+   const targetY =
+    window.scrollY +
+    heroRect.top;
+
+   smoothScrollTo(targetY, SNAP_DURATION);
+  };
+
+  const onWheel = (event: WheelEvent) => {
+   const heroSection = sectionRef.current;
+   const agencySection = document.getElementById("agency-intro");
+
+   if (!heroSection || !agencySection) return;
+
+   const heroRect = heroSection.getBoundingClientRect();
+   const agencyRect = agencySection.getBoundingClientRect();
+
+   /* Tiny scroll DOWN: Hero -> Agency Intro */
+   if (
+    event.deltaY > 0 &&
+    heroRect.bottom > 1 &&
+    agencyRect.top > 1
+   ) {
+    event.preventDefault();
+    snapToAgency();
+    return;
+   }
+
+   /* Tiny scroll UP: Agency Intro -> Hero */
+   if (
+    event.deltaY < 0 &&
+    agencyRect.top <= 1 &&
+    agencyRect.top >= -80
+   ) {
+    event.preventDefault();
+    snapToHero();
+   }
+  };
+
+  const onTouchStart = (event: TouchEvent) => {
+   touchStartY = event.touches[0]?.clientY ?? 0;
+  };
+
+  const onTouchEnd = (event: TouchEvent) => {
+   const touchEndY =
+    event.changedTouches[0]?.clientY ?? touchStartY;
+
+   const swipeDistance =
+    touchStartY - touchEndY;
+
+   /* Swipe UP: Hero -> Agency Intro */
+   if (swipeDistance > SWIPE_THRESHOLD) {
+    snapToAgency();
+    return;
+   }
+
+   /* Swipe DOWN: Agency Intro -> Hero */
+   if (swipeDistance < -SWIPE_THRESHOLD) {
+    snapToHero();
+   }
+  };
+
+  const onSnapButtonClick = () => {
+   snapToAgency();
+  };
+
+  window.addEventListener("wheel", onWheel, {
+   passive: false,
+  });
+
+  window.addEventListener(
+   "touchstart",
+   onTouchStart,
+   { passive: true }
+  );
+
+  window.addEventListener(
+   "touchend",
+   onTouchEnd,
+   { passive: true }
+  );
+
+  window.addEventListener(
+   "hero-snap-to-agency",
+   onSnapButtonClick
+  );
+
+  return () => {
+   cancelAnimationFrame(animationFrame);
+
+   window.removeEventListener(
+    "wheel",
+    onWheel
+   );
+
+   window.removeEventListener(
+    "touchstart",
+    onTouchStart
+   );
+
+   window.removeEventListener(
+    "touchend",
+    onTouchEnd
+   );
+
+   window.removeEventListener(
+    "hero-snap-to-agency",
+    onSnapButtonClick
+   );
   };
  }, []);
 
@@ -122,24 +336,18 @@ export function HeroSection() {
   };
  }, [isHeroVisible]);
 
- const heroTranslateY = progress * -22;
- const backgroundScale = 1 + progress * 0.05;
- const backgroundTranslateY = progress * -18;
- const contentTranslateY = progress * -70;
- const contentOpacity = 1 - progress * 0.32;
- const indicatorOpacity = clamp(1 - progress * 1.75, 0, 1);
- const indicatorTranslateY = progress * 20;
- const ellipseScale = 1 + progress * 0.06;
-
  return (
-  <section ref={sectionRef} className="relative h-[165svh] bg-white">
-   <div className="sticky top-0 h-svh overflow-hidden bg-black">
-    <div
-     className="relative h-full will-change-transform"
-    // style={{
-    //   transform: `translateY(${heroTranslateY}vh)`,
-    // }}
-    >
+  <section
+   ref={sectionRef}
+   className="relative h-svh bg-black"
+  >
+   {/* Fixed hero: it stays still while the next section scrolls over it */}
+   <div
+    className={`fixed inset-0 z-0 h-svh overflow-hidden bg-black transition-opacity duration-300 ease-out ${
+     heroCovered ? "pointer-events-none opacity-0" : "opacity-100"
+    }`}
+   >
+    <div className="relative h-full">
      {/* Background image */}
      <Image
       src="/images/hero-bg-img.png"
@@ -147,10 +355,7 @@ export function HeroSection() {
       fill
       priority
       sizes="100vw"
-      className="object-cover will-change-transform"
-      style={{
-       transform: `translateY(${backgroundTranslateY}px) scale(${backgroundScale})`,
-      }}
+      className="object-cover"
      />
 
      {/* Dark overlay */}
@@ -162,9 +367,9 @@ export function HeroSection() {
 
      {/* Main big red ellipse */}
      <div
-      className="pointer-events-none absolute left-1/2 top-[6%] h-[84vw] min-h-155 w-[95vw] min-w-245 max-w-475 rounded-t-full bg-[#B81C15]/10 will-change-transform"
+      className="pointer-events-none absolute left-1/2 top-[6%] h-[84vw] min-h-155 w-[95vw] min-w-245 max-w-475 rounded-t-full bg-[#B81C15]/10"
       style={{
-       transform: `translateX(-50%) scale(${ellipseScale})`,
+       transform: "translateX(-50%)",
        filter: "blur(1px)",
       }}
      />
@@ -176,13 +381,7 @@ export function HeroSection() {
      <div className="pointer-events-none absolute left-[-10%] top-[20%] h-105 w-105 rounded-full bg-[#B81C15]/20 blur-3xl" />
 
      {/* Content */}
-     <div
-      className="relative z-10 flex h-full items-center justify-center px-4 pb-28 pt-24 text-center text-white sm:px-6 sm:pt-28 lg:px-8 lg:pb-32"
-      style={{
-       transform: `translateY(${contentTranslateY}px)`,
-       opacity: contentOpacity,
-      }}
-     >
+     <div className="relative z-10 flex h-full items-center justify-center px-4 pb-28 pt-24 text-center text-white sm:px-6 sm:pt-28 lg:px-8 lg:pb-32">
       <div className="mx-auto flex max-w-295 flex-col items-center">
        <div className="relative inline-block mb-5 [&_span]:absolute sm:[&_span]:h-3 [&_span]:h-1.5 sm:[&_span]:w-3 [&_span]:w-1.5 [&_span]:border-[#FFFFFF80] [&_span]:rounded-[1px]">
         <p className="font-archivo mb-0! 2xl:text-[42px] sm:text-[28px] text-[22px] font-normal tracking-[-0.94px] text-[#EFF0F0] sm:mb-7">
@@ -220,7 +419,7 @@ export function HeroSection() {
 
         <Link
          href="#"
-         className="font-archivo group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#B81C15] px-5 py-[18.25px] pr-11! text-[12px] sm:text-[13px] font-semibold uppercase tracking-[-0.01em] leading-[normal] text-white transition-all duration-300  hover:text-[#B81C15]"
+         className="font-archivo group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#B81C15] px-5 py-[18.25px] pr-11! text-[12px] sm:text-[13px] font-semibold uppercase tracking-[-0.01em] leading-[normal] text-white transition-all duration-300 hover:text-[#B81C15]"
         >
          {/* expanding white bg */}
          <span className="absolute right-5 size-2.5 rounded-full bg-[#F5D5D2] transition-all duration-500 ease-out group-hover:right-0 group-hover:h-full group-hover:w-full" />
@@ -232,8 +431,6 @@ export function HeroSection() {
 
          {/* icon area */}
          <div className="absolute z-10 left-0 -right-25 group-hover:-right-38.5 transition-all duration-300 top-0 bottom-0 m-auto w-fit h-fit">
-
-
           {/* arrow after hover */}
           <img
            src="images/red-arrow.webp"
@@ -259,8 +456,6 @@ export function HeroSection() {
 
          {/* icon area */}
          <div className="absolute z-10 left-0 -right-25 group-hover:-right-28 transition-all duration-300 top-0 bottom-0 m-auto w-fit h-fit">
-
-
           {/* arrow after hover */}
           <img
            src="images/red-arrow.webp"
@@ -271,26 +466,21 @@ export function HeroSection() {
           />
          </div>
         </Link>
-
-
-
-
-
-
        </div>
       </div>
      </div>
 
      {/* Scroll indicator */}
-     <div
-      className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3 sm:bottom-10"
-      style={{
-       opacity: indicatorOpacity,
-       // transform: `translateX(-50%) translateY(${indicatorTranslateY}px)`,
-      }}
-     >
+     <div className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3 sm:bottom-10">
       <Link
        href="#agency-intro"
+       onClick={(event) => {
+        event.preventDefault();
+
+        window.dispatchEvent(
+         new Event("hero-snap-to-agency")
+        );
+       }}
        className="font-archivo group inline-flex h-11.5 items-center rounded-full bg-white px-6 text-[15px] font-medium text-[#222222] shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all duration-300 hover:scale-[1.02] hover:bg-[#EFF0F0]"
       >
        Scroll to Discover
@@ -299,6 +489,13 @@ export function HeroSection() {
       <Link
        href="#agency-intro"
        aria-label="Scroll to Discover"
+       onClick={(event) => {
+        event.preventDefault();
+
+        window.dispatchEvent(
+         new Event("hero-snap-to-agency")
+        );
+       }}
        className="group grid size-11.5 place-items-center rounded-full bg-white text-[#222222] shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all duration-300 hover:scale-105 hover:bg-[#F5D5D2] hover:text-[#B81C15]"
       >
        <Menu
